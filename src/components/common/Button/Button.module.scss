@@ -29,13 +29,13 @@
 .outline {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  border: 1px solid $favorite-button;
+  color: $favorite-button;
   font-size: 13px;
   line-height: 22px;
 
   &:not(.noHover):hover {
     background-color: #2a2a2a;
-    color: #ffffff;
+    color: $favorite-button-hover-text;
   }
 }
