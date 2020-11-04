@@ -5,10 +5,9 @@
   display: inline-flex;
   height: 45px;
   color: $text-color;
-  border: 2px solid $form-border-color;
 
   .category {
-    border-right: 2px solid $form-border-color;
+    border-right: 1px solid $form-border-color;
     display: flex;
     align-items: center;
     position: relative;
@@ -17,22 +16,13 @@
       color: $primary;
       position: absolute;
       left: 10px;
-      padding-right: 4px;
       z-index: 0;
-      font-size: 20px;
-      font-weight: bold;
     }
 
     .icon:last-child {
       position: absolute;
       right: 10px;
-      z-index: 1;
-      transition: all 0.5s;
-      cursor: pointer;
-      transition: all 0.5s;
-      &:hover {
-        color: $primary;
-      }
+      z-index: 0;
     }
 
     select {
@@ -42,8 +32,6 @@
       padding: 5px 30px 5px 35px;
       position: relative;
       z-index: 1;
-      outline: none;
-      font-size: 12px;
     }
   }
 
@@ -55,12 +43,11 @@
     input {
       border: 0;
       padding-left: 10px;
-      font-size: 12px;
+      font-size: 14px;
       outline: none;
-      width: 250px;
 
       &::placeholder {
-        color: gray;
+        color: $text-color;
       }
     }
 
@@ -68,11 +55,6 @@
       border: 0;
       background-color: transparent;
       outline: none;
-      transition: all 0.5s;
-
-      &:hover {
-        color: $primary;
-      }
     }
   }
 }
