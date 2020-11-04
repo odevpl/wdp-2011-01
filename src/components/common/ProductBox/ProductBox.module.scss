@@ -30,8 +30,15 @@
 
     .buttons {
       display: flex;
+      visibility: hidden;
       justify-content: space-between;
     }
+
+    &:hover .buttons {
+      visibility: visible;
+    }
+
+
   }
 
   .content {
