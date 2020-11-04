@@ -33,12 +33,6 @@
       visibility: hidden;
       justify-content: space-between;
     }
-
-    &:hover .buttons {
-      visibility: visible;
-    }
-
-
   }
 
   .content {
@@ -73,7 +67,7 @@
       width: 30px;
       border-bottom: 4px solid $primary;
       transform: translateX(-50%);
-    }
+    } 
   }
 
   .actions {
@@ -81,5 +75,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .price {
+      background-color: red;
+    }
+  }
+  &:hover .buttons {
+    visibility: visible;
+  }
+  
+  &:hover .price {
+    background-color: $primary;
   }
 }
