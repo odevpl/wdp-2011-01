@@ -4,6 +4,7 @@
   border: 1px solid #b6b6b6;
   text-align: center;
   margin-top: 40px;
+  min-height: 150px;
 
   .iconWrapper {
     height: 60px;
@@ -74,5 +75,17 @@
     .content {
       color: $primary;
     }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .root {
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .root {
+    min-width: 300px;
   }
 }
