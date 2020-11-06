@@ -75,14 +75,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .price {
-      background-color: red;
+  }
+  &:hover {
+    .buttons {
+      visibility: visible;
     }
+    .price div {
+      background-color: $primary;
+      color: black;
+      font-weight: bold;
+    } 
   }
-  &:hover .buttons {
-    visibility: visible;
-  }
-  
+
   &:hover .noHover {
     background-color: $primary;
   }
