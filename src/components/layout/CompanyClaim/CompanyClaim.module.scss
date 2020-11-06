@@ -10,10 +10,11 @@
   .phoneNumber {
     p {
       margin: 0;
-      font-size: 17px;
+      font-size: 14px;
       line-height: 42px;
       color: rgb(216, 216, 216);
       font-weight: 500;
+      display: inline-block;
 
       .icon {
         font-size: 32px;
@@ -26,10 +27,12 @@
   }
 
   .cart {
+    height: 77px;
     .cartBox {
       display: inline-block;
       position: relative;
       color: #ffffff;
+      margin-right: 16px;
 
       .cartIcon {
         background-color: $primary;
@@ -66,6 +69,62 @@
         .cartIcon {
           background-color: lighten($primary, 10%);
         }
+      }
+    }
+  }
+
+  .number {
+    order: -1;
+  }
+}
+
+@media(max-width: 768px) {
+
+  .number {
+    display: none;
+  }
+
+  .cart {
+    padding-left: 0;
+  }
+
+  .logo {
+    padding-right: 0;
+  }
+}
+
+@media(max-width: 435px) {
+
+  .phoneNumber p span {
+    font-size: 10px;
+  }
+}
+
+@media(min-width: 769px) {
+
+  .phoneNumber {
+    display: none;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .number {
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 42px;
+      color: rgb(216, 216, 216);
+      font-weight: 500;
+      display: inline-block;
+
+      .icon {
+        font-size: 32px;
+        color: $primary;
+        vertical-align: middle;
+        margin-top: -3px;
+        margin-right: 0.8rem;
       }
     }
   }
