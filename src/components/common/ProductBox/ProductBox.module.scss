@@ -74,5 +74,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .olderPrice {
+      text-decoration: line-through double $mainBlack;
+      font-size: 22px;
+      color: $old-price;
+    }
+    .heart {
+      background-color: $primary;
+    }
   }
 }
+
+
