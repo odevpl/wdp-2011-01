@@ -75,15 +75,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .price {
-      background-color: red;
+    .olderPrice {
+      text-decoration: line-through double $mainBlack;
+      font-size: 22px;
+      color: $old-price;
+    }
+    .heart {
+      background-color: $primary;
     }
   }
-  &:hover .buttons {
-    visibility: visible;
-  }
-  
-  &:hover .noHover {
-    background-color: $orange;
-  }
 }
+
+
