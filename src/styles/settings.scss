@@ -1,26 +1,46 @@
-/* BASIC COLORS */
-$mainBlack: #0c0b0b;
-$mainWhite: #fdfcfc;
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
-/**/
-
-$base-padding: 24px;
-
-$header-topbar-bg: #434343;
-$header-bg: #363636;
-
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
-
+/* BASIC COLORS SETUP*/
 $primary: #d58e32;
+$primary-dark: #c17700;
+$main-dark: #2a2a2a;
+$main-white: #fdfcfc;
+$main-grey: #434343;
+$dark-grey: #363636;
+$white: #ffffff;
+$black: #000000;
+$color-warning: #f6b93b;
+$color-danger: #e55039;
+$color-success: #78e08f;
 
-$text-color: #2a2a2a;
-
-$form-border-color: #292929;
-
+/* BASIC VARIABLES SETUP*/
+$primary-font: "Poppins", sans-serif;
+$font-size: 16px;
+$font-weight: 300;
+$text-color: $main-dark;
 $letter-spacing: 1.2px;
+$line-height: 24px;
 
-$box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+$main-transition: all 0.3s linear;
+$main-spacing: 0.3rem;
+$light-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+$dark-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 
-/* PRODUCT BOX */
-$old-price: #c17700;
+$base-padding: 12px;
+$max-width: 40rem;
+$small-width: 85vw;
+$full-width: 1170px;
+
+/* MIXINS */
+@mixin flex($align-items, $justify-content) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
