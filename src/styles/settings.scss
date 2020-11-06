@@ -1,82 +1,53 @@
-$darkGrey: #2a2a2a;
-$chocolate: #363636;
-$latte: #434343;
-$grey: #292929;
-$orange:  #d58e32;
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+/* BASIC COLORS SETUP */
+$primary: #d58e32;
+$primary-dark: #c17700;
+$main-white: #fdfcfc;
 $white: #ffffff;
-$lightGrey: #b6b6b6;
-$cream: #f4f5f7;
 $milk: #e1e1e1;
 $invisibleGrey: #e2e2e2;
-$almostBlack:  rgb(42, 42, 42);
-$anotherWhite:  rgb(216, 216, 216);
+$main-grey: #434343;
+$lightGrey: #b6b6b6;
+$dark-grey: #363636;
 $heavenlyGrey: rgb(169, 169, 169);
+$main-dark: #2a2a2a;
+$almostBlack:  rgb(42, 42, 42);
+$black: #000000;
 $blackishBlack: rgba(1, 2, 2, 0.2);
+$color-warning: #f6b93b;
+$color-danger: #e55039;
+$color-success: #78e08f;
 
-//NIE UŻYWANY ZMIENNYCH POWYŻEJ W STYLACH KOMPONENTÓW!!!!!!!!
-
-
-//////COLORS////////
-
-//TOP BAR
-$topBar-text: $white;
-
-//MENU
-$menu-bg: $white;
-$searchBox-border: $blackishBlack;
-$menu-text-active: $white;
-
-//HEADER
-$header-topbar-bg: $latte;
-$header-bg: $chocolate;
-
-//FEATURE BOXES
-$feature-box-border: $lightGrey;
-$circles-color: $white;
-
-//PRODUCT BOXES
-$productBox-half-circle: $grey;
-$productBox-half-circle-text: $white;
-$productBox-underline: $darkGrey;
-$productBoxes-bg: $white;
-$favorite-button:  $darkGrey;
-$favorite-button-hover-text: $white;
-$favorite-button-hover-bg: $darkGrey;
-
-//NEW FURNITURE SECTION
-$dots: $milk;
-$line-under-newFurniture: $invisibleGrey;
-
-//FOOTER
-
-$primary: #d58e32;
-$light-green: #90EE90;
-$headings-footer: $white;
-$footer-text-hover: $white;
-$footer-text: $heavenlyGrey;
-$footer-copyrights: $heavenlyGrey;
-$footer-icons: $heavenlyGrey;
-$footer-claim-bg: $darkGrey;
-$footer-bg: $chocolate;
-
-//OTHER
-
-$primary: $orange;
-$text-color: $invisibleGrey;
-$form-border-color: $grey;
-
-
-
-
-///////PADDING////////
-
-$base-padding: 24px;
-
-$form-border-color: #292929;
-
+/* BASIC VARIABLES SETUP*/
+$primary-font: "Poppins", sans-serif;
+$font-size: 16px;
+$font-weight: 300;
+$text-color: $main-dark;
 $letter-spacing: 1.2px;
+$line-height: 24px;
 
-$box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+$main-transition: all 0.3s linear;
+$main-spacing: 0.3rem;
+$light-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+$dark-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 
-/* PRODUCT BOX */
-$old-price: #c17700;
+$base-padding: 12px;
+$max-width: 40rem;
+$small-width: 85vw;
+$full-width: 1170px;
+
+/* MIXINS */
+@mixin flex($align-items, $justify-content) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+

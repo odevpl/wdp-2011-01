@@ -1,21 +1,20 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  border: 1px solid $feature-box-border;
+  border: 1px solid $lightGrey;
   text-align: center;
   margin-top: 40px;
 
   .iconWrapper {
     height: 60px;
-    transform: translateY(-50%);
+
     color: $text-color;
+    @include flex(center, center);
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     left: 50%;
     right: 50%;
-
+    transform: translate(-50%, -50%);
     .icon {
       position: relative;
       z-index: 9;
@@ -23,15 +22,13 @@
 
     &::before {
       content: "";
-      border: 1px solid $feature-box-border;
+      border: 1px solid $lightGrey;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @include center();
       width: 76px;
       height: 76px;
       border-radius: 100%;
-      background-color: $circles-color;
+      background-color: $white;
       z-index: -1;
     }
 
@@ -40,11 +37,8 @@
       width: 60px;
       height: 60px;
       border-radius: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 1px solid $feature-box-border;
+      @include center();
+      border: 1px solid $lightGrey;
     }
   }
 
@@ -52,8 +46,8 @@
     text-transform: uppercase;
     color: rgb(42, 42, 42);
     margin-top: -0.5rem;
-    letter-spacing: 1px;
-    font-weight: 300;
+    letter-spacing: $letter-spacing;
+    font-weight: $font-weight;
     width: 100%;
     padding-top: 60px;
 
@@ -68,16 +62,16 @@
 
   &.active:hover {
     .iconWrapper {
-      color: #ffffff;
+      color: $white;
 
       &::after {
-        background-color: $orange;
-        border-color: $orange;
+        background-color: $primary;
+        border-color: $primary;
       }
     }
 
     .content {
-      color: $orange;
+      color: $primary;
     }
   }
 }

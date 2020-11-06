@@ -1,7 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  background-color: #ffffff;
+  background-color: $white;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
 
@@ -21,13 +21,13 @@
     width: auto;
     height: 400px;
     padding-bottom: 50px;
-    
+
     img {
       object-fit: cover;
       width: 100%;
       height: 100%;
     }
-    
+
     .sale {
       position: absolute;
       top: -30px;
@@ -35,14 +35,13 @@
       transform: translateX(-50%);
       background-color: $productBox-half-circle;
       border-radius: 50%;
-      color: $productBox-half-circle-text;
+      color: $white;
       padding: 30px 15px 5px 15px;
     }
 
     .buttons {
-      display: flex;
+      @include flex(center, center);
       visibility: hidden;
-      justify-content: space-between;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -59,9 +58,9 @@
 
     h5 {
       color: $primary;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 1px;
+      font-size: $font-size;
+      line-height: $line-height;
+      letter-spacing: $letter-spacing;
     }
 
     .stars {
@@ -74,7 +73,7 @@
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid $productBox-underline;
+    border-bottom: 1px solid $main-dark;
     position: relative;
 
     &::before {
@@ -83,20 +82,18 @@
       bottom: -1px;
       left: 50%;
       width: 30px;
-      border-bottom: 4px solid $orange;
+      border-bottom: 4px solid $primary;
       transform: translateX(-50%);
-    } 
+    }
   }
 
   .actions {
     padding: 15px 10px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(center, space-between);
     .olderPrice {
-      text-decoration: line-through double $darkGrey;
+      text-decoration: line-through double $main-dark;
       font-size: 22px;
-      color: $old-price;
+      color: $primary-dark;
     }
     .heart {
       background-color: $primary;
@@ -110,7 +107,7 @@
       background-color: $primary;
       color: black;
       font-weight: bold;
-    } 
+    }
   }
 
   &:hover .noHover {
@@ -123,6 +120,6 @@
 }
 
 .arrow {
-  background-color: $light-green;
+  background-color: $color-success;
 }
 

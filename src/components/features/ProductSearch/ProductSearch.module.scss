@@ -1,13 +1,13 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  border: 1px solid $form-border-color;
+  border: 1px solid #292929;
   display: inline-flex;
   height: 45px;
   color: $text-color;
 
   .category {
-    border-right: 1px solid $form-border-color;
+    border-right: 1px solid #292929;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -27,10 +27,10 @@
         display: none;
         position: absolute;
         top:34px;
-        background: $white;
+        background: $main-white;
         width: 230px;
         min-width: 160px;
-        box-shadow: $box-shadow;
+        box-shadow: $dark-shadow;
         z-index: 1;
       }
       .dropdownContent a {
@@ -42,7 +42,7 @@
       }
       .dropdownContent a:hover {
         background: $primary;
-        color: $white;
+        color: $main-white;
         font-weight: bolder;
       }
     }

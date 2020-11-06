@@ -2,12 +2,12 @@
 
 .root {
   .footerMenu {
-    background-color: $footer-bg;
+    background-color: $dark-grey;
     padding: 3rem 0;
 
     .menuWrapper {
       h6 {
-        color: $headings-footer;
+        color: $white;
         text-transform: uppercase;
         margin: 0 0 1rem 0;
       }
@@ -23,7 +23,7 @@
             color: $footer-text;
 
             &:hover {
-              color: $footer-text-hover;
+              color: $white;
             }
           }
         }
@@ -42,7 +42,7 @@
   }
 
   .bottomBar {
-    background-color: $footer-claim-bg;
+    background-color: $main-dark;
 
     :global(.container) > :global(.row) {
       height: 95px;
@@ -72,7 +72,7 @@
             text-decoration: none;
 
             &:hover {
-              color: $orange;
+              color: $primary;
             }
           }
         }
