@@ -5,45 +5,54 @@
   display: inline-flex;
   height: 45px;
   color: $text-color;
-  border: 2px solid $form-border-color;
 
   .category {
-    border-right: 2px solid $form-border-color;
+    border-right: 1px solid $form-border-color;
     display: flex;
     align-items: center;
-    position: relative;
-
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 230px;
     .icon:first-child {
       color: $primary;
-      position: absolute;
-      left: 10px;
-      padding-right: 4px;
-      z-index: 0;
-      font-size: 20px;
-      font-weight: bold;
     }
-
-    .icon:last-child {
-      position: absolute;
-      right: 10px;
-      z-index: 1;
-      transition: all 0.5s;
-      cursor: pointer;
-      transition: all 0.5s;
-      &:hover {
+    .dropdown {
+      position: relative;
+      .dropdownContainer {
         color: $primary;
+        text-transform: capitalize;
+        letter-spacing: $letter-spacing;
+      }
+      .dropdownContent {
+        display: none;
+        position: absolute;
+        top:34px;
+        background: $mainWhite;
+        width: 230px;
+        min-width: 160px;
+        box-shadow: $box-shadow;
+        z-index: 1;
+      }
+      .dropdownContent a {
+        color: $primary;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-transform: uppercase;
+      }
+      .dropdownContent a:hover {
+        background: $primary;
+        color: $mainWhite;
+        font-weight: bolder;
       }
     }
-
-    select {
-      -webkit-appearance: none;
-      border: 0;
-      background-color: transparent;
-      padding: 5px 30px 5px 35px;
-      position: relative;
-      z-index: 1;
-      outline: none;
-      font-size: 12px;
+  }
+  .category:hover {
+    .dropdownContent {
+      display: block;
+    }
+    .dropdownContainer {
+      font-weight: bolder;
     }
   }
 
@@ -55,12 +64,12 @@
     input {
       border: 0;
       padding-left: 10px;
-      font-size: 12px;
+      font-size: 14px;
       outline: none;
       width: 240px;
 
       &::placeholder {
-        color: gray;
+        color: $text-color;
       }
     }
 
@@ -68,11 +77,6 @@
       border: 0;
       background-color: transparent;
       outline: none;
-      transition: all 0.5s;
-
-      &:hover {
-        color: $primary;
-      }
     }
   }
 }
