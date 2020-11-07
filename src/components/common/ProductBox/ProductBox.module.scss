@@ -41,6 +41,7 @@
 
     .buttons {
       display: flex;
+      visibility: hidden;
       justify-content: space-between;
       position: absolute;
       bottom: 0;
@@ -84,7 +85,7 @@
       width: 30px;
       border-bottom: 4px solid $primary;
       transform: translateX(-50%);
-    }
+    } 
   }
 
   .actions {
@@ -100,6 +101,20 @@
     .heart {
       background-color: $primary;
     }
+  }
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+    .price div {
+      background-color: $primary;
+      color: black;
+      font-weight: bold;
+    } 
+  }
+
+  &:hover .noHover {
+    background-color: $primary;
   }
 }
 
