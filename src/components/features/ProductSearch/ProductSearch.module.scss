@@ -27,7 +27,7 @@
         display: none;
         position: absolute;
         top:34px;
-        background: $mainWhite;
+        background: $white;
         width: 230px;
         min-width: 160px;
         box-shadow: $box-shadow;
@@ -42,7 +42,7 @@
       }
       .dropdownContent a:hover {
         background: $primary;
-        color: $mainWhite;
+        color: $white;
         font-weight: bolder;
       }
     }

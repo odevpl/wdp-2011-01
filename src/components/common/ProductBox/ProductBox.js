@@ -86,6 +86,7 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   arrow: PropTypes.bool,
+  image: PropTypes.node,
   handleFavourite: PropTypes.func.isRequired,
   heart: PropTypes.bool,
 };
