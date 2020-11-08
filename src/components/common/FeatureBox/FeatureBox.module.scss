@@ -3,9 +3,7 @@
 .root {
   border: 1px solid $feature-box-border;
   text-align: center;
-  display: flex;
-  height: 100%;
-  position: relative;
+  margin-top: 40px;
 
   .iconWrapper {
     height: 60px;
@@ -81,5 +79,17 @@
     .content {
       color: $orange;
     }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .root {
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .root {
+    min-width: 300px;
   }
 }
