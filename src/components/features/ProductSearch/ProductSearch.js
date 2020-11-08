@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faListUl, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-
+import BurgerMenu from '../../features/BurgerMenu/BurgerMenu';
 import styles from './ProductSearch.module.scss';
 
 const ProductSearch = () => (
+<div className={styles.wrapper}>
   <form action='' className={styles.root}>
     <div className={styles.category}>
       <FontAwesomeIcon className={styles.icon} icon={faListUl} />
@@ -32,6 +33,12 @@ const ProductSearch = () => (
       </button>
     </div>
   </form>
+  <span className={styles.burgerWrapper}>
+      {' '}
+      <BurgerMenu className={styles.burger} />
+    </span>
+  </div>
+
 );
 
 ProductSearch.propTypes = {
