@@ -12,7 +12,6 @@ import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons'
 import Button from '../Button/Button';
 
 const ProductBox = ({
-  id,
   name,
   price,
   promo,
@@ -22,6 +21,7 @@ const ProductBox = ({
   handleCompare,
   heart,
   compare,
+  id,
 }) => {
   const favouriteHandler = e => {
     e.preventDefault();
@@ -59,11 +59,7 @@ const ProductBox = ({
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button
-            className={heart ? styles.heart : ' '}
-            variant='outline'
-            onClick={favouriteHandler}
-          >
+          <Button variant='outline' className={heart ? styles.heart : ''}>
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button
@@ -74,11 +70,26 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
-        <div className={styles.olderPrice}>{olderPrice}</div>
-        <div className={styles.price}>
-          <Button noHover variant='small'>
-            $ {price}
-          </Button>
+        <div className={styles.line}></div>
+        <div className={styles.actions}>
+          <div className={styles.outlines}>
+            <Button
+              className={heart ? styles.heart : ' '}
+              variant='outline'
+              onClick={favouriteHandler}
+            >
+              <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+            </Button>
+            <Button variant='outline'>
+              <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+            </Button>
+          </div>
+          <div className={styles.olderPrice}>{olderPrice}</div>
+          <div className={styles.price}>
+            <Button noHover variant='small'>
+              $ {price}
+            </Button>
+          </div>
         </div>
       </div>
     </div>
@@ -93,6 +104,7 @@ ProductBox.propTypes = {
   olderPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  image: PropTypes.node,
   handleFavourite: PropTypes.func.isRequired,
   handleCompare: PropTypes.func.isRequired,
   heart: PropTypes.bool,

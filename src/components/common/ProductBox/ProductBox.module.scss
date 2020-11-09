@@ -7,7 +7,9 @@
 
   .photo {
     position: relative;
-    padding: 80% 10px 0 10px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 5px 5px 1px 5px;
     background: {
       color: #f4f5f7;
       size: contain;
@@ -16,27 +18,44 @@
     }
     overflow: hidden;
     align-items: flex-end;
+    width: auto;
+    height: 400px;
+    padding-bottom: 50px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
 
     .sale {
       position: absolute;
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #292929;
+      background-color: $productBox-half-circle;
       border-radius: 50%;
-      color: #ffffff;
+      color: $productBox-half-circle-text;
       padding: 30px 15px 5px 15px;
     }
 
     .buttons {
       display: flex;
+      visibility: hidden;
       justify-content: space-between;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 50px;
+      width: 100%;
+      padding: 1px 5px;
     }
   }
 
   .content {
     text-align: center;
     padding: 20px;
+    z-index: 1;
 
     h5 {
       color: $primary;
@@ -55,7 +74,7 @@
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid $productBox-underline;
     position: relative;
 
     &::before {
@@ -64,7 +83,7 @@
       bottom: -1px;
       left: 50%;
       width: 30px;
-      border-bottom: 4px solid $primary;
+      border-bottom: 4px solid $orange;
       transform: translateX(-50%);
     }
   }
@@ -75,7 +94,7 @@
     justify-content: space-between;
     align-items: center;
     .olderPrice {
-      text-decoration: line-through double $mainBlack;
+      text-decoration: line-through double $darkGrey;
       font-size: 22px;
       color: $old-price;
     }
@@ -84,4 +103,26 @@
       background-color: $primary;
     }
   }
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+    .price div {
+      background-color: $primary;
+      color: black;
+      font-weight: bold;
+    }
+  }
+
+  &:hover .noHover {
+    background-color: $primary;
+  }
+}
+
+.heart {
+  background-color: $primary;
+}
+
+.compare {
+  background-color: $light-green;
 }
