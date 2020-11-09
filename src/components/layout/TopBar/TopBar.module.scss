@@ -13,7 +13,7 @@
       line-height: 55px;
 
       a {
-        color: #ffffff;
+        color: $topBar-text;
         font-size: 13px;
 
         &:hover {
@@ -37,6 +37,33 @@
 
     .icon {
       margin-right: 5px;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .root {
+    .topOptions {
+      padding-right: 0;
+
+      ul li {
+        margin-right: 0.6rem;
+    }
+  }
+    .topMenu {
+      padding-left: 0;
+    }
+}
+
+  .topMenuText {
+    display: none;
+  }
+}
+
+@media(max-width: 420px) {
+  .root {
+    .topOptions ul li {
+      margin-right: 0.3rem;
     }
   }
 }
