@@ -1,8 +1,5 @@
 @import "../../../styles/settings.scss";
 
-// .root {
-// }
-
 .main {
   background-color: $main-dark;
   color: $white;
@@ -26,8 +23,6 @@
   font-weight: 400;
 }
 
-
-
 .outline {
   display: inline-block;
   padding: 5px 10px;
@@ -42,5 +37,3 @@
     color: $white;
   }
 }
-
-
