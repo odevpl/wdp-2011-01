@@ -20,7 +20,11 @@ const ProductBox = ({
   arrow,
   olderPrice,
   handleFavourite,
+<<<<<<< HEAD
   id
+=======
+  id,
+>>>>>>> b0ec038 (Add changes to global styles settings)
 }) => {
   const favouriteHandler = e => {
     e.preventDefault();
@@ -41,7 +45,7 @@ const ProductBox = ({
         <h5>{name}</h5>
         <div className={styles.stars}>
           {[1, 2, 3, 4, 5].map(i => (
-            <a key={i} href='#'>
+            <a key={i} href='/'>
               {i <= stars ? (
                 <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
               ) : (
@@ -92,7 +96,7 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
-  olderPrice: PropTypes.number,
+  olderPrice: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
   arrow: PropTypes.bool,
