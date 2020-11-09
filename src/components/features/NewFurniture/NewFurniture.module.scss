@@ -6,7 +6,7 @@
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid $line-under-newFurniture;
+      border-bottom: 4px solid $lightGrey;
     }
 
     .heading {
@@ -27,7 +27,7 @@
         bottom: -4px;
         left: 0;
         width: 45px;
-        border-bottom: 4px solid $orange;
+        border-bottom: 4px solid $primary;
       }
     }
 
@@ -57,7 +57,7 @@
                 bottom: -4px;
                 left: 0;
                 width: 100%;
-                border-bottom: 4px solid $orange;
+                border-bottom: 4px solid $primary;
               }
             }
           }
@@ -86,7 +86,7 @@
             width: 13px;
             height: 13px;
             border-radius: 6px;
-            background-color: $dots;
+            background-color: $milk;
             font-size: 0;
 
             &.active,

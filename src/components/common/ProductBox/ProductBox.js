@@ -20,11 +20,7 @@ const ProductBox = ({
   arrow,
   olderPrice,
   handleFavourite,
-<<<<<<< HEAD
-  id
-=======
   id,
->>>>>>> b0ec038 (Add changes to global styles settings)
 }) => {
   const favouriteHandler = e => {
     e.preventDefault();
