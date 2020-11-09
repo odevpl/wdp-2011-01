@@ -444,6 +444,17 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-24',
       name: 'Aenean Ru Bristique 24',
+      category: 'chair',
+      image: 'src=../../images/bed2.jpeg',
+      price: 30,
+      olderPrice: `$ ${55}`,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+    },
+    {
+      id: 'aenean-ru-bristique-22',
+      name: 'Aenean Ru Bristique 22',
       category: 'bed',
       image: 'images/bed2.jpeg',
       price: 30,
