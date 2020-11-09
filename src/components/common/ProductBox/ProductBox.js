@@ -18,6 +18,9 @@ const ProductBox = ({
   olderPrice,
   handleFavourite,
   id,
+  handleStar,
+  handleStyle,
+  starChange,
 }) => {
   const favouriteHandler = e => {
     e.preventDefault();
@@ -36,7 +39,13 @@ const ProductBox = ({
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <Stars rate={stars} />
+        <Stars
+          rate={stars}
+          handleStar={handleStar}
+          id={id}
+          handleStyle={handleStyle}
+          starChange={starChange}
+        />
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
@@ -86,6 +95,9 @@ ProductBox.propTypes = {
   image: PropTypes.node,
   handleFavourite: PropTypes.func.isRequired,
   heart: PropTypes.bool,
+  handleStar: PropTypes.func,
+  handleStyle: PropTypes.func,
+  starChange: PropTypes.bool,
 };
 
 export default ProductBox;

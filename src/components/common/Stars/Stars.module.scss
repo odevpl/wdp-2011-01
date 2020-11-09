@@ -4,17 +4,19 @@
     a {
       text-decoration: none;
       color: rgb(42, 42, 42);
-      &:hover {
-        color: red;
-      }
     }
+}
+
+.test {
+  color: red;
 }
 
 input[type="radio"] {
   display: none;
 }
 
-.star {
+.stars2 {
+  color: orange;
   &:hover {
     cursor: pointer;
   }
