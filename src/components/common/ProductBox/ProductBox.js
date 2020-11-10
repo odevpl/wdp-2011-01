@@ -16,15 +16,20 @@ const ProductBox = ({
   price,
   promo,
   stars,
-  heart,
-  arrow,
   olderPrice,
   handleFavourite,
-  id
+  handleCompare,
+  heart,
+  compare,
+  id,
 }) => {
   const favouriteHandler = e => {
     e.preventDefault();
     handleFavourite(id);
+  };
+  const compareHandler = e => {
+    e.preventDefault();
+    handleCompare(id);
   };
   return (
     <div className={styles.root}>
@@ -57,7 +62,11 @@ const ProductBox = ({
           <Button variant='outline' className={heart ? styles.heart : ''}>
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button variant='outline' className={arrow ? styles.arrow : ''}>
+          <Button
+            className={compare ? styles.compare : ' '}
+            variant='outline'
+            onClick={compareHandler}
+          >
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
@@ -95,10 +104,11 @@ ProductBox.propTypes = {
   olderPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
-  arrow: PropTypes.bool,
   image: PropTypes.node,
   handleFavourite: PropTypes.func.isRequired,
+  handleCompare: PropTypes.func.isRequired,
   heart: PropTypes.bool,
+  compare: PropTypes.bool,
 };
 
 export default ProductBox;
