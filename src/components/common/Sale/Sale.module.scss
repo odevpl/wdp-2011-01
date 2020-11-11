@@ -16,18 +16,15 @@
 }
 
 .firstPhoto {
-    background-color: purple;
     grid-row-start:1;
     grid-row-end: 3;
-}
-
-.secondPhoto {
-    background-color: violet;
-
-}
-
-.thirdPhoto {
-    background-color: pink;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: 0;
+        
+    }
 }
 
 

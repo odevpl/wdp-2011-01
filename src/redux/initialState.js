@@ -273,6 +273,18 @@ const initialState = {
   cart: {
     products: [],
   },
+  saleContent: {
+    sofa: 'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg',
+    goldenChair: 'https://images.pexels.com/photos/5379190/pexels-photo-5379190.jpeg',
+    yellowChair: 'https://images.pexels.com/photos/4056469/pexels-photo-4056469.jpeg',
+    bed: 'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg',
+    content1: 'GUEST ROOM SOFA',
+    bargain: '-20%',
+    content2: 'OFFICE CHAIR COLLECTION',
+    price: '$200.00',
+    content3: 'SPECIAL COLLECTION',
+    info: 'SAVE UP 45% OF FURNITURE',
+  },
 };
 
 export default initialState;
