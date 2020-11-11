@@ -1,0 +1,36 @@
+@import "../../../styles/settings.scss";
+
+
+.root {
+    padding: 5rem 0;
+  }
+ 
+.saleContainer {
+    min-height: 400px;
+    width: 100%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.firstPhoto {
+    background-color: purple;
+    grid-row-start:1;
+    grid-row-end: 3;
+}
+
+.secondPhoto {
+    background-color: violet;
+
+}
+
+.thirdPhoto {
+    background-color: pink;
+}
+
+
+
+
+  

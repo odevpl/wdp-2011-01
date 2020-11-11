@@ -1,4 +1,5 @@
 import React from 'react';
+import Sale from '../../common/Sale/Sale';
 // import PropTypes from 'prop-types';
 
 import styles from './Homepage.module.scss';
@@ -9,6 +10,7 @@ import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 const Homepage = () => (
   <div className={styles.root}>
     <FeatureBoxes />
+    <Sale />
     <NewFurniture />
   </div>
 );
