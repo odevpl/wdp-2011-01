@@ -56,18 +56,17 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .root .wrapper .list li:nth-child(n+6){
+     display: none;
+   }
+}
 @media (min-width: 360px) and (max-width: 767px) {
   .root .wrapper {
     padding: 15px 0 15px 0;
 
-   .list li {
-     width: 60px;
-     height: 40px;
+   .list li:nth-child(n+5){
+     display: none;
    }
  }
-
-   .root .wrapper .button {
-      width: 20px;
-      height: 40px;
-    }
  }
