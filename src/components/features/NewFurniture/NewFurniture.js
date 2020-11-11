@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Brands from '../../layout/Brands/Brands';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
@@ -74,6 +75,7 @@ class NewFurniture extends React.Component {
             ))}
           </div>
         </div>
+        <Brands />
       </div>
     );
   }
