@@ -20,7 +20,7 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, brands } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -75,7 +75,7 @@ class NewFurniture extends React.Component {
             ))}
           </div>
         </div>
-        <Brands />
+        <Brands brands={brands} />
       </div>
     );
   }
@@ -100,6 +100,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  brands: PropTypes.array,
 };
 
 NewFurniture.defaultProps = {
