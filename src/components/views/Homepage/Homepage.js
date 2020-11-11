@@ -1,5 +1,5 @@
 import React from 'react';
-import Sale from '../../common/Sale/Sale';
+import Sale from '../../common/Sale/SaleContainer';
 // import PropTypes from 'prop-types';
 
 import styles from './Homepage.module.scss';
