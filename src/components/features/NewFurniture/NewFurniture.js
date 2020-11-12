@@ -27,11 +27,13 @@ class NewFurniture extends React.Component {
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
+      const preparedClass = i === activePage ? styles.active : '';
       dots.push(
-        <li>
+        <li key={i}>
           <a
+            href='/'
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={preparedClass}
           >
             page {i}
           </a>
@@ -49,16 +51,21 @@ class NewFurniture extends React.Component {
               </div>
               <div className={'col ' + styles.menu}>
                 <ul>
-                  {categories.map(item => (
-                    <li key={item.id}>
-                      <a
-                        className={item.id === activeCategory && styles.active}
-                        onClick={() => this.handleCategoryChange(item.id)}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
+                  {categories.map(item => {
+                    const preparedClass =
+                      item.id === activeCategory ? styles.active : '';
+                    return (
+                      <li key={item.id}>
+                        <a
+                          href='/'
+                          className={preparedClass}
+                          onClick={() => this.handleCategoryChange(item.id)}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
               <div className={'col-auto ' + styles.dots}>
