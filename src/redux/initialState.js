@@ -451,7 +451,7 @@ const initialState = {
   },
   saleContent: {
     sofa: 'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg',
-    goldenChair: 'https://images.pexels.com/photos/5379190/pexels-photo-5379190.jpeg',
+    goldenChair: 'https://images.pexels.com/photos/3932957/pexels-photo-3932957.jpeg',
     yellowChair: 'https://images.pexels.com/photos/4056469/pexels-photo-4056469.jpeg',
     bed: 'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg',
     content1: 'GUEST ROOM SOFA',
