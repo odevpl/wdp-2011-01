@@ -68,3 +68,9 @@
 
   }
 }
+
+@media (max-width: 768px) {
+  .root .menu {
+    display: none;
+  }
+}

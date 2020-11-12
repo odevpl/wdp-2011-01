@@ -73,6 +73,10 @@
       }
     }
 
+    .searchButton {
+      margin: 0 10px 0 10px;
+    }
+
     .search {
       border: 0;
       background-color: transparent;
@@ -80,8 +84,6 @@
     }
   }
 }
-<<<<<<< HEAD
-=======
 
 button:focus {
  outline: none;
@@ -92,6 +94,7 @@ button:focus {
 }
 
 @media (max-width: 768px) {
+
 
   .root .searchField input {
     width: 140px;
@@ -113,4 +116,3 @@ button:focus {
   }
 }
 
->>>>>>> ad5a76b... Set RWD for MenuBar and prepare BurgerMenu component which is prepared for Routing
