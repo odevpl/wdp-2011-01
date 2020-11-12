@@ -6,6 +6,13 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  tabs: [
+    { id: 'featured', name: 'featured' },
+    { id: 'top-seller', name: 'top-seller' },
+    { id: 'sale-off', name: 'sale-off' },
+    { id: 'top-ratted', name: 'top-ratted' },
+  ],
+
   products: [
     {
       id: 'aenean-ru-bristique-1',
@@ -226,6 +233,14 @@ const initialState = {
   ],
   cart: {
     products: [],
+  },
+
+  isSelected: {
+    featured: {
+      name: 'featured',
+      id: 1,
+      featuredImg: [],
+    },
   },
 };
 
