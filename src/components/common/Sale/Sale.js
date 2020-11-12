@@ -19,19 +19,20 @@ const Sale = ({
       <div className={styles.saleContainer}>
         <div className={styles.firstPhoto}>
           <img src={sofa} />
-          <h1>{content1}</h1>
+          <span></span>
+          <h2>{content1}</h2>
           <h1>{bargain}</h1>
         </div>
         <div className={styles.secondPhoto}>
-          <img src={goldenChair} />
-          <h1>{content2}</h1>
-          <h1>{price}</h1>
           <img src={yellowChair} />
+          <h4>{content2}</h4>
+          <h3>{price}</h3>
+          <img src={goldenChair} />
         </div>
         <div className={styles.thirdPhoto}>
           <img src={bed} />
-          <h1>{content3}</h1>
-          <h1>{info}</h1>
+          <h3>{content3}</h3>
+          <h4>{info}</h4>
         </div>
       </div>
     </div>
