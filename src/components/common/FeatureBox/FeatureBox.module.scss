@@ -38,6 +38,7 @@
     }
 
     &::after {
+      @extend %hover-effect;
       content: "";
       width: 60px;
       height: 60px;
@@ -51,6 +52,7 @@
   }
 
   .content {
+    @extend %hover-effect;
     text-transform: uppercase;
     color: rgb(42, 42, 42);
     margin-top: -0.5rem;
