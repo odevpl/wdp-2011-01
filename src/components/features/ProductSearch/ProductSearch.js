@@ -17,7 +17,7 @@ const ProductSearch = () => (
             <span>select category</span>
           </div>
           <div className={styles.dropdownContent}>
-            <a href='#'>furniture</a>
+            <a href='/shop/furniture'>furniture</a>
             <a href='#'>chair</a>
             <a href='#'>table</a>
             <a href='#'>sofa</a>
