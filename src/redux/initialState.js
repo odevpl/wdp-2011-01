@@ -6,12 +6,6 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
-  tabs: [
-    { id: 'featured', name: 'featured' },
-    { id: 'top-seller', name: 'top-seller' },
-    { id: 'sale-off', name: 'sale-off' },
-    { id: 'top-ratted', name: 'top-ratted' },
-  ],
 
   products: [
     {
@@ -235,13 +229,57 @@ const initialState = {
     products: [],
   },
 
-  isSelected: {
-    featured: {
-      name: 'featured',
-      id: 1,
-      featuredImg: [],
-    },
+  galleryContent: {
+    featured: 'galleryOne',
+    topseller: 'galleryTwo',
+    saleoff: 'galleryThree',
+    topratted: 'galleryFour',
   },
+
+  galleryOne: [
+    {
+      img: 'https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg',
+    },
+    {
+      img: 'https://images.pexels.com/photos/5337386/pexels-photo-5337386.jpeg',
+    },
+    {
+      img: 'https://images.pexels.com/photos/1841149/pexels-photo-1841149.jpeg',
+    },
+  ],
+  galleryTwo: [
+    {
+      img: 'https://images.pexels.com/photos/3773582/pexels-photo-3773582.png',
+    },
+    {
+      img: 'https://images.pexels.com/photos/5337386/pexels-photo-5337386.jpeg',
+    },
+    {
+      img: 'https://images.pexels.com/photos/698170/pexels-photo-698170.jpeg',
+    },
+  ],
+  galleryThree: [
+    {
+      img: 'https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg',
+    },
+    {
+      img: 'https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg',
+    },
+    {
+      img: 'https://images.pexels.com/photos/4210854/pexels-photo-4210854.jpeg',
+    },
+  ],
+  galleryFour: [
+    {
+      img: 'https://images.pexels.com/photos/3773582/pexels-photo-3773582.png',
+    },
+    {
+      img: 'https://images.pexels.com/photos/1648768/pexels-photo-1648768.jpeg',
+    },
+    {
+      img: 'https://images.pexels.com/photos/698170/pexels-photo-698170.jpeg',
+    },
+  ],
 };
 
 export default initialState;

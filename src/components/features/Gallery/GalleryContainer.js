@@ -2,10 +2,10 @@ import { connect } from 'react-redux';
 
 import Gallery from './Gallery';
 
-import { getNew } from '../../../redux/productsRedux.js';
+import { getGallery } from '../../../redux/galleryRedux.js';
 
 const mapStateToProps = state => ({
-  tabs: getNew(state),
+  gallery: state.galleryContent,
 });
 
 export default connect(mapStateToProps)(Gallery);
