@@ -5,12 +5,7 @@ import {
   handleStar,
   handleStyle,
   handleCompare,
-  getProduct,
 } from '../../../redux/productsRedux';
-
-const mapStateToProps = (state, product) => ({
-  product: getProduct(state, product.id),
-});
 
 const mapDispatchToProps = dispatch => ({
   handleFavourite: value => dispatch(handleFavourite(value)),
@@ -19,4 +14,4 @@ const mapDispatchToProps = dispatch => ({
   handleCompare: value => dispatch(handleCompare(value)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductBox);
+export default connect(null, mapDispatchToProps)(ProductBox);
