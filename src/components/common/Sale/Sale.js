@@ -2,37 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Sale.module.scss';
 
-const Sale = ({
-  sofa,
-  goldenChair,
-  yellowChair,
-  bed,
-  content1,
-  bargain,
-  content2,
-  price,
-  content3,
-  info,
-}) => (
+const Sale = ({ saleContent }) => (
   <div className={styles.root}>
     <div className='container'>
       <div className={styles.saleContainer}>
         <div className={styles.firstPhoto}>
-          <img src={sofa} />
+          <img src={saleContent.sofa} />
           <span></span>
-          <h2>{content1}</h2>
-          <h1>{bargain}</h1>
+          <h2>{saleContent.content1}</h2>
+          <h1>{saleContent.bargain}</h1>
         </div>
         <div className={styles.secondPhoto}>
-          <img src={yellowChair} />
-          <h4>{content2}</h4>
-          <h3>{price}</h3>
-          <img src={goldenChair} />
+          <img src={saleContent.yellowChair} />
+          <h4>{saleContent.content2}</h4>
+          <h3>{saleContent.price}</h3>
+          <img src={saleContent.goldenChair} />
         </div>
         <div className={styles.thirdPhoto}>
-          <img src={bed} />
-          <h3>{content3}</h3>
-          <h4>{info}</h4>
+          <img src={saleContent.bed} />
+          <h3>{saleContent.content3}</h3>
+          <h4>{saleContent.info}</h4>
         </div>
       </div>
     </div>
@@ -40,16 +29,7 @@ const Sale = ({
 );
 
 Sale.propTypes = {
-  sofa: PropTypes.node,
-  goldenChair: PropTypes.node,
-  yellowChair: PropTypes.node,
-  bed: PropTypes.node,
-  content1: PropTypes.string,
-  bargain: PropTypes.string,
-  content2: PropTypes.string,
-  price: PropTypes.string,
-  content3: PropTypes.string,
-  info: PropTypes.string,
+  saleContent: PropTypes.node,
 };
 
 export default Sale;
