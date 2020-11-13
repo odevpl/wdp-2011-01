@@ -1,0 +1,24 @@
+@import "../../../styles/settings.scss";
+
+.stars {
+    a {
+      text-decoration: none;
+      color: rgb(42, 42, 42);
+      cursor: pointer;
+    }
+}
+
+.test {
+  color: red;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.stars2 {
+  color: orange;
+  &:hover {
+    cursor: pointer;
+  }
+}
