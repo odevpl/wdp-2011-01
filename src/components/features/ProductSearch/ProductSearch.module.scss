@@ -73,10 +73,55 @@
       }
     }
 
-    button {
+    .searchButton {
+      margin: 0 10px 0 10px;
+    }
+
+    .search {
       border: 0;
       background-color: transparent;
       outline: none;
     }
   }
 }
+
+button:focus {
+ outline: none;
+}
+
+.burgerWrapper {
+  display: none;
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+
+  .searchField input {
+    &::placeholder {
+      font-size: 12px;
+    }
+    .fa-search {
+      font-size: 12px;
+    }
+  }
+
+  .root .searchField input {
+    width: 140px;
+  }
+
+  .root .category {
+    width: 180px;
+    font-size: 12px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .burgerWrapper {
+    margin-left: 10px;
+    display: block;
+    outline: none;
+  }
+}
+
