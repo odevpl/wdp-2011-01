@@ -1,9 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  .row {
-    animation: fadeIn 2s;
-  }
+
   .panelBar {
     margin-bottom: 30px;
     position: relative;
@@ -138,20 +136,3 @@
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity:0;
-  }
-  to {
-    opacity:2;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity:2;
-  }
-  to {
-    opacity:0;
-  }
-}
