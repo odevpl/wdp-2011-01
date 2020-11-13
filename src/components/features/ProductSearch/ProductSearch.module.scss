@@ -93,15 +93,24 @@ button:focus {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 360px) and (max-width: 768px) {
 
+  .searchField input {
+    &::placeholder {
+      font-size: 12px;
+    }
+    .fa-search {
+      font-size: 12px;
+    }
+  }
 
   .root .searchField input {
     width: 140px;
   }
 
-  .root .category select {
-    width: 140px;
+  .root .category {
+    width: 180px;
+    font-size: 12px;
   }
 
   .wrapper {

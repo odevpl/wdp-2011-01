@@ -3,7 +3,6 @@ import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
 import '@szhsin/react-menu/dist/index.css';
 import HamburgerMenu from 'react-hamburger-menu';
 import { NavLink } from 'react-router-dom';
-import styles from './BurgerMenu.module.scss';
 
 const BurgerMenu = () => {
   return (
