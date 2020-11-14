@@ -276,6 +276,31 @@ const initialState = {
   cart: {
     products: [],
   },
+  feedback: [
+    {
+      id: 1,
+      content: 'Suspendisse ac nisl nisi. Proin suscipit, ligula ut pharetra mollis.',
+      photo: 'https://i.ibb.co/0mTvQjz/099962-1.jpg',
+      name: 'John Smith',
+      position: 'Furniture client',
+    },
+    {
+      id: 2,
+      content:
+        'Nullam nulla leo, auctor a fermentum id, vehicula id augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+      photo: 'https://i.ibb.co/0GTZk8M/099947-1.jpg',
+      name: 'Lisa Brown',
+      position: 'Furniture client',
+    },
+    {
+      id: 3,
+      content:
+        'Nullam vel finibus dui. Aenean condimentum nibh id massa imperdiet, ac tempus mauris elementum.',
+      photo: 'https://i.ibb.co/ZmBY6jg/089960-1.jpg',
+      name: 'Marc Leopold',
+      position: 'Furniture client',
+    },
+  ],
 };
 
 export default initialState;
