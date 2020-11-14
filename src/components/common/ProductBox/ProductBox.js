@@ -12,6 +12,7 @@ import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons'
 import Button from '../Button/Button';
 
 const ProductBox = ({
+  image,
   name,
   price,
   promo,
@@ -34,6 +35,7 @@ const ProductBox = ({
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
+        <img src={image} />
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
@@ -56,12 +58,18 @@ const ProductBox = ({
           ))}
         </div>
       </div>
-      <div className={styles.line}></div>
+      <div className={styles.line}>
+      </div>
       <div className={styles.actions}>
-        <div className={styles.outlines}>
-          <Button variant='outline' className={heart ? styles.heart : ''}>
+        <div className={styles.outline}>
+          <Button 
+            className={heart ? styles.heart : ''}
+            variant='outline'
+          >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
+        </div> 
+        <div className={styles.outline}>
           <Button
             className={compare ? styles.compare : ' '}
             variant='outline'
@@ -70,28 +78,23 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
-        <div className={styles.line}></div>
-        <div className={styles.actions}>
-          <div className={styles.outlines}>
-            <Button
-              className={heart ? styles.heart : ' '}
-              variant='outline'
-              onClick={favouriteHandler}
-            >
-              <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-            </Button>
-            <Button variant='outline'>
-              <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-            </Button>
-          </div>
-          <div className={styles.olderPrice}>{olderPrice}</div>
+        
+        <div className={styles.outline}>
+        </div>
+        <div className={styles.outline}>
+        </div>
+       
+        <div className={styles.olderPrice}>
+          <span className='text-right'>{olderPrice}</span>
+        </div>
           <div className={styles.price}>
             <Button noHover variant='small'>
-              $ {price}
+              <h5>
+                $ {price}
+              </h5>
             </Button>
           </div>
         </div>
-      </div>
     </div>
   );
 };
