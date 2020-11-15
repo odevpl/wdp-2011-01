@@ -109,6 +109,16 @@
   }
 }
 
+
+.fadeIn {
+  animation: fadeIn 2s ;
+}
+
+.fadeOut {
+  animation: fadeOut 2s ;
+}
+
+
 @keyframes fadeIn {
   from {
     opacity:0;
