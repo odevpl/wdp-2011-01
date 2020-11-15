@@ -7,7 +7,6 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 class NewFurniture extends React.Component {
-
   state = {
     activePage: 0,
     activeCategory: 'bed',
@@ -28,8 +27,6 @@ class NewFurniture extends React.Component {
   handleFadeIn(newCategory) {
     this.setState({ fadeTrue: true });
     this.setState({ activeCategory: newCategory });
-    this.setState({fadeTrue: this.props.changeFade(newCategory),
-    });
   }
 
   handleRightSwipe() {
@@ -98,6 +95,7 @@ class NewFurniture extends React.Component {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className='row'>
                 {categoryProducts
                   .slice(activePage * 8, (activePage + 1) * 8)
@@ -105,6 +103,19 @@ class NewFurniture extends React.Component {
                     <div key={item.id} className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}>
                       <ProductBox {...item} />
                     </div>
+=======
+              <div className={'col ' + styles.menu}>
+                <ul>
+                  {categories.map(item => (
+                    <li key={item.id}>
+                      <a
+                        className={item.id === activeCategory && styles.active}
+                        onClick={() => this.handleFadeOut(item.id)}
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+>>>>>>> fe31572... Add fading
                   ))}
               </div>
             </div>
@@ -115,7 +126,10 @@ class NewFurniture extends React.Component {
 =======
           <div className={`row`}>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}>
+              <div
+                key={item.id}
+                className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}
+              >
                 <ProductBox {...item} />
               </div>
             ))}
@@ -146,7 +160,10 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+<<<<<<< HEAD
   brands: PropTypes.array,
+=======
+>>>>>>> fe31572... Add fading
   changeFade: PropTypes.func,
 };
 
