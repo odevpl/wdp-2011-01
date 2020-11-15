@@ -1,0 +1,47 @@
+.content {
+    background-color: #363636;
+    color: white;
+    letter-spacing: 10px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    h1, h2 {
+        text-align: center;
+    }
+    h1 {
+        margin-top: 35px;
+        font-weight: 300;
+        span {
+            font-weight: bold;
+        }
+    }
+    h2 {
+        margin-top: 20px;
+        span {
+            color: orange;
+        }
+    }   
+
+}
+
+.breadcrumbs {
+    padding: 10px;
+    background-color: lightgrey;
+
+    .item {
+    display: inline-block;
+    position: relative;
+    padding-right: 5px;
+    }
+    a {
+        padding: 10px;
+    }
+    a:first-child:before {
+        content: ">";
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: black;
+    }
+}
