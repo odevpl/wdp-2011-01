@@ -7,6 +7,7 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 class NewFurniture extends React.Component {
+
   state = {
     activePage: 0,
     activeCategory: 'bed',
@@ -27,6 +28,8 @@ class NewFurniture extends React.Component {
   handleFadeIn(newCategory) {
     this.setState({ fadeTrue: true });
     this.setState({ activeCategory: newCategory });
+    this.setState({fadeTrue: this.props.changeFade(newCategory),
+    });
   }
 
   handleRightSwipe() {
@@ -106,8 +109,19 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </Swipe>
         <Brands brands={brands} />
+=======
+          <div className={`row`}>
+            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
+              <div key={item.id} className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}>
+                <ProductBox {...item} />
+              </div>
+            ))}
+          </div>
+        </div>
+>>>>>>> a0cc3c1... Changes to add fadeIn and fadeOut
       </div>
     );
   }
