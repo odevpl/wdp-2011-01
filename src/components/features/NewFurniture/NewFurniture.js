@@ -7,7 +7,6 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 class NewFurniture extends React.Component {
-
   state = {
     activePage: 0,
     activeCategory: 'bed',
@@ -18,10 +17,16 @@ class NewFurniture extends React.Component {
     this.setState({ activePage: newPage });
   }
 
-  handleCategoryChange(newCategory) {
+  handleFadeOut(newCategory) {
+    this.setState({ fadeTrue: false });
+    setTimeout(() => {
+      this.handleFadeIn(newCategory);
+    }, 2000);
+  }
+
+  handleFadeIn(newCategory) {
+    this.setState({ fadeTrue: true });
     this.setState({ activeCategory: newCategory });
-    this.setState({fadeTrue: this.props.changeFade(newCategory),
-    });
   }
 
   handleRightSwipe() {
@@ -40,7 +45,6 @@ class NewFurniture extends React.Component {
 
     const { categories, products, brands } = this.props;
     const { activeCategory, activePage, fadeTrue } = this.state;
-
 
     const fadeFilter = categories.map(category => {
       return category.fade;
@@ -82,7 +86,7 @@ class NewFurniture extends React.Component {
                         <li key={item.id}>
                           <a
                             className={item.id === activeCategory && styles.active}
-                            onClick={() => this.handleCategoryChange(item.id)}
+                            onClick={() => this.handleFadeOut(item.id)}
                           >
                             {item.name}
                           </a>
@@ -133,6 +137,7 @@ NewFurniture.propTypes = {
     })
   ),
   brands: PropTypes.array,
+  changeFade: PropTypes.func,
 };
 
 NewFurniture.defaultProps = {
