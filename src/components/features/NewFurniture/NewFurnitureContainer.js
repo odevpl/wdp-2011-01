@@ -12,4 +12,9 @@ const mapStateToProps = state => ({
   brands: getAllBrands(state),
 });
 
-export default connect(mapStateToProps)(NewFurniture);
+const mapDispatchToProps = dispatch => ({
+  changeFade: value => dispatch(changeFade(value)),
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewFurniture);
