@@ -5,9 +5,11 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 class NewFurniture extends React.Component {
+
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    fadeTrue: true,
   };
 
   handlePageChange(newPage) {
@@ -16,11 +18,19 @@ class NewFurniture extends React.Component {
 
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
+    this.setState({fadeTrue: this.props.changeFade(newCategory),
+    });
   }
 
   render() {
+
     const { categories, products } = this.props;
-    const { activeCategory, activePage } = this.state;
+    const { activeCategory, activePage, fadeTrue } = this.state;
+
+
+    const fadeFilter = categories.map(category => {
+      return category.fade;
+    });
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
@@ -66,9 +76,9 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
+          <div className={`row`}>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
+              <div key={item.id} className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}>
                 <ProductBox {...item} />
               </div>
             ))}
