@@ -1,10 +1,10 @@
 const initialState = {
   categories: [
-    { id: 'bed', name: 'Bed' },
-    { id: 'chair', name: 'Chair' },
-    { id: 'sofa', name: 'Sofa' },
-    { id: 'table', name: 'Table' },
-    { id: 'dining', name: 'Dining' },
+    { id: 'bed', name: 'Bed', fade: true },
+    { id: 'chair', name: 'Chair', fade: true},
+    { id: 'sofa', name: 'Sofa', fade: false },
+    { id: 'table', name: 'Table', fade: false },
+    { id: 'dining', name: 'Dining', fade: false },
   ],
 
   brands: [
