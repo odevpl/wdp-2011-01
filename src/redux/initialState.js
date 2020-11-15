@@ -13,11 +13,12 @@ const initialState = {
       category: 'bed',
       image: 'src=../../images/bed.jpeg',
       price: 30,
-      stars: 2,
+      stars: 4,
       promo: 'sale',
       newFurniture: true,
       heart: true,
       arrow: false,
+      starChange: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -68,7 +69,6 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       heart: true,
-      arrow: false,
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -93,7 +93,6 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       heart: false,
-      arrow: false,
     },
     {
       id: 'aenean-ru-bristique-8',
