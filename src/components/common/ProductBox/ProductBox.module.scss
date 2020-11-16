@@ -7,9 +7,9 @@
 
   .photo {
     position: relative;
-    height: 700px;
+    height: 250px;
     margin: 0 auto;
-    padding: 5px 5px 1px 5px;
+    padding: 0;
     background: {
       color: #f4f5f7;
       size: contain;
@@ -19,8 +19,8 @@
     overflow: hidden;
     align-items: flex-end;
     width: auto;
-    height: 400px;
-    padding-bottom: 50px;
+    max-width: 260px;
+    height: 250px;
 
     img {
       object-fit: cover;
@@ -48,7 +48,7 @@
       left: 0;
       height: 50px;
       width: 100%;
-      padding: 1px 5px;
+      padding: 1px;
     }
   }
 
@@ -62,6 +62,7 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
+      margin-bottom: 0;
     }
 
     .stars {
@@ -89,18 +90,41 @@
   }
 
   .actions {
-    padding: 15px 10px 10px 10px;
+    padding: 20px 10px 20px 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: space-between;
+    align-content: space-between;
+      .price > .small {
+        padding: 0;
+      }
+      .price h5 {
+        padding-bottom: 0;
+      }
+      .price > h5 {
+        margin-bottom: 0;
+      }
+    
     .olderPrice {
       text-decoration: line-through double $darkGrey;
       font-size: 22px;
-      color: $old-price;
+      color: $lightGrey;
+      text-align: right;
     }
-    .heart,
-    .compare {
-      background-color: $primary;
+    .price h5 {
+      margin-bottom: 0;
+    }
+    .outline {
+      background-color: $white;
+      color: $darkGrey;
+      :hover {
+        color: white;
+        background-color: black;
+      }
+      icon {
+        font-size: 30px;
+        margin-left: auto;
+      }
     }
   }
   &:hover {
@@ -109,20 +133,19 @@
     }
     .price div {
       background-color: $primary;
-      color: black;
+      color: $white;
       font-weight: bold;
+      line-height: 1;
+    }
+    .price > .small {
+      padding-bottom: 0;
+    }
+    .price h5 {
+      margin-bottom: 0;
     }
   }
 
   &:hover .noHover {
     background-color: $primary;
   }
-}
-
-.heart {
-  background-color: $primary;
-}
-
-.compare {
-  background-color: $light-green;
 }
