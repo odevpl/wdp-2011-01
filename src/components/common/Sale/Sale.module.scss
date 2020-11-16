@@ -2,6 +2,7 @@
 
 .root {
   padding: 5rem 0;
+  padding-top: 10px;
 }
  
 .saleContainer {
@@ -17,6 +18,7 @@
   grid-row-start:1;
   grid-row-end: 3;
   position: relative;
+  height: auto;
 
   img {
     height: 100%;
@@ -53,12 +55,12 @@
   }
   span {
     background-color: $latte;
-    width: 92%;
-    height: 92%;
+    width: 90%;
+    height: 90%;
     position: absolute;
     opacity: 0.5;
-    left: 20px;
-    top:20px;
+    left: 30px;
+    top:25px;
   }
 }
 
@@ -67,6 +69,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 65% 35%;
   background-color: #EAEDF7;
+  height: auto;
+  min-height: 300px;
   img {
     height: 100%;
     width: 100%;
@@ -113,6 +117,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   background-color: #FAF3F8;
+  height:auto;
   img {
     height: 100%;
     width: 90%;
@@ -124,7 +129,7 @@
     grid-column-end: 3;
     grid-row-end: 2;
     color: $primary;
-    margin-top: 120px;
+    margin-top: 110px;
     margin-right: 12px;
     text-align: right;
     text-shadow: 3px 2px $milk;
@@ -134,10 +139,53 @@
     grid-column-end: 3;
     grid-row-start: 2; 
     color: $darkGrey;
-    margin-bottom: 130px;
+    margin-bottom: 110px;
     margin-right: 12px;
     text-align: right;
     text-shadow: 3px 2px $milk;
     font-size: 16px;
+  }
+}
+
+/* Screen smaller than 600px: 1 column */
+@media (max-width: 600px) {
+  .saleContainer {
+    grid-template-columns: repeat(1, 1fr);
+    .firstPhoto span {
+      width: 87%;
+      height: 85%;
+      top:25px;
+      left: 25px;
+    }
+  }
+}
+
+/* Screen smaller than 990px: 1 column */
+@media (max-width: 990px) {
+  .saleContainer {
+    grid-template-columns: repeat(1, 1fr);
+    .secondPhoto h2 {
+      margin-top: -130px;
+    }
+    .therdPhoto h4 {
+      margin-bottom: 120px;
+    }
+  }
+}
+
+/* Screen larger than 991px: 2 column */
+@media (min-width: 991px) {
+  .saleContainer {
+    .secondPhoto h2 {
+      margin-top: -150px;
+    }
+    .secondPhoto h4 {
+      margin-top: 145px;
+    }
+    .firstPhoto span {
+      width: 87%;
+      height: 92%;
+      top:30px;
+    }
   }
 }
