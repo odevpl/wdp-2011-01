@@ -54,49 +54,50 @@ class NewFurniture extends React.Component {
     }
 
     return (
-      <Swipe
-        onSwipeLeft={() => this.handleLeftSwipe(pagesCount)}
-        onSwipeRight={() => this.handleRightSwipe()}
-      >
-        <div className={styles.root}>
-          <div className='container'>
-            <div className={styles.panelBar}>
-              <div className='row no-gutters align-items-end'>
-                <div className={'col-auto ' + styles.heading}>
-                  <h3>New furniture</h3>
-                </div>
-                <div className={'col ' + styles.menu}>
-                  <ul>
-                    {categories.map(item => (
-                      <li key={item.id}>
-                        <a
-                          className={item.id === activeCategory && styles.active}
-                          onClick={() => this.handleCategoryChange(item.id)}
-                        >
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className={'col-auto ' + styles.dots}>
-                  <ul>{dots}</ul>
+      <div>
+        <Swipe
+          onSwipeLeft={() => this.handleLeftSwipe(pagesCount)}
+          onSwipeRight={() => this.handleRightSwipe()}
+        >
+          <div className={styles.root}>
+            <div className='container'>
+              <div className={styles.panelBar}>
+                <div className='row no-gutters align-items-end'>
+                  <div className={'col-auto ' + styles.heading}>
+                    <h3>New furniture</h3>
+                  </div>
+                  <div className={'col ' + styles.menu}>
+                    <ul>
+                      {categories.map(item => (
+                        <li key={item.id}>
+                          <a
+                            className={item.id === activeCategory && styles.active}
+                            onClick={() => this.handleCategoryChange(item.id)}
+                          >
+                            {item.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={'col-auto ' + styles.dots}>
+                    <ul>{dots}</ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className='row'>
-              {categoryProducts
-                .slice(activePage * 8, (activePage + 1) * 8)
-                .map(item => (
-                  <div key={item.id} className='col-md-4 col-6 col-lg-3'>
-                    <ProductBox {...item} />
-                  </div>
-                ))}
+              <div className='row'>
+                {categoryProducts
+                  .slice(activePage * 8, (activePage + 1) * 8)
+                  .map(item => (
+                    <div key={item.id} className='col-md-4 col-6 col-lg-3'>
+                      <ProductBox {...item} />
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
-        </div>
-        <Brands brands={brands} /> 
         </Swipe>
+        <Brands brands={brands} />
       </div>
     );
   }

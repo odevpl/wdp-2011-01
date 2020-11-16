@@ -23,7 +23,6 @@ class Brands extends React.Component {
                   ></li>
                 );
               })}
-              ;
             </ul>
             <Button className={styles.button}>
               <span className={styles.arrow}> &gt; </span>
