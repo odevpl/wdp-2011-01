@@ -132,6 +132,7 @@ const initialState = {
       hotDeal: true,
       heart: false,
       arrow: true,
+
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -143,9 +144,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      hotDeal: false,
-      heart: false,
       arrow: false,
+      heart: true,
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -386,7 +387,6 @@ const initialState = {
       newFurniture: true,
     },
   ],
-  
   promoProducts: {
     name: 'indoor',
     spanName: 'furniture',
@@ -410,7 +410,6 @@ const initialState = {
       },
     ],
   },
-
   cart: {
     products: [],
   },
