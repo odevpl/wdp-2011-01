@@ -6,6 +6,33 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+
+  brands: [
+    {
+      id: 'Brand-1',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-2',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+    {
+      id: 'Brand-3',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-4',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+    {
+      id: 'Brand-5',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-6',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+  ],
   products: [
     {
       id: 'aenean-ru-bristique-1',

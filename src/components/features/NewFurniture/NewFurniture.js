@@ -1,6 +1,7 @@
 import React from 'react';
 import Swipe from 'react-easy-swipe';
 import PropTypes from 'prop-types';
+import Brands from '../../layout/Brands/Brands';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
@@ -32,7 +33,7 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, brands } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -94,7 +95,9 @@ class NewFurniture extends React.Component {
             </div>
           </div>
         </div>
-      </Swipe>
+        <Brands brands={brands} /> 
+        </Swipe>
+      </div>
     );
   }
 }
@@ -118,6 +121,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  brands: PropTypes.array,
 };
 
 NewFurniture.defaultProps = {
