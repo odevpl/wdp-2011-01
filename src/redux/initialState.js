@@ -11,7 +11,7 @@ const initialState = {
       id: 'aenean-ru-bristique-1',
       name: 'Aenean Ru Bristique 1',
       category: 'bed',
-      image: 'src=../../images/bed.jpeg',
+      image: 'images/bed.jpeg',
       price: 30,
       stars: 4,
       promo: 'sale',
@@ -19,12 +19,15 @@ const initialState = {
       heart: true,
       arrow: false,
       starChange: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 2,
     },
     {
       id: 'aenean-ru-bristique-2',
       name: 'Aenean Ru Bristique 2',
       category: 'bed',
-      image: 'src=../../images/table.jpeg',
+      image: 'images/table.jpeg',
       price: 30,
       olderPrice: `$ ${50}`,
       stars: 2,
@@ -32,12 +35,15 @@ const initialState = {
       newFurniture: true,
       heart: false,
       arrow: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-3',
       name: 'Aenean Ru Bristique 3',
       category: 'bed',
-      image: 'src=../../images/sofa2.jpeg',
+      image: 'images/sofa2.jpeg',
       price: 30,
       olderPrice: `$ ${35}`,
       stars: 2,
@@ -45,54 +51,69 @@ const initialState = {
       newFurniture: true,
       heart: false,
       arrow: false,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 2,
     },
     {
       id: 'aenean-ru-bristique-4',
       name: 'Aenean Ru Bristique 4',
       category: 'bed',
-      image: 'src=../../images/bed.jpeg',
+      image: 'images/bed.jpeg',
       price: 30,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
       heart: true,
       arrow: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-5',
       name: 'Aenean Ru Bristique 5',
       category: 'bed',
-      image: 'src=../../images/bed2.jpeg',
+      image: 'images/bed2.jpeg',
       price: 30,
       olderPrice: `$ ${60}`,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
       heart: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 0,
     },
     {
       id: 'aenean-ru-bristique-6',
       name: 'Aenean Ru Bristique 6',
       category: 'bed',
-      image: 'src=../../images/table.jpeg',
+      image: 'images/table.jpeg',
       price: 30,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
       heart: false,
       arrow: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-7',
       name: 'Aenean Ru Bristique 7',
       category: 'bed',
-      image: 'src=../../images/bed2.jpeg',
+      image: 'images/bed2.jpeg',
       price: 30,
       olderPrice: `$ ${40}`,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
       heart: false,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -106,6 +127,9 @@ const initialState = {
       newFurniture: true,
       heart: true,
       arrow: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -116,6 +140,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-10',
@@ -126,6 +153,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-11',
@@ -137,6 +167,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -147,6 +180,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-13',
@@ -158,6 +194,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-14',
@@ -168,6 +207,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-15',
@@ -179,6 +221,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-16',
@@ -189,6 +234,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-17',
@@ -199,6 +247,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-18',
@@ -209,6 +260,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-19',
@@ -219,6 +273,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-20',
@@ -230,6 +287,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-21',
@@ -240,6 +300,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-22',
@@ -250,6 +313,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-23',
@@ -260,17 +326,23 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
     {
       id: 'aenean-ru-bristique-24',
       name: 'Aenean Ru Bristique 24',
       category: 'bed',
-      image: 'src=../../images/bed2.jpeg',
+      image: 'images/bed2.jpeg',
       price: 30,
       olderPrice: `$ ${55}`,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      overview:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quantity: 1,
     },
   ],
   cart: {

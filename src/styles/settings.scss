@@ -2,14 +2,15 @@ $darkGrey: #2a2a2a;
 $chocolate: #363636;
 $latte: #434343;
 $grey: #292929;
-$orange:  #d58e32;
+$orange: #d58e32;
 $white: #ffffff;
 $lightGrey: #b6b6b6;
 $cream: #f4f5f7;
 $milk: #e1e1e1;
 $invisibleGrey: #e2e2e2;
-$almostBlack:  rgb(42, 42, 42);
-$anotherWhite:  rgb(216, 216, 216);
+$americanSilver: #d1d1d1;
+$almostBlack: rgb(42, 42, 42);
+$anotherWhite: rgb(216, 216, 216);
 $heavenlyGrey: rgb(169, 169, 169);
 $blackishBlack: rgba(1, 2, 2, 0.2);
 
@@ -19,7 +20,6 @@ $transition: all 0.25s;
 }
 
 //NIE UŻYWANY ZMIENNYCH POWYŻEJ W STYLACH KOMPONENTÓW!!!!!!!!
-
 
 //////COLORS////////
 
@@ -44,9 +44,20 @@ $productBox-half-circle: $grey;
 $productBox-half-circle-text: $white;
 $productBox-underline: $darkGrey;
 $productBoxes-bg: $white;
-$favorite-button:  $darkGrey;
+$favorite-button: $darkGrey;
 $favorite-button-hover-text: $white;
 $favorite-button-hover-bg: $darkGrey;
+
+//PRODUCT PAGE
+$productPage-background-top: grey;
+$productPage-background: white;
+$productPage-header: $milk;
+$productPage-border: $americanSilver;
+$productPage-old-price: $milk;
+$productPage-price: white;
+$productPage-price-background: black;
+$productPage-section-border: gray;
+$productPage-input: $darkGrey;
 
 //NEW FURNITURE SECTION
 $dots: $milk;
@@ -55,7 +66,7 @@ $line-under-newFurniture: $invisibleGrey;
 //FOOTER
 
 $primary: #d58e32;
-$light-green: #90EE90;
+$light-green: #90ee90;
 $headings-footer: $white;
 $footer-text-hover: $white;
 $footer-text: $heavenlyGrey;
@@ -64,14 +75,18 @@ $footer-icons: $heavenlyGrey;
 $footer-claim-bg: $darkGrey;
 $footer-bg: $chocolate;
 
+//SOCIAL MEDIA
+$social-facebook: rgb(59, 89, 152);
+$social-google: rgb(218, 68, 55);
+$social-twitter: rgb(64, 153, 255);
+$social-pinterest: rgb(210, 76, 80);
+$social-linkedin: rgb(47, 143, 194);
+
 //OTHER
 
 $primary: $orange;
 $text-color: $invisibleGrey;
 $form-border-color: $grey;
-
-
-
 
 ///////PADDING////////
 
@@ -81,7 +96,7 @@ $form-border-color: #292929;
 
 $letter-spacing: 1.2px;
 
-$box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+$box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
 
 /* PRODUCT BOX */
 $old-price: #c17700;
