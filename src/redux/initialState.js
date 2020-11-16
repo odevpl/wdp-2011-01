@@ -25,6 +25,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -36,6 +37,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       heart: true,
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -55,6 +57,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      hotDeal: false,
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -235,6 +238,29 @@ const initialState = {
       newFurniture: true,
     },
   ],
+  promoProducts: {
+    name: 'indoor',
+    spanName: 'furniture',
+    subName: 'save up to 50% of all furniture',
+    button: 'shop now',
+    images: [
+      {
+        image:
+          'https://images.pexels.com/photos/2762247/pexels-photo-2762247.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+        imageAlt: 'chair',
+      },
+      {
+        image:
+          'https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+        imageAlt: 'bed',
+      },
+      {
+        image:
+          'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+        imageAlt: 'sofa',
+      },
+    ],
+  },
   cart: {
     products: [],
   },
