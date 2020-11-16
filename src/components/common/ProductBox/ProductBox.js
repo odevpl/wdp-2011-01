@@ -7,6 +7,7 @@ import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-ico
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import Stars from '../Stars/StarsContainer';
+import { Link } from 'react-router-dom';
 
 const ProductBox = ({
   name,
@@ -33,63 +34,65 @@ const ProductBox = ({
     handleCompare(id);
   };
   return (
-    <div className={styles.root}>
-      <div className={styles.photo}>
-        {promo && <div className={styles.sale}>{promo}</div>}
-        <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
-          <Button variant='small'>
-            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-          </Button>
+    <Link to={`/product/${id}`}>
+      <div className={styles.root}>
+        <div className={styles.photo}>
+          {promo && <div className={styles.sale}>{promo}</div>}
+          <div className={styles.buttons}>
+            <Button variant='small'>Quick View</Button>
+            <Button variant='small'>
+              <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+            </Button>
+          </div>
         </div>
-      </div>
-      <div className={styles.content}>
-        <h5>{name}</h5>
-        <Stars
-          rate={stars}
-          handleStar={handleStar}
-          id={id}
-          handleStyle={handleStyle}
-          starChange={starChange}
-        />
-      </div>
-      <div className={styles.line}></div>
-      <div className={styles.actions}>
-        <div className={styles.outlines}>
-          <Button variant='outline' className={heart ? styles.heart : ''}>
-            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-          </Button>
-          <Button
-            className={compare ? styles.compare : ' '}
-            variant='outline'
-            onClick={compareHandler}
-          >
-            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-          </Button>
+        <div className={styles.content}>
+          <h5>{name}</h5>
+          <Stars
+            rate={stars}
+            handleStar={handleStar}
+            id={id}
+            handleStyle={handleStyle}
+            starChange={starChange}
+          />
         </div>
         <div className={styles.line}></div>
         <div className={styles.actions}>
           <div className={styles.outlines}>
-            <Button
-              className={heart ? styles.heart : ' '}
-              variant='outline'
-              onClick={favouriteHandler}
-            >
+            <Button variant='outline' className={heart ? styles.heart : ''}>
               <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
             </Button>
-            <Button variant='outline'>
+            <Button
+              className={compare ? styles.compare : ' '}
+              variant='outline'
+              onClick={compareHandler}
+            >
               <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
             </Button>
           </div>
-          <div className={styles.olderPrice}>{olderPrice}</div>
-          <div className={styles.price}>
-            <Button noHover variant='small'>
-              $ {price}
-            </Button>
+          <div className={styles.line}></div>
+          <div className={styles.actions}>
+            <div className={styles.outlines}>
+              <Button
+                className={heart ? styles.heart : ' '}
+                variant='outline'
+                onClick={favouriteHandler}
+              >
+                <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+              </Button>
+              <Button variant='outline'>
+                <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+              </Button>
+            </div>
+            <div className={styles.olderPrice}>{olderPrice}</div>
+            <div className={styles.price}>
+              <Button noHover variant='small'>
+                $ {price}
+              </Button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
