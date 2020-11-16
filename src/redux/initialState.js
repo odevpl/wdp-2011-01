@@ -138,6 +138,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -149,12 +150,13 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      hotDeal: false,
-      heart: false,
       arrow: false,
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      heart: true,
+      hotDeal: false,
+
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -447,7 +449,6 @@ const initialState = {
       quantity: 1,
     },
   ],
-  
   promoProducts: {
     name: 'indoor',
     spanName: 'furniture',
@@ -471,7 +472,6 @@ const initialState = {
       },
     ],
   },
-
   cart: {
     products: [],
   },
