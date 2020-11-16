@@ -17,7 +17,7 @@ const Footer = ({ children }) => (
     <div className={styles.footerMenu}>
       <div className='container'>
         <div className='row'>
-          <div className='col'>
+          <div className='col-xl-3 col-lg-4 col-md-6 col-sm-*'>
             <div className={styles.menuWrapper}>
               <h6>Information</h6>
               <ul>
@@ -36,7 +36,7 @@ const Footer = ({ children }) => (
               </ul>
             </div>
           </div>
-          <div className='col'>
+          <div className='col-xl-3 col-lg-4 col-md-6 col-sm-*'>
             <div className={styles.menuWrapper}>
               <h6>My account</h6>
               <ul>
@@ -55,9 +55,12 @@ const Footer = ({ children }) => (
               </ul>
             </div>
           </div>
-          <div className='col'>
+          <div className='col-xl-3 col-lg-4 col-md-6 col-sm-*'>
             <div className={styles.menuWrapper}>
-              <h6>Information</h6>
+              <h6>
+                Information
+                {/*this title is in first col, maybe it should be here title: (OUR) PRODUCTS*/}
+              </h6>
               <ul>
                 <li>
                   <a href='#'>Specials</a>
@@ -74,7 +77,7 @@ const Footer = ({ children }) => (
               </ul>
             </div>
           </div>
-          <div className='col'>
+          <div className='col-xl-3 col-lg-4 col-md-6 col-sm-*'>
             <div className={styles.menuWrapper}>
               <h6>Orders</h6>
               <ul>
@@ -100,11 +103,25 @@ const Footer = ({ children }) => (
     <div className={styles.bottomBar}>
       <div className='container'>
         <div className='row align-items-center'>
-          <div className='col'></div>
-          <div className={'col text-center ' + styles.copyright}>
+          <div
+            className={
+              'col-lg-4 col-sm-* text-lg-left text-md-center ' + styles.copyright
+            }
+          >
+            {/*client wants possibility to add some information in this col*/}
+            {/*<p>test text</p>*/}
+          </div>
+          <div
+            className={
+              'col-lg-4 col-md-6 col-sm-* text-lg-center text-md-left ' +
+              styles.copyright
+            }
+          >
             <p>©Copyright 2016 Bazar | All Rights Reserved</p>
           </div>
-          <div className={'col text-right ' + styles.socialMedia}>
+          <div
+            className={'col-lg-4 col-md-6 col-sm-* text-right ' + styles.socialMedia}
+          >
             <ul>
               <li>
                 <a href='#'>
