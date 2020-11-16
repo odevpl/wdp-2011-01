@@ -10,9 +10,4 @@ const mapStateToProps = state => ({
   products: getNew(state),
 });
 
-const mapDispatchToProps = dispatch => ({
-  changeFade: value => dispatch(changeFade(value)),
-});
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(NewFurniture);
+export default connect(mapStateToProps)(NewFurniture);

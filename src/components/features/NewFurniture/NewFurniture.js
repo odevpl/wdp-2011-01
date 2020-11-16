@@ -31,10 +31,6 @@ class NewFurniture extends React.Component {
     const { categories, products } = this.props;
     const { activeCategory, activePage, fadeTrue } = this.state;
 
-    const fadeFilter = categories.map(category => {
-      return category.fade;
-    });
-
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
