@@ -67,17 +67,17 @@
 .secondPhoto {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     background-color: #EBE9DF;
     min-height: 150px;
     img {
         height: 100%;
-        width: 90%;
+        width: 100%;
         object-fit: cover;
-        grid-row-start: 1;
-        grid-row-end: 3;
     }
     .secondWrapper {
         margin-top: 30px;
+        margin-left: 10px;
     h4 {
         grid-column-start: 2;
         grid-column-end: 3;
