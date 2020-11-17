@@ -276,6 +276,12 @@ const initialState = {
   cart: {
     products: [],
   },
+  bannerData: {
+    description: 'Bedroom <span>Furniture</span>',
+    bargain: 'Always <span> 25% </span> off or more',
+    home: 'home',
+    furniture: 'firniture',
+  },
 };
 
 export default initialState;
