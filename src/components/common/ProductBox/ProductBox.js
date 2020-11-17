@@ -3,26 +3,28 @@ import PropTypes from 'prop-types';
 
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faStar,
-  faExchangeAlt,
-  faShoppingBasket,
-} from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import Stars from '../Stars/StarsContainer';
+import { Link } from 'react-router-dom';
 
 const ProductBox = ({
   image,
   name,
   price,
   promo,
+  heart,
+  arrow,
   stars,
   olderPrice,
   handleFavourite,
-  handleCompare,
-  heart,
-  compare,
   id,
+  handleStar,
+  handleStyle,
+  starChange,
+  handleCompare,
+  compare,
 }) => {
   const favouriteHandler = e => {
     e.preventDefault();
@@ -46,17 +48,13 @@ const ProductBox = ({
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <div className={styles.stars}>
-          {[1, 2, 3, 4, 5].map(i => (
-            <a key={i} href='#'>
-              {i <= stars ? (
-                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-              ) : (
-                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-              )}
-            </a>
-          ))}
-        </div>
+        <Stars
+            rate={stars}
+            handleStar={handleStar}
+            id={id}
+            handleStyle={handleStyle}
+            starChange={starChange}
+        />
       </div>
       <div className={styles.line}>
       </div>
@@ -78,12 +76,10 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
-        
         <div className={styles.outline}>
         </div>
         <div className={styles.outline}>
         </div>
-       
         <div className={styles.olderPrice}>
           <span className='text-right'>{olderPrice}</span>
         </div>
@@ -111,7 +107,11 @@ ProductBox.propTypes = {
   handleFavourite: PropTypes.func.isRequired,
   handleCompare: PropTypes.func.isRequired,
   heart: PropTypes.bool,
+  handleStar: PropTypes.func,
+  handleStyle: PropTypes.func,
+  starChange: PropTypes.bool,
   compare: PropTypes.bool,
+  arrow: PropTypes.bool,
 };
 
 export default ProductBox;
