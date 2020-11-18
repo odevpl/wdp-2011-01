@@ -5,59 +5,27 @@
   .leftContainer {
     padding: 0;
     border: 1px solid #e1e1e1;
-  }
-  .hotDealsContainer {
-    display: flex;
-    padding: .5rem;
-    background: $footer-bg;
-
-    h5 {
-      text-transform: capitalize;
-      color: $mainWhite;
-      margin: 0;
-    }
-
-    .dots {
-      ul {
+    .hotDealsContainer {
+      display: flex;
+      background: $footer-bg;
+      h5 {
+        text-transform: capitalize;
+        color: $mainWhite;
         margin: 0;
-        padding: 0;
-        list-style: none;
-        background-color: $footer-bg;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-
-        li {
-          display: inline-block;
-          margin-left: 0.5rem;
-          a.hotDealTrue {
-            background-color: $primary;
-          }
-          a {
-            display: block;
-            width: 13px;
-            height: 13px;
-            border-radius: 6px;
-            background-color: $mainWhite;
-            font-size: 0;
-
-            &.active,
-            &:hover {
-              background-color: $primary;
-              text-decoration: none;
-            }
-          }
-        }
+      }
+      ul {
+        margin-right: 1rem;
       }
     }
+    .promoBoxContainer {
+      height: auto;
+      padding: 0;
+    }
   }
-
   .rightContainer {
     position: relative;
     padding: 0;
     img {
-      display: block;
       width: 100%;
       height: 100%;
     }
@@ -136,5 +104,67 @@
       }
 
     }
+  }
+}
+
+.dots {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $footer-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    li {
+      display: inline-block;
+      margin-left: 0.5rem;
+      a.hotDealTrue {
+        background-color: $primary;
+      }
+      a {
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-radius: 6px;
+        background-color: $mainWhite;
+        font-size: 0;
+
+        &.active,
+        &:hover {
+          background-color: $primary;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 2s ;
+}
+
+.fadeOut {
+  animation: fadeOut 2s ;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:2;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity:2;
+  }
+  to {
+    opacity:0;
   }
 }

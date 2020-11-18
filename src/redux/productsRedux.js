@@ -19,7 +19,12 @@ const createActionName = name => `products/${name}`;
 
 /* action type */
 export const FAVOURITE_HANDLER = createActionName('FAVOURITE_HANDLER');
+<<<<<<< HEAD
 export const CHANGE_HOTDEAL = createActionName('CHANGE_HOTDEAL');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c417223 (Add promo section functionality)
 export const SHINING_STAR = createActionName('SHINING_STAR');
 export const CHANGE_STYLE = createActionName('CHANGE_STYLE');
 export const COMPARE_HANDLER = createActionName('COMPARE_HANDLER');
@@ -31,7 +36,16 @@ export const handleStar = payload => ({ payload, type: SHINING_STAR });
 export const handleStyle = payload => ({ payload, type: CHANGE_STYLE });
 export const handleCompare = payload => ({ payload, type: COMPARE_HANDLER });
 export const changeHotDeal = payload => ({ payload, type: CHANGE_HOTDEAL });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4de80b8 (Add promo section component)
+=======
+
+/* action creator */
+export const handleFavourite = payload => ({ payload, type: FAVOURITE_HANDLER });
+>>>>>>> d2d6751 (Add promo section functionality)
+>>>>>>> c417223 (Add promo section functionality)
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
@@ -69,6 +83,7 @@ export default function reducer(statePart = [], action = {}) {
       });
       return newStatePart;
     }
+<<<<<<< HEAD
     case CHANGE_HOTDEAL: {
       const newStatePart = statePart.map(product => {
         product.hotDeal = false;
@@ -81,6 +96,10 @@ export default function reducer(statePart = [], action = {}) {
       });
       return newStatePart;
     }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c417223 (Add promo section functionality)
     case COMPARE_HANDLER: {
       let compareCounter = 0;
       for (let product of statePart) {
@@ -109,6 +128,8 @@ export default function reducer(statePart = [], action = {}) {
       });
       return newStatePart;
     }
+=======
+>>>>>>> d2d6751 (Add promo section functionality)
     default:
       return statePart;
   }
