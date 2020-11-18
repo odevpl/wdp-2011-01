@@ -1,9 +1,16 @@
 import { connect } from 'react-redux';
 import PromoProductBox from './PromoProductBox';
-import { handleFavourite } from '../../../redux/productsRedux';
+import { getNew, getHotDeal, handleFavourite } from '../../../redux/productsRedux';
+import { getAll } from '../../../redux/categoriesRedux.js';
+
+const mapStateToProps = state => ({
+  categories: getAll(state),
+  products: getNew(state),
+  hotDeal: getHotDeal(state),
+});
 
 const mapDispatchToProps = dispatch => ({
   handleFavourite: value => dispatch(handleFavourite(value)),
 });
 
-export default connect(null, mapDispatchToProps)(PromoProductBox);
+export default connect(mapStateToProps, mapDispatchToProps)(PromoProductBox);

@@ -1,25 +1,25 @@
 import { connect } from 'react-redux';
-
 import PromoProducts from './PromoProducts';
-import {
-  getPromo,
-  getHotDeal,
-  handleFavourite,
-  changeHotDeal,
-} from '../../../redux/productsRedux';
+import { handleFavourite } from '../../../redux/productsRedux';
+
+import { getAll } from '../../../redux/categoriesRedux.js';
+import { getNew, getHotDeal, getPromo } from '../../../redux/productsRedux.js';
 
 const mapStateToProps = state => {
-  const promoProducts = getPromo(state);
-  const hotDealProducts = getHotDeal(state);
-
+  const products = getNew(state);
+  const categories = getAll(state);
+  const hotDeal = getHotDeal(state);
+  const getPromos = getPromo(state);
   return {
-    ...promoProducts,
-    hotDealProducts,
+    products,
+    categories,
+    hotDeal,
+    ...getPromos,
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  changeHotDeal: value => dispatch(changeHotDeal(value)),
+  handleFavourite: value => dispatch(handleFavourite(value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PromoProducts);
