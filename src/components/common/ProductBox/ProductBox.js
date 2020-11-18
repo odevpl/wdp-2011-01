@@ -34,65 +34,73 @@ const ProductBox = ({
     handleCompare(id);
   };
   return (
-    <Link to={`/product/${id}`}>
-      <div className={styles.root}>
+    <div className={styles.root}>
+      <Link to={`/product/${id}`}>
         <div className={styles.photo}>
           {promo && <div className={styles.sale}>{promo}</div>}
           <div className={styles.buttons}>
-            <Button variant='small'>Quick View</Button>
-            <Button variant='small'>
-              <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-            </Button>
+            <Link className={styles.quickView}>
+              <Button variant='small' className={styles.quickView}>
+                Quick View
+              </Button>
+            </Link>
+            <Link className={styles.quickView}>
+              <Button variant='small' className={styles.quickView}>
+                <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+              </Button>
+            </Link>
           </div>
         </div>
-        <div className={styles.content}>
+      </Link>
+      <div className={styles.content}>
+        <Link to={`/product/${id}`}>
           <h5>{name}</h5>
-          <Stars
-            rate={stars}
-            handleStar={handleStar}
-            id={id}
-            handleStyle={handleStyle}
-            starChange={starChange}
-          />
+        </Link>
+        <Stars
+          rate={stars}
+          handleStar={handleStar}
+          id={id}
+          handleStyle={handleStyle}
+          starChange={starChange}
+        />
+      </div>
+      <div className={styles.line}></div>
+      <div className={styles.actions}>
+        <div className={styles.outlines}>
+          <Button variant='outline' className={heart ? styles.heart : ''}>
+            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+          </Button>
+          <Button
+            className={compare ? styles.compare : ' '}
+            variant='outline'
+            onClick={compareHandler}
+          >
+            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+          </Button>
         </div>
         <div className={styles.line}></div>
         <div className={styles.actions}>
           <div className={styles.outlines}>
-            <Button variant='outline' className={heart ? styles.heart : ''}>
+            <Button
+              className={heart ? styles.heart : ' '}
+              variant='outline'
+              onClick={favouriteHandler}
+            >
               <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
             </Button>
-            <Button
-              className={compare ? styles.compare : ' '}
-              variant='outline'
-              onClick={compareHandler}
-            >
+            <Button variant='outline'>
               <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
             </Button>
           </div>
-          <div className={styles.line}></div>
-          <div className={styles.actions}>
-            <div className={styles.outlines}>
-              <Button
-                className={heart ? styles.heart : ' '}
-                variant='outline'
-                onClick={favouriteHandler}
-              >
-                <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-              </Button>
-              <Button variant='outline'>
-                <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-              </Button>
-            </div>
-            <div className={styles.olderPrice}>{olderPrice}</div>
-            <div className={styles.price}>
-              <Button noHover variant='small'>
-                $ {price}
-              </Button>
-            </div>
+          <div className={styles.olderPrice}>{olderPrice}</div>
+          <div className={styles.price}>
+            <Button noHover variant='small'>
+              $ {price}
+            </Button>
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 
