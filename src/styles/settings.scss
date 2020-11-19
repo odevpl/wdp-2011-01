@@ -1,7 +1,7 @@
 $darkGrey: #2a2a2a;
 $chocolate: #363636;
 $latte: #434343;
-$grey: #292929;
+$grey: #a9a9a9;
 $orange: #d58e32;
 $white: #ffffff;
 $lightGrey: #b6b6b6;
@@ -13,6 +13,7 @@ $almostBlack: rgb(42, 42, 42);
 $anotherWhite: rgb(216, 216, 216);
 $heavenlyGrey: rgb(169, 169, 169);
 $blackishBlack: rgba(1, 2, 2, 0.2);
+$transition: all 0.5s;
 
 $transition: all 0.25s;
 %hover-effect {
@@ -81,6 +82,11 @@ $social-google: rgb(218, 68, 55);
 $social-twitter: rgb(64, 153, 255);
 $social-pinterest: rgb(210, 76, 80);
 $social-linkedin: rgb(47, 143, 194);
+//BRANDS
+
+$brands-background: $white;
+$border-color: #e1e1e1;
+$radius: 10%;
 
 //OTHER
 

@@ -6,6 +6,105 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+
+  brands: [
+    {
+      id: 'Brand-1',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-2',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+    {
+      id: 'Brand-3',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-4',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+    {
+      id: 'Brand-5',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-6',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+    {
+      id: 'Brand-7',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-8',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-9',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-10',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-11',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-12',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-13',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+    {
+      id: 'Brand-14',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-15',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+    {
+      id: 'Brand-16',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-17',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+    {
+      id: 'Brand-18',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-19',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-20',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-21',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-22',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-23',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-24',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+  ],
   products: [
     {
       id: 'aenean-ru-bristique-1',
@@ -348,6 +447,31 @@ const initialState = {
   cart: {
     products: [],
   },
+  feedback: [
+    {
+      id: 1,
+      content: 'Suspendisse ac nisl nisi. Proin suscipit, ligula ut pharetra mollis.',
+      photo: 'https://i.ibb.co/0mTvQjz/099962-1.jpg',
+      name: 'John Smith',
+      position: 'Furniture client',
+    },
+    {
+      id: 2,
+      content:
+        'Nullam nulla leo, auctor a fermentum id, vehicula id augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+      photo: 'https://i.ibb.co/0GTZk8M/099947-1.jpg',
+      name: 'Lisa Brown',
+      position: 'Furniture client',
+    },
+    {
+      id: 3,
+      content:
+        'Nullam vel finibus dui. Aenean condimentum nibh id massa imperdiet, ac tempus mauris elementum.',
+      photo: 'https://i.ibb.co/ZmBY6jg/089960-1.jpg',
+      name: 'Marc Leopold',
+      position: 'Furniture client',
+    },
+  ],
 };
 
 export default initialState;

@@ -35,15 +35,23 @@ const ProductBox = ({
   };
   return (
     <div className={styles.root}>
-      <div className={styles.photo}>
-        {promo && <div className={styles.sale}>{promo}</div>}
-        <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
-          <Button variant='small'>
-            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-          </Button>
+      <Link to={`/product/${id}`}>
+        <div className={styles.photo}>
+          {promo && <div className={styles.sale}>{promo}</div>}
+          <div className={styles.buttons}>
+            <Link className={styles.quickView}>
+              <Button variant='small' className={styles.quickView}>
+                Quick View
+              </Button>
+            </Link>
+            <Link className={styles.quickView}>
+              <Button variant='small' className={styles.quickView}>
+                <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+              </Button>
+            </Link>
+          </div>
         </div>
-      </div>
+      </Link>
       <div className={styles.content}>
         <Link to={`/product/${id}`}>
           <h5>{name}</h5>

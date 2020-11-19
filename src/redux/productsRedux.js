@@ -5,6 +5,7 @@ export const getProductById = ({ products }, productId) => {
   const filtered = products.filter(product => product.id === productId);
   return filtered.length ? filtered[0] : { error: true };
 };
+export const getProduct = ({ products }) => products.id;
 
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
