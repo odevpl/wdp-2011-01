@@ -9,7 +9,6 @@ import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 import Feedback from '../../features/Feedback/FeedbackContainer';
 import PromoProducts from '../../features/PromoProducts/PromoProductsContainer';
 
-
 const Homepage = () => (
   <div className={styles.root}>
     <PromoProducts />

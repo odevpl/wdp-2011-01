@@ -107,28 +107,6 @@ class NewFurniture extends React.Component {
                       <ProductBox {...item} />
                     </div>
                   ))}
-                <div className={'col ' + styles.menu}>
-                  <ul>
-                    {categories.map(item => {
-                      const preparedClass =
-                        item.id === activeCategory ? styles.active : '';
-                      return (
-                        <li key={item.id}>
-                          <a
-                            href='/'
-                            className={preparedClass}
-                            onClick={() => this.handleCategoryChange(item.id)}
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-                <div className={'col-auto ' + styles.dots}>
-                  <ul>{dots}</ul>
-                </div>
               </div>
             </div>
           </div>

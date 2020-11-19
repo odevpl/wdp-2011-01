@@ -10,7 +10,7 @@
       background: $footer-bg;
       h5 {
         text-transform: capitalize;
-        color: $mainWhite;
+        color: $cream;
         margin: 0;
       }
       ul {
@@ -43,7 +43,7 @@
         display: flex;
         flex-wrap: wrap;
         text-transform: uppercase;
-        color: $mainWhite;
+        color: $cream;
         position: relative;
         h2 {
           margin: auto;
@@ -61,7 +61,7 @@
           font-size: 1.5rem;
         }
         .promoBtn {
-          background: $mainWhite;
+          background: $cream;
           padding: 1rem;
           border-radius: 4px;
           position: absolute;
@@ -72,7 +72,7 @@
           &:hover {
             background: $footer-bg;
             text-decoration: none;
-            color: $mainWhite;
+            color: $cream;
           }
         }
       }
@@ -86,7 +86,7 @@
       background: $footer-bg;
       z-index: 99;
       a {
-        color: $mainWhite;
+        color: $cream;
         width: 100%;
         height: 100%;
         display: flex;
@@ -129,7 +129,7 @@
         width: 13px;
         height: 13px;
         border-radius: 6px;
-        background-color: $mainWhite;
+        background-color: $cream;
         font-size: 0;
 
         &.active,
