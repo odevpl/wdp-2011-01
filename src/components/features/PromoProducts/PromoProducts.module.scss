@@ -19,6 +19,12 @@
 
     .dots {
       ul {
+    .hotDealsContainer {
+      display: flex;
+      background: $footer-bg;
+      h5 {
+        text-transform: capitalize;
+        color: $cream;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -79,7 +85,7 @@
         display: flex;
         flex-wrap: wrap;
         text-transform: uppercase;
-        color: $white;
+        color: $cream;
         position: relative;
         h2 {
           margin: auto;
@@ -97,7 +103,7 @@
           font-size: 1.5rem;
         }
         .promoBtn {
-          background: $white;
+          background: $cream;
           padding: 1rem;
           border-radius: 4px;
           position: absolute;
@@ -108,7 +114,7 @@
           &:hover {
             background: $footer-bg;
             text-decoration: none;
-            color: $white;
+            color: $cream;
           }
         }
       }
@@ -122,7 +128,7 @@
       background: $footer-bg;
       z-index: 99;
       a {
-        color: $white;
+        color: $cream;
         width: 100%;
         height: 100%;
         display: flex;
