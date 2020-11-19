@@ -3,26 +3,26 @@ import PropTypes from 'prop-types';
 
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import {
+  faStar,
+  faExchangeAlt,
+  faShoppingBasket,
+} from '@fortawesome/free-solid-svg-icons';
+import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
-import Stars from '../Stars/StarsContainer';
 
 const ProductBox = ({
+  image,
   name,
   price,
   promo,
-  heart,
-  arrow,
   stars,
   olderPrice,
   handleFavourite,
-  id,
-  handleStar,
-  handleStyle,
-  starChange,
   handleCompare,
+  heart,
   compare,
+  id,
 }) => {
   const favouriteHandler = e => {
     e.preventDefault();
@@ -35,6 +35,7 @@ const ProductBox = ({
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
+        <img src={image} />
         {promo && <div className={styles.sale}>{promo}</div>}
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
@@ -45,20 +46,26 @@ const ProductBox = ({
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <Stars
-          rate={stars}
-          handleStar={handleStar}
-          id={id}
-          handleStyle={handleStyle}
-          starChange={starChange}
-        />
+        <div className={styles.stars}>
+          {[1, 2, 3, 4, 5].map(i => (
+            <a key={i} href='#'>
+              {i <= stars ? (
+                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
+              ) : (
+                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
+              )}
+            </a>
+          ))}
+        </div>
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
-        <div className={styles.outlines}>
-          <Button variant='outline' className={heart ? styles.heart : ''}>
+        <div className={styles.outline}>
+          <Button className={heart ? styles.heart : ''} variant='outline'>
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
+        </div>
+        <div className={styles.outline}>
           <Button
             className={compare ? styles.compare : ' '}
             variant='outline'
@@ -67,26 +74,17 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
-        <div className={styles.line}></div>
-        <div className={styles.actions}>
-          <div className={styles.outlines}>
-            <Button
-              className={heart ? styles.heart : ' '}
-              variant='outline'
-              onClick={favouriteHandler}
-            >
-              <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-            </Button>
-            <Button variant='outline'>
-              <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-            </Button>
-          </div>
-          <div className={styles.olderPrice}>{olderPrice}</div>
-          <div className={styles.price}>
-            <Button noHover variant='small'>
-              $ {price}
-            </Button>
-          </div>
+
+        <div className={styles.outline}></div>
+        <div className={styles.outline}></div>
+
+        <div className={styles.olderPrice}>
+          <span className='text-right'>{olderPrice}</span>
+        </div>
+        <div className={styles.price}>
+          <Button noHover variant='small'>
+            <h5>$ {price}</h5>
+          </Button>
         </div>
       </div>
     </div>
@@ -105,11 +103,7 @@ ProductBox.propTypes = {
   handleFavourite: PropTypes.func.isRequired,
   handleCompare: PropTypes.func.isRequired,
   heart: PropTypes.bool,
-  handleStar: PropTypes.func,
-  handleStyle: PropTypes.func,
-  starChange: PropTypes.bool,
   compare: PropTypes.bool,
-  arrow: PropTypes.bool,
 };
 
 export default ProductBox;
