@@ -109,32 +109,6 @@
   }
 }
 
-.fadeIn {
-  animation: fadeIn 2s ;
-}
-
-.fadeOut {
-  animation: fadeOut 2s ;
-}
-
-
-@keyframes fadeIn {
-  from {
-    opacity:0;
-  }
-  to {
-    opacity:2;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity:2;
-  }
-  to {
-    opacity:0;
-  }
-}
 
 .fadeIn {
   animation: fadeIn 2s ;
@@ -162,33 +136,3 @@
     opacity:0;
   }
 }
-<<<<<<< HEAD
-
-.fadeIn {
-  animation: fadeIn 2s ;
-}
-
-.fadeOut {
-  animation: fadeOut 2s ;
-}
-
-
-@keyframes fadeIn {
-  from {
-    opacity:0;
-  }
-  to {
-    opacity:2;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity:2;
-  }
-  to {
-    opacity:0;
-  }
-}
-=======
->>>>>>> 46f5878... changes resolved

@@ -2,6 +2,7 @@ import React from 'react';
 import Swipe from 'react-easy-swipe';
 import PropTypes from 'prop-types';
 import Brands from '../../layout/Brands/Brands';
+import ColorFilter from '../ColorFilter/ColorFilter';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
@@ -42,7 +43,6 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-
     const { categories, products, brands } = this.props;
     const { activeCategory, activePage, fadeTrue } = this.state;
 
@@ -95,47 +95,23 @@ class NewFurniture extends React.Component {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className='row'>
                 {categoryProducts
                   .slice(activePage * 8, (activePage + 1) * 8)
                   .map(item => (
-                    <div key={item.id} className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}>
+                    <div
+                      key={item.id}
+                      className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}
+                    >
                       <ProductBox {...item} />
                     </div>
-=======
-              <div className={'col ' + styles.menu}>
-                <ul>
-                  {categories.map(item => (
-                    <li key={item.id}>
-                      <a
-                        className={item.id === activeCategory && styles.active}
-                        onClick={() => this.handleFadeOut(item.id)}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
->>>>>>> fe31572... Add fading
                   ))}
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </Swipe>
         <Brands brands={brands} />
-=======
-          <div className={`row`}>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div
-                key={item.id}
-                className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}
-              >
-                <ProductBox {...item} />
-              </div>
-            ))}
-          </div>
-        </div>
->>>>>>> a0cc3c1... Changes to add fadeIn and fadeOut
+        <ColorFilter></ColorFilter>
       </div>
     );
   }
@@ -160,10 +136,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
-<<<<<<< HEAD
   brands: PropTypes.array,
-=======
->>>>>>> fe31572... Add fading
   changeFade: PropTypes.func,
 };
 
