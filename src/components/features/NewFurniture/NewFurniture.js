@@ -10,13 +10,22 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    fadeTrue: true,
   };
 
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
   }
 
-  handleCategoryChange(newCategory) {
+  handleFadeOut(newCategory) {
+    this.setState({ fadeTrue: false });
+    setTimeout(() => {
+      this.handleFadeIn(newCategory);
+    }, 2000);
+  }
+
+  handleFadeIn(newCategory) {
+    this.setState({ fadeTrue: true });
     this.setState({ activeCategory: newCategory });
   }
 
@@ -34,7 +43,7 @@ class NewFurniture extends React.Component {
 
   render() {
     const { categories, products, brands } = this.props;
-    const { activeCategory, activePage } = this.state;
+    const { activeCategory, activePage, fadeTrue } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
@@ -74,7 +83,7 @@ class NewFurniture extends React.Component {
                         <li key={item.id}>
                           <a
                             className={item.id === activeCategory && styles.active}
-                            onClick={() => this.handleCategoryChange(item.id)}
+                            onClick={() => this.handleFadeOut(item.id)}
                           >
                             {item.name}
                           </a>
@@ -91,7 +100,10 @@ class NewFurniture extends React.Component {
                 {categoryProducts
                   .slice(activePage * 8, (activePage + 1) * 8)
                   .map(item => (
-                    <div key={item.id} className='col-md-4 col-6 col-lg-3'>
+                    <div
+                      key={item.id}
+                      className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}
+                    >
                       <ProductBox {...item} />
                     </div>
                   ))}
@@ -124,7 +136,9 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+
   brands: PropTypes.array,
+  changeFade: PropTypes.func,
 };
 
 NewFurniture.defaultProps = {
