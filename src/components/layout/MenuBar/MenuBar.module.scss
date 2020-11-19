@@ -1,8 +1,8 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-  background-color: #ffffff;
+  box-shadow: 2px 3.464px 6px $searchBox-border;
+  background-color: $menu-bg;
 
   :global(.container) > :global(.row) {
     height: 84px;
@@ -25,6 +25,7 @@
     }
 
     a {
+      @extend %hover-effect;
       color: $text-color;
       text-transform: uppercase;
       font-size: 12px;
@@ -35,11 +36,12 @@
       border-top: 4px solid #ffffff;
       font-weight: 500;
       letter-spacing: 1px;
+      transition: all 0.5s;
 
       &:hover,
       &.active {
         background-color: $primary;
-        color: #ffffff;
+        color: $menu-text-active;
         border-color: $primary;
       }
 
@@ -47,5 +49,29 @@
         border-color: $text-color;
       }
     }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1201px) {
+
+  .root {
+    height: 130px;
+  }
+
+  .search {
+    text-align: center;
+    margin: 10px 0 10px 0;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: center;
+
+  }
+}
+
+@media (max-width: 768px) {
+  .root .menu {
+    display: none;
   }
 }

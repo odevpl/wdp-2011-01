@@ -1,11 +1,9 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  border: 1px solid #b6b6b6;
+  border: 1px solid $feature-box-border;
   text-align: center;
-  display: flex;
-  height: 100%;
-  position: relative;
+  margin-top: 40px;
 
   .iconWrapper {
     height: 60px;
@@ -25,7 +23,7 @@
 
     &::before {
       content: "";
-      border: 1px solid #b6b6b6;
+      border: 1px solid $feature-box-border;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -33,11 +31,12 @@
       width: 76px;
       height: 76px;
       border-radius: 100%;
-      background-color: #ffffff;
+      background-color: $circles-color;
       z-index: -1;
     }
 
     &::after {
+      @extend %hover-effect;
       content: "";
       width: 60px;
       height: 60px;
@@ -46,11 +45,12 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border: 1px solid #b6b6b6;
+      border: 1px solid $feature-box-border;
     }
   }
 
   .content {
+    @extend %hover-effect;
     text-transform: uppercase;
     color: rgb(42, 42, 42);
     margin-top: -0.5rem;
@@ -73,13 +73,25 @@
       color: #ffffff;
 
       &::after {
-        background-color: $primary;
-        border-color: $primary;
+        background-color: $orange;
+        border-color: $orange;
       }
     }
 
     .content {
-      color: $primary;
+      color: $orange;
     }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .root {
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .root {
+    min-width: 300px;
   }
 }
