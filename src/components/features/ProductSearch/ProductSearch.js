@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faListUl, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import BurgerMenu from '../../features/BurgerMenu/BurgerMenu';
+//import BurgerMenu from '../../features/BurgerMenu/BurgerMenu';
 import styles from './ProductSearch.module.scss';
 
 const ProductSearch = () => (
@@ -36,7 +36,7 @@ const ProductSearch = () => (
     </form>
     <span className={styles.burgerWrapper}>
       {' '}
-      <BurgerMenu className={styles.burger} />
+      {/*<BurgerMenu className={styles.burger} /> */}
     </span>
   </div>
 );

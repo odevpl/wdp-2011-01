@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
-//import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-//import Tabs from './Tabs.js';
 
 class Gallery extends React.Component {
   state = {
@@ -25,33 +23,47 @@ class Gallery extends React.Component {
               <h3>Furniture Gallery</h3>
             </div>
             <div className={styles.line}></div>
+            
             <div className='container'>
-              {/*         
-    <Tabs>
-      <Tab><button onClick='featured'>featured</button></Tab>
-      <Tab><button onClick='top-seller'>top seller</button></Tab>
-      <Tab><button onClick='sale-off'>sale off</button></Tab>
-      <Tab><button onClick='ratted'>top ratted</button></Tab>
-    <TabPanel>
-      <h2>Any content 1</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-  </Tabs>
-*/}
-              <div className='tab'>
-                <button onClick='featured'>featured</button>
-                <button onClick='top-seller'>top seller</button>
-                <button onClick='sale-off'>sale off</button>
-                <button onClick='ratted'>top ratted</button>
+              <nav>
+                <div className="nav nav-tabs" id="nav-tab" role="tablist">
+                  <a className="nav-item nav-link active" id="nav-feature-tab" data-toggle="tab" href="#nav-freature" role="tab" aria-controls="nav-freature" aria-selected="true">FREATURE</a>
+                  <a className="nav-item nav-link " id="nav-topseller-tab" data-toggle="tab" href="#nav-topseller" role="tab" aria-controls="nav-topseller" aria-selected="true">TOP SELLER</a>
+                  <a className="nav-item nav-link " id="nav-saleoff-tab" data-toggle="tab" href="#nav-saleoff" role="tab" aria-controls="nav-saleoff" aria-selected="true">SALE OFF</a>
+                  <a className="nav-item nav-link " id="nav-topratted-tab" data-toggle="tab" href="#nav-topratted" role="tab" aria-controls="nav-topratted" aria-selected="true">TOP RATTED</a>
+                </div>
+              </nav>
+              <div className="tab-content" id="nav-tabContent">
+                <div className="tab-pane fade show active" id="nav-freature" role="tabpanel"aria-labelledby="nav-freature-tab">
+                  {/*feature gallery*/}
+                  
+                  <img id="expandedImg" src='../../images/bed7.jpeg' />
+                    
+                  <div className='row'>
+                    <div className='col'>
+                      <img src='../../images/chair1.jpeg' />
+                    </div>
+                    <div className='col'>
+                      <img src='../../images/table1.jpeg' />
+                    </div>
+                    <div className='col'>
+                      <img src='../../images/bed2.jpeg' />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className='featured'>
-                <img src='../../images/bed1.jpeg' />
+              <div className="tab-pane fade " id="nav-topseller" role="tabpanel" aria-labelledby="nav-topseller-tab">
+                {/*top seller gallery*/}
+              </div>
+              <div className="tab-pane fade " id="nav-saleoff" role="tabpanel" aria-labelledby="nav-saleoff-tab">
+                {/*sale off gallery*/}
+              </div>
+              <div className="tab-pane fade " id="nav-saleoff" role="tabpanel" aria-labelledby='nav-topratted-tab'>
+                {/*top ratted gallery</div>*/}
               </div>
             </div>
           </div>
-
+            
           <div className='col-6'>
             <img src='../../images/bed1.jpeg' />
             <h2>
@@ -69,36 +81,8 @@ class Gallery extends React.Component {
 }
 
 Gallery.propTypes = {
-  gallery: PropTypes.array.isRequired,
-  count: PropTypes.number.isRequired,
+  image: PropTypes.any,
+  id: PropTypes.any,
 };
 
 export default Gallery;
-
-{
-  /*
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-
- 
-const Tabs () => {
-  return (
-  <Tabs>
-    <TabList>
-      <Tab>FURNITURE</Tab>
-      <Tab>TOP SELLER</Tab>
-      <Tab>SALE OFF</Tab>
-      <Tab>TOP RATTED</Tab>
-    </TabList>
- 
-    <TabPanel>
-      <h2>Any content 1</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-  </Tabs>
-  );
-};
-export default Tabs;
-*/
-}
