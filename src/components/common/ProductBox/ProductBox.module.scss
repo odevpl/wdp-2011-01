@@ -48,7 +48,12 @@
       left: 0;
       height: 50px;
       width: 100%;
-      padding: 1px;
+      padding: 1px 5px;
+      .quickView {
+        height: 40px;
+        display: block;
+        text-decoration: none;
+      }
     }
   }
 
