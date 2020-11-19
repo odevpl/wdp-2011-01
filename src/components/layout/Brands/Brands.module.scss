@@ -1,0 +1,95 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $brands-background;
+  margin: 0 0 30px 0;
+
+  :global(.container) > :global(.row) {
+    height: auto;
+  }
+
+  .wrapper {
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 30px 0 30px 0;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    position: relative;
+
+    .brandsParent {
+      overflow: hidden;
+    }
+
+    .brandsChild {
+      display: flex;
+      transition-duration: 500ms;
+
+      .image {
+        border: 1px solid $border-color;
+        width: 100%;
+        height: 100%;
+        margin: 0 20px 0 20px;
+
+        img {
+          width: 120px;
+          height: 70px;
+          display: block;
+        }
+      }
+    }
+
+    .button {
+      min-width: 25px;
+      height: 70px;
+      background-color: black;
+      align-items: center;
+      position: relative;
+      border-radius: $radius;
+      cursor: pointer;
+      &:hover .arrow {
+        color: $primary
+      }
+
+      .arrow {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        color: $white;
+        transition: $transition;
+      }
+    }
+
+    .button.buttonTwo {
+      position: absolute;
+      right: 0;
+    }
+
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+      flex-grow: 1;
+      list-style-type: none;
+
+      li {
+        width: 100px;
+        height: 70px;
+        border: 1px solid $border-color;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 5px 0 5px 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .root .wrapper {
+    padding: 15px 0 15px 0;
+  }
+ }
