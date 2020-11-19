@@ -17,21 +17,21 @@ const ProductSearch = () => (
             <span>select category</span>
           </div>
           <div className={styles.dropdownContent}>
-            <a href='#'>furniture</a>
-            <a href='#'>chair</a>
-            <a href='#'>table</a>
-            <a href='#'>sofa</a>
-            <a href='#'>bedroom</a>
-            <a href='#'>blog</a>
+            <a href='/'>furniture</a>
+            <a href='/'>chair</a>
+            <a href='/'>table</a>
+            <a href='/'>sofa</a>
+            <a href='/'>bedroom</a>
+            <a href='/'>blog</a>
           </div>
+          <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
         </div>
-        <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
-      </div>
-      <div className={styles.searchField}>
-        <input placeholder='Search products...' type='text' />
-        <Button className={styles.searchButton}>
-          <FontAwesomeIcon className={styles.icon} icon={faSearch} />
-        </Button>
+        <div className={styles.searchField}>
+          <input placeholder='Search products...' type='text' />
+          <Button className={styles.searchButton}>
+            <FontAwesomeIcon className={styles.icon} icon={faSearch} />
+          </Button>
+        </div>
       </div>
     </form>
     <span className={styles.burgerWrapper}>
