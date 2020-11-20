@@ -35,7 +35,7 @@ const ProductBox = ({
     handleCompare(id);
   };
   return (
-    <div className={styles.root}
+    <div className={styles.root}>
       <Link to={`/product/${id}`}>
         <div className={styles.photo}>
           <img src={image} />
