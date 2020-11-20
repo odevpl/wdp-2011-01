@@ -4,7 +4,6 @@
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
-
   .photo {
     position: relative;
     height: 250px;
@@ -152,5 +151,30 @@
 
   &:hover .noHover {
     background-color: $primary;
+  }
+}
+.heart {
+  background-color: $primary;
+}
+
+.compare {
+  background-color: $light-green;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:2;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity:2;
+  }
+  to {
+    opacity:0;
   }
 }

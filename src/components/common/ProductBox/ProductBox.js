@@ -112,7 +112,7 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
-  olderPrice: PropTypes.number,
+  olderPrice: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
   image: PropTypes.node,
