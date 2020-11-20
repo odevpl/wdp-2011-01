@@ -1,4 +1,5 @@
 import React from 'react';
+import Sale from '../../common/Sale/SaleContainer';
 // import PropTypes from 'prop-types';
 
 import styles from './Homepage.module.scss';
@@ -10,6 +11,7 @@ import Feedback from '../../features/Feedback/FeedbackContainer';
 const Homepage = () => (
   <div className={styles.root}>
     <FeatureBoxes />
+    <Sale />
     <NewFurniture />
     <Feedback />
   </div>
