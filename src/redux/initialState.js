@@ -1,7 +1,7 @@
 const initialState = {
   categories: [
     { id: 'bed', name: 'Bed', fade: true },
-    { id: 'chair', name: 'Chair', fade: true},
+    { id: 'chair', name: 'Chair', fade: true },
     { id: 'sofa', name: 'Sofa', fade: false },
     { id: 'table', name: 'Table', fade: false },
     { id: 'dining', name: 'Dining', fade: false },
@@ -417,6 +417,12 @@ const initialState = {
 
   cart: {
     products: [],
+  },
+  bannerData: {
+    description: 'Bedroom <span>Furniture</span>',
+    bargain: 'Always <span> 25% </span> off or more',
+    home: 'home',
+    furniture: 'firniture',
   },
   feedback: [
     {
