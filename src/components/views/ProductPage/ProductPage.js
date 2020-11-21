@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './ProductPage.module.scss';
 import Button from '../../common/Button/Button';
 import Stars from '../../common/Stars/StarsContainer';
+import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -256,6 +257,7 @@ const ProductPage = ({
           </div>
         </div>
       </div>
+      <NewFurniture />
     </div>
   );
 };

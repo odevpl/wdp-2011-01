@@ -3,7 +3,7 @@
 .root {
   padding: $base-padding 0;
 
-  background: linear-gradient(to bottom, $productPage-background-top 50%, $productPage-background 50%);
+  background: linear-gradient(to bottom, $productPage-background-top 0%, $productPage-background 10%);
 
   .panelBar {
     margin-bottom: 30px;
