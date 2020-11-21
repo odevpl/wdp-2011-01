@@ -311,13 +311,11 @@ const initialState = {
     content2b: 'CHAIR',
     content2c: 'COLLECTION',
     price: '$200.00',
-<<<<<<< HEAD
     content3a: 'SPECIAL',
     content3b: 'COLLECTION',
     info: 'SAVE UP 45% OF FURNITURE',
   },
   feedback: [
-=======
     content3a: 'SPECIAL ',
     content3b: 'COLLECTION',
     info: 'SAVE UP 45% OF FURNITURE',
@@ -332,7 +330,6 @@ const initialState = {
       id: 'feature-2',
       image: 'src=../../images/bed2.jpeg',
     },
->>>>>>> a074401... status after resolved problems to do task
     {
       id: 'feature-3',
       image: 'src=../../images/bed3.jpeg',
