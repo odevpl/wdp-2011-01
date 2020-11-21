@@ -51,11 +51,13 @@ class NewFurniture extends React.Component {
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
+      const preparedClass = i === activePage ? styles.active : '';
       dots.push(
-        <li>
+        <li key={i}>
           <a
+            href='/'
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={preparedClass}
           >
             page {i}
           </a>
@@ -136,6 +138,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+
   brands: PropTypes.array,
   changeFade: PropTypes.func,
 };
