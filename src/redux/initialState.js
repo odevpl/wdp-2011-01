@@ -315,11 +315,6 @@ const initialState = {
     content3b: 'COLLECTION',
     info: 'SAVE UP 45% OF FURNITURE',
   },
-  feedback: [
-    content3a: 'SPECIAL ',
-    content3b: 'COLLECTION',
-    info: 'SAVE UP 45% OF FURNITURE',
-  },
 
   gallery: [
     {
