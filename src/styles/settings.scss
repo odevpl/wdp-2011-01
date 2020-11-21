@@ -1,20 +1,88 @@
-/* BASIC COLORS */
-$mainBlack: #0c0b0b;
-$mainWhite: #fdfcfc;
+$darkGrey: #2a2a2a;
+$chocolate: #363636;
+$latte: #434343;
+$grey:  #A9A9A9;
+$orange:  #d58e32;
+$white: #ffffff;
+$lightGrey: #b6b6b6;
+$cream: #f4f5f7;
+$milk: #e1e1e1;
+$invisibleGrey: #e2e2e2;
+$almostBlack:  rgb(42, 42, 42);
+$anotherWhite:  rgb(216, 216, 216);
+$heavenlyGrey: rgb(169, 169, 169);
+$blackishBlack: rgba(1, 2, 2, 0.2);
+$transition: all 0.5s;
 
-/**/
+$transition: all 0.25s;
+%hover-effect {
+  transition: $transition;
+}
 
-$base-padding: 24px;
+//NIE UŻYWANY ZMIENNYCH POWYŻEJ W STYLACH KOMPONENTÓW!!!!!!!!
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
 
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
+//////COLORS////////
+
+//TOP BAR
+$topBar-text: $white;
+
+//MENU
+$menu-bg: $white;
+$searchBox-border: $blackishBlack;
+$menu-text-active: $white;
+
+//HEADER
+$header-topbar-bg: $latte;
+$header-bg: $chocolate;
+
+//FEATURE BOXES
+$feature-box-border: $lightGrey;
+$circles-color: $white;
+
+//PRODUCT BOXES
+$productBox-half-circle: $grey;
+$productBox-half-circle-text: $white;
+$productBox-underline: $darkGrey;
+$productBoxes-bg: $white;
+$favorite-button:  $darkGrey;
+$favorite-button-hover-text: $white;
+$favorite-button-hover-bg: $darkGrey;
+
+//NEW FURNITURE SECTION
+$dots: $milk;
+$line-under-newFurniture: $invisibleGrey;
+
+//FOOTER
 
 $primary: #d58e32;
+$light-green: #90EE90;
+$headings-footer: $white;
+$footer-text-hover: $white;
+$footer-text: $heavenlyGrey;
+$footer-copyrights: $heavenlyGrey;
+$footer-icons: $heavenlyGrey;
+$footer-claim-bg: $darkGrey;
+$footer-bg: $chocolate;
 
-$text-color: #2a2a2a;
+//BRANDS
+
+$brands-background: $white;
+$border-color: #e1e1e1;
+$radius: 10%;
+
+//OTHER
+
+$primary: $orange;
+$text-color: $invisibleGrey;
+$form-border-color: $grey;
+
+
+
+
+///////PADDING////////
+
+$base-padding: 24px;
 
 $form-border-color: #292929;
 

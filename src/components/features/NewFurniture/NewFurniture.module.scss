@@ -1,6 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
+
   .panelBar {
     margin-bottom: 30px;
     position: relative;
@@ -43,6 +44,7 @@
           font-weight: 600;
 
           a {
+            @extend %hover-effect;
             color: rgb(42, 42, 42);
             position: relative;
             text-decoration: none;
@@ -82,6 +84,7 @@
           margin-left: 0.5rem;
 
           a {
+            @extend %hover-effect;
             display: block;
             width: 13px;
             height: 13px;
@@ -97,5 +100,65 @@
         }
       }
     }
+  }
+  .button {
+    background-color: black;
+    width: 20px;
+    height: 70px;
+    display: block;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 2s ;
+}
+
+.fadeOut {
+  animation: fadeOut 2s ;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:2;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity:2;
+  }
+  to {
+    opacity:0;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 2s ;
+}
+
+.fadeOut {
+  animation: fadeOut 2s ;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:2;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity:2;
+  }
+  to {
+    opacity:0;
   }
 }
