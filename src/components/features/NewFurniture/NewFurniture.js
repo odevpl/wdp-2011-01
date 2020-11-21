@@ -134,6 +134,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+
   brands: PropTypes.array,
   changeFade: PropTypes.func,
 };

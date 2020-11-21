@@ -38,6 +38,7 @@ const ProductBox = ({
     <div className={styles.root}>
       <Link to={`/product/${id}`}>
         <div className={styles.photo}>
+          <img src={image} />
           {promo && <div className={styles.sale}>{promo}</div>}
           <div className={styles.buttons}>
             <Link className={styles.quickView}>

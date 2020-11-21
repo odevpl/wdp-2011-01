@@ -10,6 +10,7 @@ const ProductList = () => (
   </div>
 );
 
+
 // ProductList.propTypes = {};
 
 export default ProductList;
