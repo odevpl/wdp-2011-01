@@ -447,7 +447,7 @@ const initialState = {
     description: 'Bedroom <span>Furniture</span>',
     bargain: 'Always <span> 25% </span> off or more',
     home: 'home',
-    furniture: 'firniture',
+    furniture: 'furniture',
   },
   saleContent: {
     sofa: 'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg',
