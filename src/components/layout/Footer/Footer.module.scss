@@ -18,7 +18,6 @@
         list-style: none;
         li {
           a {
-            @extend %hover-effect;
             font-size: 14px;
             line-height: 30px;
             color: $footer-text;
@@ -69,7 +68,6 @@
           margin-left: 1rem;
 
           a {
-            @extend %hover-effect;
             color: $footer-icons;
             text-decoration: none;
 

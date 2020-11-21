@@ -19,7 +19,6 @@
     .dropdown {
       position: relative;
       .dropdownContainer {
-        @extend %hover-effect;
         color: $primary;
         text-transform: capitalize;
         letter-spacing: $letter-spacing;
@@ -35,7 +34,6 @@
         z-index: 1;
       }
       .dropdownContent a {
-        @extend %hover-effect;
         color: $primary;
         padding: 12px 16px;
         text-decoration: none;

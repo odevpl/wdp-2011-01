@@ -1,12 +1,11 @@
 const initialState = {
   categories: [
-    { id: 'bed', name: 'Bed', fade: true },
-    { id: 'chair', name: 'Chair', fade: true},
-    { id: 'sofa', name: 'Sofa', fade: false },
-    { id: 'table', name: 'Table', fade: false },
-    { id: 'dining', name: 'Dining', fade: false },
+    { id: 'bed', name: 'Bed' },
+    { id: 'chair', name: 'Chair' },
+    { id: 'sofa', name: 'Sofa' },
+    { id: 'table', name: 'Table' },
+    { id: 'dining', name: 'Dining' },
   ],
-
   brands: [
     {
       id: 'Brand-1',
@@ -32,78 +31,6 @@ const initialState = {
       id: 'Brand-6',
       image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
     },
-    {
-      id: 'Brand-7',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-8',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-9',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-10',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-11',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-12',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-13',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
-    },
-    {
-      id: 'Brand-14',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-15',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
-    },
-    {
-      id: 'Brand-16',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-17',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
-    },
-    {
-      id: 'Brand-18',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-19',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-20',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-21',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-22',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-23',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
-    {
-      id: 'Brand-24',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
-    },
   ],
   products: [
     {
@@ -112,12 +39,10 @@ const initialState = {
       category: 'bed',
       image: 'src=../../images/bed1.jpeg',
       price: 30,
-      stars: 4,
+      stars: 2,
       promo: 'sale',
       newFurniture: true,
       heart: true,
-      arrow: false,
-      starChange: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -143,7 +68,6 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       heart: false,
-      arrow: false,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -363,19 +287,8 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-24',
       name: 'Aenean Ru Bristique 24',
-      category: 'chair',
-      image: 'src=../../images/bed2.jpeg',
-      price: 30,
-      olderPrice: `$ ${55}`,
-      stars: 2,
-      promo: 'sale',
-      newFurniture: true,
-    },
-    {
-      id: 'aenean-ru-bristique-24',
-      name: 'Aenean Ru Bristique 24',
-      category: 'table',
-      image: 'src=../../images/bed2.jpeg',
+      category: 'bed',
+      image: 'src=../../images/bed3.jpeg',
       price: 30,
       olderPrice: `$ ${55}`,
       stars: 2,
@@ -383,7 +296,6 @@ const initialState = {
       newFurniture: true,
     },
   ],
-
   cart: {
     products: [],
   },
@@ -399,33 +311,67 @@ const initialState = {
     content2b: 'CHAIR',
     content2c: 'COLLECTION',
     price: '$200.00',
+<<<<<<< HEAD
     content3a: 'SPECIAL',
     content3b: 'COLLECTION',
     info: 'SAVE UP 45% OF FURNITURE',
   },
   feedback: [
+=======
+    content3a: 'SPECIAL ',
+    content3b: 'COLLECTION',
+    info: 'SAVE UP 45% OF FURNITURE',
+  },
+
+  gallery: [
     {
-      id: 1,
-      content: 'Suspendisse ac nisl nisi. Proin suscipit, ligula ut pharetra mollis.',
-      photo: 'https://i.ibb.co/0mTvQjz/099962-1.jpg',
-      name: 'John Smith',
-      position: 'Furniture client',
+      id: 'feature-1',
+      image: 'src=../../images/bed1.jpeg',
     },
     {
-      id: 2,
-      content:
-        'Nullam nulla leo, auctor a fermentum id, vehicula id augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      photo: 'https://i.ibb.co/0GTZk8M/099947-1.jpg',
-      name: 'Lisa Brown',
-      position: 'Furniture client',
+      id: 'feature-2',
+      image: 'src=../../images/bed2.jpeg',
+    },
+>>>>>>> a074401... status after resolved problems to do task
+    {
+      id: 'feature-3',
+      image: 'src=../../images/bed3.jpeg',
     },
     {
-      id: 3,
-      content:
-        'Nullam vel finibus dui. Aenean condimentum nibh id massa imperdiet, ac tempus mauris elementum.',
-      photo: 'https://i.ibb.co/ZmBY6jg/089960-1.jpg',
-      name: 'Marc Leopold',
-      position: 'Furniture client',
+      id: 'topseller-1',
+      image: 'src=../../images/bed4.jpeg',
+    },
+    {
+      id: 'topseller-2',
+      image: 'src=../../images/bed5.jpeg',
+    },
+    {
+      id: 'topseller-3',
+      image: 'src=../../images/bed6.jpeg',
+    },
+    {
+      id: 'saleoff-1',
+      image: 'src=../../images/bed7.jpeg',
+    },
+    {
+      id: 'saleoff-2',
+      image: 'src=../../images/bed8.jpeg',
+    },
+    {
+      id: 'saleoff-3',
+      image: 'src=../../images/chair1.jpeg',
+    },
+    {
+      id: 'topratted-1',
+      image: 'src=../../images/table1.jpeg',
+    },
+    {
+      id: 'topratted-2',
+      image: 'src=../../images/table2.jpeg',
+    },
+    {
+      id: 'topratted-3',
+      image: 'src=../../images/sofa2.jpeg',
     },
   ],
 };
