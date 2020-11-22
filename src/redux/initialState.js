@@ -9,10 +9,17 @@ const initialState = {
   ],
 
   more: [
-    { description: { id: 'description', header: 'tbc' } },
-    { reviews: { id: 'reviews(0)', header: 'Add a review', rating: 'Your Rating' } },
-    { specification: { id: 'specification', header: 'tbc' } },
-    { customTab: { id: 'custom tab', header: 'tbc' } },
+    { description: { id: 'description', header: 'tbc', show: false } },
+    {
+      reviews: {
+        id: 'reviews(0)',
+        header: 'Add a review',
+        rating: 'Your Rating',
+        show: true,
+      },
+    },
+    { specification: { id: 'specification', header: 'tbc', show: false } },
+    { customTab: { id: 'custom tab', header: 'tbc', show: false } },
   ],
 
   brands: [

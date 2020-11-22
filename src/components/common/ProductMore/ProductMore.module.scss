@@ -1,6 +1,44 @@
 @import "../../../styles/settings.scss";
 
-.active {
-    background-color: red;
+.root {
+    margin: 30px 0;
+    .wrapper {
+        width: 100%;
+        min-height: 300px;
+        border:  1px solid $form-border-color;
+
+        .list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: block;
+
+            .item {
+                display: inline-block;
+                border-bottom: 1px solid $form-border-color;
+                border-right: 1px solid $form-border-color;
+                padding: 10px;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+            li.active {
+                display: inline-block;
+                color: $primary;
+                padding: 10px;
+                border-right: 1px solid $form-border-color;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+        }
+    }
 }
+
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+
+
 
