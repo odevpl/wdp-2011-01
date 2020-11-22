@@ -1,10 +1,12 @@
 /* selectors */
 export const getAll = ({ products }) => products;
 export const getCount = ({ products }) => products.length;
-
+export const getPromo = ({ promoProducts }) => promoProducts;
+export const getHotDeal = ({ products }) =>
+  products.filter(product => product.hotDeal === true || product.hotDeal === false);
+export const getProduct = ({ products }) => products.id;
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
-
 export const getCompared = ({ products }) =>
   products.filter(product => product.compare === true);
 
@@ -13,6 +15,11 @@ const createActionName = name => `products/${name}`;
 
 /* action type */
 export const FAVOURITE_HANDLER = createActionName('FAVOURITE_HANDLER');
+export const CHANGE_HOTDEAL = createActionName('CHANGE_HOTDEAL');
+
+/* action creator */
+export const handleFavourite = payload => ({ payload, type: FAVOURITE_HANDLER });
+export const changeHotDeal = payload => ({ payload, type: CHANGE_HOTDEAL });
 export const SHINING_STAR = createActionName('SHINING_STAR');
 export const CHANGE_STYLE = createActionName('CHANGE_STYLE');
 export const COMPARE_HANDLER = createActionName('COMPARE_HANDLER');
@@ -61,6 +68,15 @@ export default function reducer(statePart = [], action = {}) {
       });
       return newStatePart;
     }
+    case CHANGE_HOTDEAL: {
+      const newStatePart = statePart.map(product => {
+        product.hotDeal = false;
+        if (product.id === action.payload) {
+          product.hotDeal = !product.hotDeal;
+          return product;
+        } else {
+          return product;
+        }
     case COMPARE_HANDLER: {
       let compareCounter = 0;
       for (let product of statePart) {
