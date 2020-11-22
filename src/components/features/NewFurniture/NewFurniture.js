@@ -3,6 +3,7 @@ import Swipe from 'react-easy-swipe';
 import PropTypes from 'prop-types';
 import Brands from '../../layout/Brands/Brands';
 import ColorFilter from '../ColorFilter/ColorFilter';
+import TagFilter from '../TagFilter/TagFilter';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';

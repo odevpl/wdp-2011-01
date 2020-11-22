@@ -1,0 +1,19 @@
+@import "../../../styles/settings.scss";
+
+
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    .button {
+        margin: 5px;
+        display: flex;
+    }
+    .icon {
+        display: inline-block;
+        color: grey;
+        margin: auto;
+    }
+}
+
