@@ -1,10 +1,10 @@
 const initialState = {
   categories: [
-    { id: 'bed', name: 'Bed', fade: true },
-    { id: 'chair', name: 'Chair', fade: true },
-    { id: 'sofa', name: 'Sofa', fade: false },
-    { id: 'table', name: 'Table', fade: false },
-    { id: 'dining', name: 'Dining', fade: false },
+    { id: 'bed', name: 'Bed', fade: true, amount: 6 },
+    { id: 'chair', name: 'Chair', fade: true, amount: 4 },
+    { id: 'sofa', name: 'Sofa', fade: false, amount: 5 },
+    { id: 'table', name: 'Table', fade: false, amount: 4 },
+    { id: 'dining', name: 'Dining', fade: false, amount: 6 },
   ],
 
   brands: [
@@ -129,6 +129,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      hotDeal: true,
       heart: false,
       arrow: true,
     },
@@ -142,6 +143,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      hotDeal: false,
       heart: false,
       arrow: false,
     },
@@ -167,6 +169,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      hotDeal: false,
       heart: true,
     },
     {
@@ -383,6 +386,30 @@ const initialState = {
       newFurniture: true,
     },
   ],
+  
+  promoProducts: {
+    name: 'indoor',
+    spanName: 'furniture',
+    subName: 'save up to 50% of all furniture',
+    button: 'shop now',
+    images: [
+      {
+        image:
+          'https://images.pexels.com/photos/2762247/pexels-photo-2762247.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+        imageAlt: 'chair',
+      },
+      {
+        image:
+          'https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+        imageAlt: 'bed',
+      },
+      {
+        image:
+          'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+        imageAlt: 'sofa',
+      },
+    ],
+  },
 
   cart: {
     products: [],
