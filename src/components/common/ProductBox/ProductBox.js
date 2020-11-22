@@ -38,6 +38,7 @@ const ProductBox = ({
     <div className={styles.root}>
       <Link to={`/product/${id}`}>
         <div className={styles.photo}>
+          <img src={image} />
           {promo && <div className={styles.sale}>{promo}</div>}
           <div className={styles.buttons}>
             <Link className={styles.quickView}>
@@ -65,17 +66,13 @@ const ProductBox = ({
           starChange={starChange}
         />
       </div>
-      <div className={styles.line}>
-      </div>
+      <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outline}>
-          <Button 
-            className={heart ? styles.heart : ''}
-            variant='outline'
-          >
+          <Button className={heart ? styles.heart : ''} variant='outline'>
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-        </div> 
+        </div>
         <div className={styles.outline}>
           <Button
             className={compare ? styles.compare : ' '}
@@ -85,23 +82,19 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
-        
-        <div className={styles.outline}>
-        </div>
-        <div className={styles.outline}>
-        </div>
-       
+
+        <div className={styles.outline}></div>
+        <div className={styles.outline}></div>
+
         <div className={styles.olderPrice}>
           <span className='text-right'>{olderPrice}</span>
         </div>
-          <div className={styles.price}>
-            <Button noHover variant='small'>
-              <h5>
-                $ {price}
-              </h5>
-            </Button>
-          </div>
+        <div className={styles.price}>
+          <Button noHover variant='small'>
+            <h5>$ {price}</h5>
+          </Button>
         </div>
+      </div>
     </div>
   );
 };

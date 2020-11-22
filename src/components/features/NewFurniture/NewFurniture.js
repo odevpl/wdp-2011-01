@@ -42,7 +42,6 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-
     const { categories, products, brands } = this.props;
     const { activeCategory, activePage, fadeTrue } = this.state;
 
@@ -101,7 +100,10 @@ class NewFurniture extends React.Component {
                 {categoryProducts
                   .slice(activePage * 8, (activePage + 1) * 8)
                   .map(item => (
-                    <div key={item.id} className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}>
+                    <div
+                      key={item.id}
+                      className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}
+                    >
                       <ProductBox {...item} />
                     </div>
                   ))}
@@ -134,6 +136,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+
   brands: PropTypes.array,
   changeFade: PropTypes.func,
 };
