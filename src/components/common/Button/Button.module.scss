@@ -27,8 +27,6 @@
   font-weight: 400;
 }
 
-
-
 .outline {
   @extend %hover-effect;
   display: inline-block;
@@ -45,4 +43,139 @@
   }
 }
 
+.outlineYellow {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $darkGrey;
+  background-color: white;
+  color: $darkGrey;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
 
+  &:not(.noHover):hover {
+    background-color: $orange;
+    color: white;
+  }
+}
+
+.outlineFacebook {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $darkGrey;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  *:first-child {
+    color: $social-facebook;
+  }
+
+  &:not(.noHover):hover {
+    background-color: $social-facebook;
+    color: white;
+    * {
+      color: white;
+    }
+  }
+}
+
+.outlineGoogle {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $darkGrey;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  *:first-child {
+    color: $social-google;
+  }
+
+  &:not(.noHover):hover {
+    background-color: $social-google;
+    color: white;
+    * {
+      color: white;
+    }
+  }
+}
+
+.outlineTwitter {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $darkGrey;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  *:first-child {
+    color: $social-twitter;
+  }
+
+  &:not(.noHover):hover {
+    background-color: $social-twitter;
+    color: white;
+    * {
+      color: white;
+    }
+  }
+}
+
+.outlinePinterest {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $darkGrey;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  *:first-child {
+    color: $social-pinterest;
+  }
+
+  &:not(.noHover):hover {
+    background-color: $social-pinterest;
+    color: white;
+    * {
+      color: white;
+    }
+  }
+}
+
+.outlineLinkedIn {
+  @extend %hover-effect;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $darkGrey;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.5s;
+
+  *:first-child {
+    color: $social-linkedin;
+  }
+
+  &:not(.noHover):hover {
+    background-color: $social-linkedin;
+    color: white;
+    * {
+      color: white;
+    }
+  }
+}
