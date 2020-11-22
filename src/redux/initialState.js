@@ -1,18 +1,10 @@
 const initialState = {
   categories: [
-<<<<<<< HEAD
     { id: 'bed', name: 'Bed', fade: true, amount: 6 },
     { id: 'chair', name: 'Chair', fade: true, amount: 4 },
     { id: 'sofa', name: 'Sofa', fade: false, amount: 5 },
     { id: 'table', name: 'Table', fade: false, amount: 4 },
     { id: 'dining', name: 'Dining', fade: false, amount: 6 },
-=======
-    { id: 'bed', name: 'Bed', fade: true },
-    { id: 'chair', name: 'Chair', fade: true},
-    { id: 'sofa', name: 'Sofa', fade: false },
-    { id: 'table', name: 'Table', fade: false },
-    { id: 'dining', name: 'Dining', fade: false },
->>>>>>> 49cc6d5... Changes to add fadeIn and fadeOut
   ],
 
   brands: [

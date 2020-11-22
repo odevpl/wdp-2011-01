@@ -1,49 +1,53 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styles from './Tags.module.scss';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTag } from '@fortawesome/free-solid-svg-icons';
 
-const Tags = () => (
+const Tags = ({ tagsContent }) => (
   <div className={styles.buttons}>
     <div className={styles.button}>
       <Button className={styles.button} variant='outline'>
         <FontAwesomeIcon className={styles.icon} icon={faTag}></FontAwesomeIcon>
-        <p>Table</p>
+        <p>{tagsContent.firstTag}</p>
       </Button>
     </div>
     <div className={styles.button}>
       <Button className={styles.button} variant='outline'>
         <FontAwesomeIcon className={styles.icon} icon={faTag}></FontAwesomeIcon>
-        <p>Chair</p>
+        <p>{tagsContent.secondTag}</p>
       </Button>
     </div>
     <div className={styles.button}>
       <Button className={styles.button} variant='outline'>
         <FontAwesomeIcon className={styles.icon} icon={faTag}></FontAwesomeIcon>
-        <p>Hand Bag</p>
+        <p>{tagsContent.thirdTag}</p>
       </Button>
     </div>
     <div className={styles.button}>
       <Button className={styles.button} variant='outline'>
         <FontAwesomeIcon className={styles.icon} icon={faTag}></FontAwesomeIcon>
-        <p>Fashion</p>
+        <p>{tagsContent.forthTag}</p>
       </Button>
     </div>
     <div className={styles.button}>
       <Button className={styles.button} variant='outline'>
         <FontAwesomeIcon className={styles.icon} icon={faTag}></FontAwesomeIcon>
-        <p>Women</p>
+        <p>{tagsContent.fifthTag}</p>
       </Button>
     </div>
     <div className={styles.button}>
       <Button className={styles.button} variant='outline'>
         <FontAwesomeIcon className={styles.icon} icon={faTag}></FontAwesomeIcon>
-        <p>Fashion</p>
+        <p>{tagsContent.sixthTag}</p>
       </Button>
     </div>
   </div>
 );
+
+Tags.propTypes = {
+  tagsContent: propTypes.string,
+};
 
 export default Tags;
