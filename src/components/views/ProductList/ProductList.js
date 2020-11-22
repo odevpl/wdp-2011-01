@@ -2,6 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 import CategoryFilter from '../../features/CategoryFilter/CategoryFilterContainer';
+import TagFilter from '../../features/TagFilter/TagFilter';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Banner from '../../features/Banner/BannerContainer';
 
@@ -16,6 +17,7 @@ const ProductList = () => (
           <div className={styles.rightColumn}>
             <Banner></Banner>
             <CategoryFilter />
+            <TagFilter/>
           </div>
         </Col>
       </Row>
