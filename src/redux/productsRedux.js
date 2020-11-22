@@ -20,7 +20,6 @@ export const FAVOURITE_HANDLER = createActionName('FAVOURITE_HANDLER');
 export const CHANGE_HOTDEAL = createActionName('CHANGE_HOTDEAL');
 
 /* action creator */
-export const handleFavourite = payload => ({ payload, type: FAVOURITE_HANDLER });
 export const changeHotDeal = payload => ({ payload, type: CHANGE_HOTDEAL });
 export const SHINING_STAR = createActionName('SHINING_STAR');
 export const CHANGE_STYLE = createActionName('CHANGE_STYLE');
@@ -79,6 +78,8 @@ export default function reducer(statePart = [], action = {}) {
         } else {
           return product;
         }
+      })
+    }
     case COMPARE_HANDLER: {
       let compareCounter = 0;
       for (let product of statePart) {
