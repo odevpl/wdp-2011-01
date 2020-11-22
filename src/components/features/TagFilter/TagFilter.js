@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './TagFilter.module.scss';
-import Tags from '../Tags/Tags';
+import Tags from '../Tags/TagsContainer';
 
 const TagFilter = () => (
   <div className={styles.filterWrapper}>
