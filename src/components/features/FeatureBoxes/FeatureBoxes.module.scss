@@ -2,4 +2,23 @@
 
 .root {
   padding: 5rem 0;
+
+  .row {
+    justify-content: space-around;
+
+    .column {
+      margin: 10px 10px 40px 10px;
+      border: 1px solid $feature-box-border;
+      max-width: 240px;
+      min-width: 240px;
+    }
+  }
+}
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .column {
+    min-width: 300px;
+  }
 }

@@ -1,9 +1,16 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  border: 1px solid $feature-box-border;
   text-align: center;
-  margin-top: 40px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+   &:hover .iconWrapper::before {
+        border: 1px solid $primary;
+    }
+
 
   .iconWrapper {
     height: 60px;
@@ -53,7 +60,6 @@
     @extend %hover-effect;
     text-transform: uppercase;
     color: rgb(42, 42, 42);
-    margin-top: -0.5rem;
     letter-spacing: 1px;
     font-weight: 300;
     width: 100%;
@@ -84,14 +90,3 @@
   }
 }
 
-@media (min-width: 360px) and (max-width: 767px) {
-  .root {
-    min-width: 200px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .root {
-    min-width: 300px;
-  }
-}
