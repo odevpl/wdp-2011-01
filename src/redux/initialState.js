@@ -5,6 +5,14 @@ const initialState = {
     { id: 'sofa', name: 'Sofa', fade: false, amount: 5 },
     { id: 'table', name: 'Table', fade: false, amount: 4 },
     { id: 'dining', name: 'Dining', fade: false, amount: 6 },
+
+  ],
+
+  more: [
+    { description: { id: 'description', header: 'tbc' } },
+    { reviews: { id: 'reviews(0)', header: 'Add a review', rating: 'Your Rating' } },
+    { specification: { id: 'specification', header: 'tbc' } },
+    { customTab: { id: 'custom tab', header: 'tbc' } },
   ],
 
   brands: [

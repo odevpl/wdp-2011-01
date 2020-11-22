@@ -1,5 +1,6 @@
 import React from 'react';
 import Sale from '../../common/Sale/SaleContainer';
+import ProductMore from '../../common/ProductMore/ProductMoreContainer';
 // import PropTypes from 'prop-types';
 
 import styles from './Homepage.module.scss';
@@ -14,6 +15,7 @@ const Homepage = () => (
     <PromoProducts />
     <FeatureBoxes />
     <Sale />
+    <ProductMore />
     <NewFurniture />
     <Feedback />
   </div>
