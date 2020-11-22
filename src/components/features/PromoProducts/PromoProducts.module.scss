@@ -13,7 +13,7 @@
 
     h5 {
       text-transform: capitalize;
-      color: $mainWhite;
+      color: $white;
       margin: 0;
     }
 
@@ -39,7 +39,7 @@
             width: 13px;
             height: 13px;
             border-radius: 6px;
-            background-color: $mainWhite;
+            background-color: $white;
             font-size: 0;
 
             &.active,
@@ -75,7 +75,7 @@
         display: flex;
         flex-wrap: wrap;
         text-transform: uppercase;
-        color: $mainWhite;
+        color: $white;
         position: relative;
         h2 {
           margin: auto;
@@ -93,7 +93,7 @@
           font-size: 1.5rem;
         }
         .promoBtn {
-          background: $mainWhite;
+          background: $white;
           padding: 1rem;
           border-radius: 4px;
           position: absolute;
@@ -104,7 +104,7 @@
           &:hover {
             background: $footer-bg;
             text-decoration: none;
-            color: $mainWhite;
+            color: $white;
           }
         }
       }
@@ -118,7 +118,7 @@
       background: $footer-bg;
       z-index: 99;
       a {
-        color: $mainWhite;
+        color: $white;
         width: 100%;
         height: 100%;
         display: flex;
