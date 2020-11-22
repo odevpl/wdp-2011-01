@@ -1,12 +1,13 @@
 @import "../../../styles/settings.scss";
 
 .root {
+
   .panelBar {
     margin-bottom: 30px;
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid $line-under-newFurniture;
+      border-bottom: 4px solid #e2e2e2;
     }
 
     .heading {
@@ -27,7 +28,7 @@
         bottom: -4px;
         left: 0;
         width: 45px;
-        border-bottom: 4px solid $orange;
+        border-bottom: 4px solid $primary;
       }
     }
 
@@ -58,7 +59,7 @@
                 bottom: -4px;
                 left: 0;
                 width: 100%;
-                border-bottom: 4px solid $orange;
+                border-bottom: 4px solid $primary;
               }
             }
           }
@@ -88,7 +89,7 @@
             width: 13px;
             height: 13px;
             border-radius: 6px;
-            background-color: $dots;
+            background-color: #e1e1e1;
             font-size: 0;
 
             &.active,
@@ -108,3 +109,56 @@
   }
 }
 
+.fadeIn {
+  animation: fadeIn 2s ;
+}
+
+.fadeOut {
+  animation: fadeOut 2s ;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:2;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity:2;
+  }
+  to {
+    opacity:0;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 2s ;
+}
+
+.fadeOut {
+  animation: fadeOut 2s ;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:2;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity:2;
+  }
+  to {
+    opacity:0;
+  }
+}

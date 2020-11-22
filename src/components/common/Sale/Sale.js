@@ -9,21 +9,29 @@ const Sale = ({ saleContent }) => (
         <div className={styles.firstPhoto}>
           <img src={saleContent.sofa} />
           <span></span>
-          <h3>{saleContent.content1a}</h3>
-          <h2>{saleContent.content1b}</h2>
+          <h2>{saleContent.content1a}</h2>
+          <p>{saleContent.content1b}</p>
           <h1>{saleContent.bargain}</h1>
         </div>
         <div className={styles.secondPhoto}>
-          <img src={saleContent.yellowChair} />
-          <h2><strong>{saleContent.content2a}</strong>{saleContent.content2b}</h2>
-          <h4>{saleContent.content2c}</h4>
-          <h3>{saleContent.price}</h3>
-          <img src={saleContent.goldenChair} />
+          <img className={styles.doggo} src={saleContent.yellowChair} />
+          <div className={styles.secondWrapper}>
+            <h4 className={styles.contentBold}>{saleContent.content2a}</h4>
+            <h4 className={styles.contentNormal}>{saleContent.content2b}</h4>
+            <h6 className={styles.contentSmall}>{saleContent.content2c}</h6>
+            <h3>{saleContent.price}</h3>
+          </div>
+          <img className={styles.chair} src={saleContent.goldenChair} />
         </div>
         <div className={styles.thirdPhoto}>
           <img src={saleContent.bed} />
-          <h3><strong>{saleContent.content3a}</strong>{saleContent.content3b}</h3>
-          <h4>{saleContent.info}</h4>
+          <div className={styles.thirdWrapper}>
+            <div>
+              <h4 className={styles.thirdBold}>{saleContent.content3a}</h4>
+              <h4 className={styles.thirdNormal}>{saleContent.content3b}</h4>
+            </div>
+            <h5>{saleContent.info}</h5>
+          </div>
         </div>
       </div>
     </div>

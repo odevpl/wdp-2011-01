@@ -36,24 +36,34 @@ const ProductBox = ({
   };
   return (
     <div className={styles.root}>
-      <div className={styles.photo}>
-        <img src={image} />
-        {promo && <div className={styles.sale}>{promo}</div>}
-        <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
-          <Button variant='small'>
-            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-          </Button>
+      <Link to={`/product/${id}`}>
+        <div className={styles.photo}>
+          <img src={image} />
+          {promo && <div className={styles.sale}>{promo}</div>}
+          <div className={styles.buttons}>
+            <Link className={styles.quickView}>
+              <Button variant='small' className={styles.quickView}>
+                Quick View
+              </Button>
+            </Link>
+            <Link className={styles.quickView}>
+              <Button variant='small' className={styles.quickView}>
+                <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+              </Button>
+            </Link>
+          </div>
         </div>
-      </div>
+      </Link>
       <div className={styles.content}>
-        <h5>{name}</h5>
+        <Link to={`/product/${id}`}>
+          <h5>{name}</h5>
+        </Link>
         <Stars
-            rate={stars}
-            handleStar={handleStar}
-            id={id}
-            handleStyle={handleStyle}
-            starChange={starChange}
+          rate={stars}
+          handleStar={handleStar}
+          id={id}
+          handleStyle={handleStyle}
+          starChange={starChange}
         />
       </div>
       <div className={styles.line}>
@@ -76,10 +86,12 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
+
         <div className={styles.outline}>
         </div>
         <div className={styles.outline}>
         </div>
+
         <div className={styles.olderPrice}>
           <span className='text-right'>{olderPrice}</span>
         </div>
@@ -100,7 +112,7 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
-  olderPrice: PropTypes.number,
+  olderPrice: PropTypes.string,
   promo: PropTypes.string,
   stars: PropTypes.number,
   image: PropTypes.node,

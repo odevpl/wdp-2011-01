@@ -32,7 +32,7 @@
     left: 60px;
     color: $milk;
     font-size: 57px;
-    text-shadow: 1px 1px  black;
+    text-shadow: 1px 1px $darkGrey;
     font-weight: bold;
   }
   h1 {
@@ -156,9 +156,6 @@
       height: 85%;
       top:25px;
       left: 25px;
-    }
-  }
-}
 
 /* Screen smaller than 990px: 1 column */
 @media (max-width: 990px) {

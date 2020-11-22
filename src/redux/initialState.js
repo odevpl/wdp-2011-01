@@ -1,10 +1,10 @@
 const initialState = {
   categories: [
-    { id: 'bed', name: 'Bed' },
-    { id: 'chair', name: 'Chair' },
-    { id: 'sofa', name: 'Sofa' },
-    { id: 'table', name: 'Table' },
-    { id: 'dining', name: 'Dining' },
+    { id: 'bed', name: 'Bed', fade: true },
+    { id: 'chair', name: 'Chair', fade: true},
+    { id: 'sofa', name: 'Sofa', fade: false },
+    { id: 'table', name: 'Table', fade: false },
+    { id: 'dining', name: 'Dining', fade: false },
   ],
 
   brands: [
@@ -32,6 +32,78 @@ const initialState = {
       id: 'Brand-6',
       image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
     },
+    {
+      id: 'Brand-7',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-8',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-9',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-10',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-11',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-12',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-13',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+    {
+      id: 'Brand-14',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-15',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+    {
+      id: 'Brand-16',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-17',
+      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+    },
+    {
+      id: 'Brand-18',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-19',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-20',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-21',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-22',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-23',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
+    {
+      id: 'Brand-24',
+      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+    },
   ],
   products: [
     {
@@ -57,6 +129,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      hotDeal: true,
       heart: false,
       arrow: true,
     },
@@ -70,6 +143,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      hotDeal: false,
       heart: false,
       arrow: false,
     },
@@ -95,6 +169,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      hotDeal: false,
       heart: true,
     },
     {
@@ -300,6 +375,31 @@ const initialState = {
       newFurniture: true,
     },
   ],
+  
+  promoProducts: {
+    name: 'indoor',
+    spanName: 'furniture',
+    subName: 'save up to 50% of all furniture',
+    button: 'shop now',
+    images: [
+      {
+        image:
+          'https://images.pexels.com/photos/2762247/pexels-photo-2762247.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+        imageAlt: 'chair',
+      },
+      {
+        image:
+          'https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+        imageAlt: 'bed',
+      },
+      {
+        image:
+          'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+        imageAlt: 'sofa',
+      },
+    ],
+  },
+
   cart: {
     products: [],
   },
