@@ -157,8 +157,8 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      heart: true,
       hotDeal: false,
-
     },
     {
       id: 'aenean-ru-bristique-4',
