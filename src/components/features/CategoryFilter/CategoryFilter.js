@@ -22,7 +22,6 @@ const CategoryFilter = ({ categories }) => {
 
 CategoryFilter.propTypes = {
   categories: PropTypes.array,
-  map: PropTypes.func,
 };
 
 export default CategoryFilter;
