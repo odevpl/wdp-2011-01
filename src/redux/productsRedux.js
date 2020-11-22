@@ -5,10 +5,8 @@ export const getPromo = ({ promoProducts }) => promoProducts;
 export const getHotDeal = ({ products }) =>
   products.filter(product => product.hotDeal === true || product.hotDeal === false);
 export const getProduct = ({ products }) => products.id;
-
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
-
 export const getCompared = ({ products }) =>
   products.filter(product => product.compare === true);
 
