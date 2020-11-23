@@ -2,6 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 import CategoryFilter from '../../features/CategoryFilter/CategoryFilterContainer';
+import ColorFilter from '../../features/ColorFilter/ColorFilter';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const ProductList = () => (
@@ -15,6 +16,7 @@ const ProductList = () => (
         <Col xs md={4} lg={3} className={styles.filters}>
           <div className={styles.rightColumn}>
             <CategoryFilter />
+            <ColorFilter />
           </div>
         </Col>
       </Row>
