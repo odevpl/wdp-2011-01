@@ -59,5 +59,28 @@
             background-color: $white;
         }
     }
-  }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+    
+    .root .inputs {
+        flex-direction: column;
+        align-items: center;
+
+        .continue {
+           width: 50%;
+           text-align: center;
+
+           &:hover {
+           font-weight: bolder;
+           }
+        }
+    }
+
+     input {
+        width: 100%;
+        margin: 20px 0;
+     }
+
+}
 
