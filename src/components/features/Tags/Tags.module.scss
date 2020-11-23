@@ -9,10 +9,13 @@
     .button {
         margin: 5px;
         display: flex;
+        &:hover {
+            color: $milk;
+        }
     }
     .icon {
         display: inline-block;
-        color: grey;
+        color: $latte;
         margin: auto;
     }
 }
