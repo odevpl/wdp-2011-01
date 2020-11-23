@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,7 +8,6 @@ import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-ico
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import Stars from '../Stars/StarsContainer';
-import { Link } from 'react-router-dom';
 
 const ProductBox = ({
   image,
@@ -66,17 +66,13 @@ const ProductBox = ({
           starChange={starChange}
         />
       </div>
-      <div className={styles.line}>
-      </div>
+      <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outline}>
-          <Button 
-            className={heart ? styles.heart : ''}
-            variant='outline'
-          >
+          <Button className={heart ? styles.heart : ''} variant='outline'>
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-        </div> 
+        </div>
         <div className={styles.outline}>
           <Button
             className={compare ? styles.compare : ' '}
@@ -86,23 +82,19 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
-
         <div className={styles.outline}>
         </div>
         <div className={styles.outline}>
         </div>
-
         <div className={styles.olderPrice}>
           <span className='text-right'>{olderPrice}</span>
         </div>
-          <div className={styles.price}>
-            <Button noHover variant='small'>
-              <h5>
-                $ {price}
-              </h5>
-            </Button>
-          </div>
+        <div className={styles.price}>
+          <Button noHover variant='small'>
+            <h5>$ {price}</h5>
+          </Button>
         </div>
+      </div>
     </div>
   );
 };
