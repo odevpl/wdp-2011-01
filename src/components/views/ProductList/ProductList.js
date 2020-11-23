@@ -6,10 +6,6 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import Banner from '../../features/Banner/BannerContainer';
 
 const ProductList = () => (
-  <div>
-    <div className={styles.root}>This is ProductList</div>
-
-const ProductList = () => (
   <div className={styles.root}>
     <Grid>
       <Row>
