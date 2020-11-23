@@ -70,7 +70,7 @@ class PromoProducts extends React.Component {
         this.setState({ activeImage: imageId - 1 });
         this.handleFadeInRight();
       }
-    }, 2000);
+    }, 1000);
   }
 
   handleImageRight(e, imageId) {
@@ -84,7 +84,7 @@ class PromoProducts extends React.Component {
         this.setState({ activeImage: imageId + 1 });
         this.handleFadeInRight();
       }
-    }, 2000);
+    }, 1000);
   }
   handleFadeOutRight() {
     this.setState({ fadeRight: false });
@@ -95,13 +95,9 @@ class PromoProducts extends React.Component {
   }
 
   render() {
-    const { categories, hotDeal, name, spanName, subName, images } = this.props;
+    const { hotDeal, name, spanName, subName, images, promoCategory } = this.props;
     const { activeCategory, activeImage, fadeRight, fadeLeft } = this.state;
-
     const categoryProduct = hotDeal.filter(item => item.category === activeCategory);
-    const newCategory = categories.filter(
-      item => item.name === 'Bed' || item.name === 'Chair' || item.name === 'Sofa'
-    );
 
     const currentImage = images.filter(item => item.id === activeImage);
 
@@ -117,9 +113,9 @@ class PromoProducts extends React.Component {
                 </div>
                 <div className={`col-5 ${styles.dots}`}>
                   <ul>
-                    {newCategory.map((item, id) => {
+                    {promoCategory.map((item, id) => {
                       const preparedClass =
-                        item.id === activeCategory ? styles.active : '';
+                        item.category === activeCategory ? styles.active : '';
                       return (
                         <li key={id}>
                           <a
@@ -150,7 +146,7 @@ class PromoProducts extends React.Component {
                   key={id}
                   src={item.image}
                   alt={item.imageAlt}
-                  className={fadeRight ? styles.fadeIn : styles.fadeOut}
+                  className={fadeRight ? styles.fadeInRight : styles.fadeOutRight}
                 />
               ))}
               <div className='row'>
@@ -200,6 +196,7 @@ PromoProducts.propTypes = {
       name: PropTypes.string,
     })
   ),
+  promoCategory: PropTypes.array,
   hotDeal: PropTypes.bool,
   name: PropTypes.string,
   spanName: PropTypes.string,

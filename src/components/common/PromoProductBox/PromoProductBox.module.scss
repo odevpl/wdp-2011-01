@@ -124,17 +124,54 @@
   }
 
   .actions {
-    padding: 15px 10px 10px 10px;
+    padding: 20px 10px 20px 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    .olderPrice {
-      text-decoration: line-through double $almostBlack;
-      font-size: 22px;
-      color: $old-price;
+    align-content: space-between;
+    .price > .small {
+      padding: 0;
     }
-    .heart {
+    .price h5 {
+      padding-bottom: 0;
+    }
+    .price > h5 {
+      margin-bottom: 0;
+    }
+
+    .olderPrice {
+      text-decoration: line-through double $darkGrey;
+      font-size: 22px;
+      color: $lightGrey;
+      text-align: right;
+    }
+    .price h5 {
+      margin-bottom: 0;
+    }
+    .outline {
+      background-color: $white;
+      color: $darkGrey;
+      :hover {
+        color: white;
+        background-color: black;
+      }
+      icon {
+        font-size: 30px;
+        margin-left: auto;
+      }
+    }
+  }
+  &:hover {
+    .price div {
       background-color: $primary;
+      color: $white;
+      font-weight: bold;
+      line-height: 1;
+    }
+    .price > .small {
+      padding-bottom: 0;
+    }
+    .price h5 {
+      margin-bottom: 0;
     }
   }
 }

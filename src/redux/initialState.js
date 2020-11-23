@@ -126,6 +126,7 @@ const initialState = {
       id: 'aenean-ru-bristique-2',
       name: 'Aenean Ru Bristique 2',
       category: 'bed',
+      promoCategory: true,
       image:
         'https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       imageAlt: 'chair',
@@ -145,6 +146,7 @@ const initialState = {
       id: 'aenean-ru-bristique-3',
       name: 'Aenean Ru Bristique 3',
       category: 'chair',
+      promoCategory: true,
       image:
         'https://images.pexels.com/photos/2029722/pexels-photo-2029722.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       imageAlt: 'bed',
@@ -179,6 +181,7 @@ const initialState = {
       id: 'aenean-ru-bristique-5',
       name: 'Aenean Ru Bristique 5',
       category: 'sofa',
+      promoCategory: true,
       image:
         'https://images.pexels.com/photos/133919/pexels-photo-133919.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       imageAlt: 'sofa',

@@ -7,9 +7,11 @@ export const getProductById = ({ products }, productId) => {
   return filtered.length ? filtered[0] : { error: true };
 };
 
-export const getProduct = ({ products }) => products.id;
+export const getPromoCategory = ({ products }) =>
+  products.filter(category => category.promoCategory === true);
 
 export const getPromo = ({ promoProducts }) => promoProducts;
+
 export const getHotDeal = ({ products }) =>
   products.filter(product => product.hotDeal === true || product.hotDeal === false);
 
