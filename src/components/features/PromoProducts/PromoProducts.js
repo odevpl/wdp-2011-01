@@ -47,7 +47,7 @@ const PromoProducts = ({ name, spanName, subName, images, hotDealProducts }) => 
             </div>
             <PromoProductBox hotDealProducts={hotDealProducts} />
           </div>
-          <div className={`col-8 ${styles.rightContainer}`}>
+          <div className={`col-md-8 ${styles.rightContainer}`}>
             <img
               src='https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
               alt=''
