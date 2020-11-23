@@ -82,7 +82,8 @@ export default function reducer(statePart = [], action = {}) {
         } else {
           return product;
         }
-      })
+      });
+      return newStatePart;
     }
     case COMPARE_HANDLER: {
       let compareCounter = 0;
