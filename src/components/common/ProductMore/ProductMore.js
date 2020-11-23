@@ -14,14 +14,30 @@ class ProductMore extends React.Component {
   render() {
     const { more } = this.props;
     const { activeCart } = this.state;
+    let showCart;
 
-    const showCart = more.filter(item => {
+    more.filter(item => {
       for (let key in item) {
-        return item[key].show === true;
+        if (item[key].id === 'description' && item[key].id === this.state.activeCart) {
+          showCart = <div> Description component to be displayed </div>;
+        } else if (
+          item[key].id === 'reviews(0)' &&
+          item[key].id === this.state.activeCart
+        ) {
+          showCart = <div> r</div>;
+        } else if (
+          item[key].id === 'specification' &&
+          item[key].id === this.state.activeCart
+        ) {
+          showCart = <div> Specification component to be displayed </div>;
+        } else if (
+          item[key].id === 'custom tab' &&
+          item[key].id === this.state.activeCart
+        ) {
+          showCart = <div> Custom Tab component to be displayed</div>;
+        }
       }
     });
-
-    console.log(showCart);
 
     return (
       <div className={styles.root}>
@@ -45,13 +61,7 @@ class ProductMore extends React.Component {
                 }
               })}
             </ul>
-            {more.map(item => {
-              for (let key in item) {
-                const preparedClass =
-                  item[key].id === activeCart ? styles.show : styles.hide;
-                return <div className={preparedClass}>{item[key].id}</div>;
-              }
-            })}
+            {showCart}
           </div>
         </div>
       </div>
