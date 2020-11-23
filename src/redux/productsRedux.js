@@ -1,6 +1,10 @@
 /* selectors */
 export const getAll = ({ products }) => products;
 export const getCount = ({ products }) => products.length;
+export const getProductById = ({ products }, productId) => {
+  const filtered = products.filter(product => product.id === productId);
+  return filtered.length ? filtered[0] : { error: true };
+};
 export const getPromo = ({ promoProducts }) => promoProducts;
 export const getHotDeal = ({ products }) =>
   products.filter(product => product.hotDeal === true || product.hotDeal === false);
@@ -20,7 +24,6 @@ export const FAVOURITE_HANDLER = createActionName('FAVOURITE_HANDLER');
 export const CHANGE_HOTDEAL = createActionName('CHANGE_HOTDEAL');
 
 /* action creator */
-export const handleFavourite = payload => ({ payload, type: FAVOURITE_HANDLER });
 export const changeHotDeal = payload => ({ payload, type: CHANGE_HOTDEAL });
 export const SHINING_STAR = createActionName('SHINING_STAR');
 export const CHANGE_STYLE = createActionName('CHANGE_STYLE');
@@ -81,7 +84,6 @@ export default function reducer(statePart = [], action = {}) {
       });
       return newStatePart;
     }
-
     case COMPARE_HANDLER: {
       let compareCounter = 0;
       for (let product of statePart) {
