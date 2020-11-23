@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductMore.module.scss';
+import ProductReview from './ProductReview';
 
 class ProductMore extends React.Component {
   state = {
@@ -20,21 +21,25 @@ class ProductMore extends React.Component {
       for (let key in item) {
         if (item[key].id === 'description' && item[key].id === this.state.activeCart) {
           showCart = <div> Description component to be displayed </div>;
+          return showCart;
         } else if (
           item[key].id === 'reviews(0)' &&
           item[key].id === this.state.activeCart
         ) {
-          showCart = <div> r</div>;
+          showCart = <ProductReview />;
+          return showCart;
         } else if (
           item[key].id === 'specification' &&
           item[key].id === this.state.activeCart
         ) {
           showCart = <div> Specification component to be displayed </div>;
+          return showCart;
         } else if (
           item[key].id === 'custom tab' &&
           item[key].id === this.state.activeCart
         ) {
           showCart = <div> Custom Tab component to be displayed</div>;
+          return showCart;
         }
       }
     });

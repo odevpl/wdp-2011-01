@@ -4,8 +4,8 @@
     margin: 30px 0;
     .wrapper {
         width: 100%;
-        min-height: 300px;
-        border:  1px solid $form-border-color;
+        min-height: 50vh;
+        border:  1px solid $grey;
 
         .list {
             margin: 0;
@@ -15,18 +15,22 @@
 
             .item {
                 display: inline-block;
-                border-bottom: 1px solid $form-border-color;
-                border-right: 1px solid $form-border-color;
+                border-bottom: 1px solid $grey;
+                border-right: 1px solid $grey;
                 padding: 10px;
-                text-transform: capitalize;
+                text-transform: uppercase;
+                transition: &transition;
+                font-weight: 600;
                 cursor: pointer;
             }
             li.active {
                 display: inline-block;
                 color: $primary;
                 padding: 10px;
-                border-right: 1px solid $form-border-color;
-                text-transform: capitalize;
+                border-right: 1px solid $grey;
+                text-transform: uppercase;
+                transition: &transition;
+                font-weight: 700;
                 cursor: pointer;
             }
         }
