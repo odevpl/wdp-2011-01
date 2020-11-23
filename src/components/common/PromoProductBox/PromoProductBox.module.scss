@@ -118,7 +118,11 @@
     justify-content: space-between;
     align-items: center;
     .olderPrice {
+<<<<<<< HEAD
       text-decoration: line-through double $black;
+=======
+      text-decoration: line-through double black;
+>>>>>>> 328d728... Fix conflicts after rebase to updated master
       font-size: 22px;
       color: $old-price;
     }
