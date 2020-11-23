@@ -447,7 +447,7 @@ const initialState = {
       quantity: 1,
     },
   ],
-  
+
   promoProducts: {
     name: 'indoor',
     spanName: 'furniture',
