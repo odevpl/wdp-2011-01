@@ -25,10 +25,13 @@
         display: flex;
         margin: 25px 0;
         .image {
-            height: 100%;
             width: 50%;
-            background-color: black
         }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
         .content {
             padding-left: 10px;
             p, h6 {

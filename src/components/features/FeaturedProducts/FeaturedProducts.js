@@ -9,7 +9,9 @@ const FeaturedProducts = () => (
     </div>
     <div className={styles.products}>
       <div className={styles.product}>
-        <div className={styles.image}></div>
+        <div className={styles.image}>
+          <img src='https://images.pexels.com/photos/1957478/pexels-photo-1957478.jpeg' />
+        </div>
         <div className={styles.content}>
           <p>Office Chair</p>
           <h5>$350.00</h5>
@@ -22,7 +24,7 @@ const FeaturedProducts = () => (
     <div className={styles.products}>
       <div className={styles.product}>
         <div className={styles.image}>
-          <image src='../../images/bed1.jpeg'></image>
+          <img src='https://images.pexels.com/photos/1957478/pexels-photo-1957478.jpeg' />
         </div>
         <div className={styles.content}>
           <p>Office Chair</p>
@@ -36,7 +38,7 @@ const FeaturedProducts = () => (
     <div className={styles.products}>
       <div className={styles.product}>
         <div className={styles.image}>
-          <image src='../../images/bed1.jpeg'></image>
+          <img src='https://images.pexels.com/photos/1957478/pexels-photo-1957478.jpeg' />
         </div>
         <div className={styles.content}>
           <p>Office Chair</p>
