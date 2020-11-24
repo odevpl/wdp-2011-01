@@ -1,5 +1,5 @@
 import React from 'react';
-import Swipe from 'react-easy-swipe';
+//import Swipe from 'react-easy-swipe';
 import PropTypes from 'prop-types';
 import Brands from '../../layout/Brands/Brands';
 
@@ -66,51 +66,51 @@ class NewFurniture extends React.Component {
 
     return (
       <div>
-        <Swipe
+        {/*<Swipe
           onSwipeLeft={() => this.handleLeftSwipe(pagesCount)}
           onSwipeRight={() => this.handleRightSwipe()}
-        >
-          <div className={styles.root}>
-            <div className='container'>
-              <div className={styles.panelBar}>
-                <div className='row no-gutters align-items-end'>
-                  <div className={'col-auto ' + styles.heading}>
-                    <h3>New furniture</h3>
-                  </div>
-                  <div className={'col ' + styles.menu}>
-                    <ul>
-                      {categories.map(item => (
-                        <li key={item.id}>
-                          <a
-                            className={item.id === activeCategory && styles.active}
-                            onClick={() => this.handleFadeOut(item.id)}
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className={'col-auto ' + styles.dots}>
-                    <ul>{dots}</ul>
-                  </div>
+        >*/}
+        <div className={styles.root}>
+          <div className='container'>
+            <div className={styles.panelBar}>
+              <div className='row no-gutters align-items-end'>
+                <div className={'col-auto ' + styles.heading}>
+                  <h3>New furniture</h3>
+                </div>
+                <div className={'col ' + styles.menu}>
+                  <ul>
+                    {categories.map(item => (
+                      <li key={item.id}>
+                        <a
+                          className={item.id === activeCategory && styles.active}
+                          onClick={() => this.handleFadeOut(item.id)}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className={'col-auto ' + styles.dots}>
+                  <ul>{dots}</ul>
                 </div>
               </div>
-              <div className='row'>
-                {categoryProducts
-                  .slice(activePage * 8, (activePage + 1) * 8)
-                  .map(item => (
-                    <div
-                      key={item.id}
-                      className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}
-                    >
-                      <ProductBox {...item} />
-                    </div>
-                  ))}
-              </div>
+            </div>
+            <div className='row'>
+              {categoryProducts
+                .slice(activePage * 8, (activePage + 1) * 8)
+                .map(item => (
+                  <div
+                    key={item.id}
+                    className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}
+                  >
+                    <ProductBox {...item} />
+                  </div>
+                ))}
             </div>
           </div>
-        </Swipe>
+        </div>
+
         <Brands brands={brands} />
       </div>
     );
