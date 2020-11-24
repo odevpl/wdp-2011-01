@@ -5,7 +5,6 @@ const initialState = {
     { id: 'sofa', name: 'Sofa', fade: false, amount: 5 },
     { id: 'table', name: 'Table', fade: false, amount: 4 },
     { id: 'dining', name: 'Dining', fade: false, amount: 6 },
-
   ],
 
   more: [
@@ -546,6 +545,14 @@ const initialState = {
     content3a: 'SPECIAL',
     content3b: 'COLLECTION',
     info: 'SAVE UP 45% OF FURNITURE',
+  },
+  tagsContent: {
+    firstTag: 'Table',
+    secondTag: 'Chair',
+    thirdTag: 'Hand Bag',
+    forthTag: 'Women',
+    fifthTag: 'Fashion',
+    sixthTag: 'Clothes',
   },
 };
 
