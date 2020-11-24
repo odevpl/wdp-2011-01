@@ -2,7 +2,6 @@ import React from 'react';
 import Swipe from 'react-easy-swipe';
 import PropTypes from 'prop-types';
 import Brands from '../../layout/Brands/Brands';
-import ColorFilter from '../ColorFilter/ColorFilter';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
@@ -113,7 +112,6 @@ class NewFurniture extends React.Component {
           </div>
         </Swipe>
         <Brands brands={brands} />
-        <ColorFilter></ColorFilter>
       </div>
     );
   }
