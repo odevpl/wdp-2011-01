@@ -82,10 +82,10 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
-
-        <div className={styles.outline}></div>
-        <div className={styles.outline}></div>
-
+        <div className={styles.outline}>
+        </div>
+        <div className={styles.outline}>
+        </div>
         <div className={styles.olderPrice}>
           <span className='text-right'>{olderPrice}</span>
         </div>

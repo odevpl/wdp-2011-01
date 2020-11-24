@@ -459,7 +459,7 @@ const initialState = {
       id: 'aenean-ru-bristique-24',
       name: 'Aenean Ru Bristique 24',
       category: 'bed',
-      image: 'images/bed2.jpeg',
+      image: 'src=../../images/bed3.jpeg',
       price: 30,
       olderPrice: `$ ${55}`,
       stars: 2,
@@ -499,6 +499,24 @@ const initialState = {
   cart: {
     products: [],
   },
+
+  saleContent: {
+    sofa: 'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg',
+    goldenChair: 'https://images.pexels.com/photos/3932957/pexels-photo-3932957.jpeg',
+    yellowChair: 'https://images.pexels.com/photos/4056469/pexels-photo-4056469.jpeg',
+    bed: 'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg',
+    content1a: 'GUEST ROOM',
+    content1b: 'SOFA',
+    bargain: '-20%',
+    content2a: 'OFFICE ',
+    content2b: 'CHAIR',
+    content2c: 'COLLECTION',
+    price: '$200.00',
+    content3a: 'SPECIAL ',
+    content3b: 'COLLECTION',
+    info: 'SAVE UP 45% OF FURNITURE',
+  },
+
   feedback: [
     {
       id: 1,
@@ -524,6 +542,7 @@ const initialState = {
       position: 'Furniture client',
     },
   ],
+
   bannerData: {
     description: 'Bedroom <span>Furniture</span>',
     bargain: 'Always <span> 25% </span> off or more',
