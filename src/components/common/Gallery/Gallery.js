@@ -41,9 +41,6 @@ class Gallery extends React.Component {
   render() {
     const { gallery, stars, handleCompare, heart, compare, id } = this.props;
 
-    const { activePage } = this.state;
-    const item = gallery[0];
-
     const compareHandler = e => {
       e.preventDefault();
       handleCompare(id);
@@ -70,7 +67,7 @@ class Gallery extends React.Component {
                     role='tab'
                     aria-controls='nav-freature'
                     aria-selected='true'
-                    onClick='openFerniture(event, nav-freature)'
+                    onClick='nav-freature'
                   >
                     FREATURE
                   </a>
@@ -82,7 +79,7 @@ class Gallery extends React.Component {
                     role='tab'
                     aria-controls='nav-topseller'
                     aria-selected='true'
-                    onClick='openFerniture(event, nav-topseller)'
+                    onClick='nav-topseller'
                   >
                     TOP SELLER
                   </a>
@@ -94,7 +91,7 @@ class Gallery extends React.Component {
                     role='tab'
                     aria-controls='nav-saleoff'
                     aria-selected='true'
-                    onClick='openFerniture(event, nav-saleoff)'
+                    onClick='nav-saleoff'
                   >
                     SALE OFF
                   </a>
@@ -106,7 +103,7 @@ class Gallery extends React.Component {
                     role='tab'
                     aria-controls='nav-topratted'
                     aria-selected='true'
-                    onClick='openFerniture(event, nav-topratted)'
+                    onClick='nav-topratted'
                   >
                     TOP RATTED
                   </a>
