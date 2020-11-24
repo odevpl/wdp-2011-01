@@ -7,6 +7,7 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 class NewFurniture extends React.Component {
+
   state = {
     activePage: 0,
     activeCategory: 'bed',
@@ -27,6 +28,8 @@ class NewFurniture extends React.Component {
   handleFadeIn(newCategory) {
     this.setState({ fadeTrue: true });
     this.setState({ activeCategory: newCategory });
+    this.setState({fadeTrue: this.props.changeFade(newCategory),
+    });
   }
 
   handleRightSwipe() {
@@ -136,7 +139,6 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
-
   brands: PropTypes.array,
   changeFade: PropTypes.func,
 };
