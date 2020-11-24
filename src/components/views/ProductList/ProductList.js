@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './ProductList.module.scss';
 import CategoryFilter from '../../features/CategoryFilter/CategoryFilterContainer';
 import ColorFilter from '../../features/ColorFilter/ColorFilter';
+import TagsFilter from '../../features/TagsFilter/TagsFilter';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Brands from '../../layout/Brands/BrandsContainer';
 import Banner from '../../features/Banner/BannerContainer';
@@ -19,6 +20,7 @@ const ProductList = () => (
             <Banner></Banner>
             <CategoryFilter />
             <ColorFilter />
+            <TagsFilter />
           </div>
         </Col>
       </Row>
