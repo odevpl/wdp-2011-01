@@ -2,4 +2,20 @@
 
 .root {
   padding: $base-padding 0;
+
+  .content {
+    height: 100vh;
+  }
+
+  .filters {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+
+  .filters {
+    display: none;
+  }
+
 }
