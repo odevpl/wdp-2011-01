@@ -3,18 +3,18 @@
 
 .filterWrapper {
     width: 100%;
-    p {
+    a {
         margin: 0;
         padding-top: 2px;
         margin-left: 10px;
     }
     .colorWrapper {
         display: flex;
-    }
-    .colorWrapper_active {
-        display: flex;
-        margin-left: 30px;
-        color: $orange;
+        &:hover {
+            display: flex;
+            margin-left: 30px;
+            color: $orange;
+        }
     }
 }
 

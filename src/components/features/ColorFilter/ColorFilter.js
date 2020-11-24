@@ -6,29 +6,29 @@ const ColorFilter = () => (
   <div className={styles.filterWrapper}>
     <h6>FILTER BY COLOR</h6>
     <hr></hr>
-    <div className={styles.colorWrapper_active}>
+    <div className={styles.colorWrapper}>
       <span className={styles.red}></span>
-      <p>Red</p>
+      <a>Red</a>
     </div>
     <div className={styles.colorWrapper}>
       <span className={styles.black}></span>
-      <p>Black</p>
+      <a>Black</a>
     </div>
     <div className={styles.colorWrapper}>
       <span className={styles.yellow}></span>
-      <p>Yellow</p>
+      <a>Yellow</a>
     </div>
     <div className={styles.colorWrapper}>
       <span className={styles.blue}></span>
-      <p>Blue</p>
+      <a>Blue</a>
     </div>
     <div className={styles.colorWrapper}>
       <span className={styles.pink}></span>
-      <p>Pink</p>
+      <a>Pink</a>
     </div>
     <div className={styles.colorWrapper}>
       <span className={styles.green}></span>
-      <p>Green</p>
+      <a>Green</a>
     </div>
   </div>
 );
