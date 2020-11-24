@@ -1,0 +1,60 @@
+@import "../../../styles/settings.scss";
+
+.filterWrapper {
+    width: 100%;
+    p {
+        margin: 0;
+        padding-top: 2px;
+        margin-left: 10px;
+    }
+    .colorWrapper {
+        display: flex;
+    }
+    .colorWrapper_active {
+        display: flex;
+        margin-left: 30px;
+        color: $orange;
+    }
+}
+
+.products {
+
+    .product {
+        height: 120px;
+        display: flex;
+        margin: 25px 0;
+        .image {
+            width: 50%;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        .content {
+            padding-left: 10px;
+            p, h6 {
+              margin: 10px 0;
+            }
+            .button {
+                margin: 10px 0;
+                background-color: $chocolate;
+                color:$milk;
+                font-size: 16px;
+                &:hover {
+                    background-color: $primary;
+                    border: $primary solid 1px;
+                }
+            }
+        }
+    }
+}
+
+.title {
+    background-color: $chocolate;
+    color: white;
+    margin-bottom: 20px;
+    h6 {
+        padding: 10px;
+    }
+} 
