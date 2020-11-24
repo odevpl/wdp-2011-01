@@ -21,7 +21,7 @@ const ProductList = () => (
         </Col>
       </Row>
       <Row>
-      <Brands />
+        <Brands />
       </Row>
     </Grid>
   </div>
