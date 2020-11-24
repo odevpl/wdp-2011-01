@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductPage.module.scss';
+<<<<<<< HEAD
 import Button from '../../common/Button/Button';
 import Stars from '../../common/Stars/StarsContainer';
-
+import ProductMore from '../../common/ProductMore/ProductMore';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChevronLeft,
@@ -256,6 +257,7 @@ const ProductPage = ({
           </div>
         </div>
       </div>
+      <ProductMore />
     </div>
   );
 };
