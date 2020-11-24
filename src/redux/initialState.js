@@ -543,6 +543,14 @@ const initialState = {
     content3b: 'COLLECTION',
     info: 'SAVE UP 45% OF FURNITURE',
   },
+  tagsContent: {
+    firstTag: 'Table',
+    secondTag: 'Chair',
+    thirdTag: 'Hand Bag',
+    forthTag: 'Women',
+    fifthTag: 'Fashion',
+    sixthTag: 'Clothes',
+  },
 };
 
 export default initialState;
