@@ -35,6 +35,7 @@ export const handleStar = payload => ({ payload, type: SHINING_STAR });
 export const handleStyle = payload => ({ payload, type: CHANGE_STYLE });
 export const handleCompare = payload => ({ payload, type: COMPARE_HANDLER });
 export const handleRemove = payload => ({ payload, type: REMOVE_HANDLER });
+export const handleFavourite = payload => ({ payload, type: FAVOURITE_HANDLER });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
