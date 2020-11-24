@@ -27,7 +27,7 @@
                 display: inline-block;
                 color: $primary;
                 padding: 10px;
-                border-right: 1px solid $grey;
+                border-right:  1px solid $grey;  
                 text-transform: uppercase;
                 transition: &transition;
                 font-weight: 700;
@@ -37,11 +37,28 @@
     }
 }
 
-.show {
-    display: block;
-}
-.hide {
-    display: none;
+
+@media (min-width: 360px) and (max-width: 768px) {
+
+    .root .wrapper .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        li.active {
+            flex-basis: 200px;
+            border-right: none;
+            margin: 20px 20px 0 20px;
+            text-align: center;      
+        }
+    }
+    
+    .item {
+        flex-basis: 200px;
+        margin: 20px 20px 0 20px;
+        border:  1px solid $grey;
+        text-align: center;
+    }
 }
 
 
