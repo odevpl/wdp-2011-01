@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './ProductList.module.scss';
 import CategoryFilter from '../../features/CategoryFilter/CategoryFilterContainer';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import Brands from '../../layout/Brands/BrandsContainer';
 
 const ProductList = () => (
   <div className={styles.root}>
@@ -18,6 +19,8 @@ const ProductList = () => (
           </div>
         </Col>
       </Row>
+      <Brands />
+      <Row></Row>
     </Grid>
   </div>
 );
