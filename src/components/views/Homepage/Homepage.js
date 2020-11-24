@@ -6,9 +6,9 @@ import styles from './Homepage.module.scss';
 
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
-import PromoProducts from '../../features/PromoProducts/PromoProductsContainer';
 import Feedback from '../../features/Feedback/FeedbackContainer';
 import Gallery from '../../common/Gallery/GalleryContainer';
+import PromoProducts from '../../features/PromoProducts/PromoProductsContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
