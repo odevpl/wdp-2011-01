@@ -129,6 +129,7 @@ class PromoProducts extends React.Component {
                       );
                     })}
                   </ul>
+
                 </div>
               </div>
               {categoryProduct.map(item => (

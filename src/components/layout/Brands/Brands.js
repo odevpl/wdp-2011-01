@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Brands.module.scss';
 import Button from '../../common/Button/Button';
 import PropTypes from 'prop-types';
-import Swipe from 'react-easy-swipe';
+//import Swipe from 'react-easy-swipe';
 
 class Brands extends React.Component {
   state = {
@@ -35,46 +35,38 @@ class Brands extends React.Component {
     const { brands } = this.props;
 
     return (
-      <Swipe
-        onSwipeLeft={() => this.handleLeftSlide(this.state.margin)}
-        onSwipeRight={() => this.handleRightSlide(this.state.margin)}
-      >
-        <div className={styles.root}>
-          <div className='container'>
-            <div className={'row align-items-center ' + styles.wrapper}>
-              <Button
-                className={styles.button}
-                onClick={() => this.handleLeftSlide(this.state.margin)}
+      <div className={styles.root}>
+        <div className='container'>
+          <div className={'row align-items-center ' + styles.wrapper}>
+            <Button
+              className={styles.button}
+              onClick={() => this.handleLeftSlide(this.state.margin)}
+            >
+              <span className={styles.arrow}> &lt; </span>
+            </Button>
+            <div className={styles.brandsParent}>
+              <div
+                className={styles.brandsChild}
+                style={{ marginLeft: this.state.margin }}
               >
-                <span className={styles.arrow}> &lt; </span>
-              </Button>
-              <div className={styles.brandsParent}>
-                <div
-                  className={styles.brandsChild}
-                  style={{ marginLeft: this.state.margin }}
-                >
-                  {brands.map(brand => {
-                    return (
-                      <div
-                        className={styles.image}
-                        key={brand.id.replace('Brand-', '')}
-                      >
-                        <img src={brand.image} alt={brand.id} />
-                      </div>
-                    );
-                  })}
-                </div>
+                {brands.map(brand => {
+                  return (
+                    <div className={styles.image} key={brand.id.replace('Brand-', '')}>
+                      <img src={brand.image} alt={brand.id} />
+                    </div>
+                  );
+                })}
               </div>
-              <Button
-                className={styles.button + ' ' + styles.buttonTwo}
-                onClick={() => this.handleRightSlide(this.state.margin)}
-              >
-                <span className={styles.arrow}> &gt; </span>
-              </Button>
             </div>
+            <Button
+              className={styles.button + ' ' + styles.buttonTwo}
+              onClick={() => this.handleRightSlide(this.state.margin)}
+            >
+              <span className={styles.arrow}> &gt; </span>
+            </Button>
           </div>
         </div>
-      </Swipe>
+      </div>
     );
   }
 }

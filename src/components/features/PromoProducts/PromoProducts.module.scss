@@ -17,6 +17,7 @@
       text-transform: capitalize;
       color: $white;
       margin: 0;
+      font-size: 90%;
     }
     .dots {
       ul {
@@ -152,6 +153,17 @@
         padding: 0;
       }
     }
+  }
+}
+
+/* Screen smaller than 767px: 1 column */
+@media (max-width: 767px) {
+  .leftContainer {
+    display: none;
+  }
+  
+  .rightContainer {
+    width: auto;
   }
 }
 
