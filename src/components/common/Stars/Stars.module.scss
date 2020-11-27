@@ -8,16 +8,12 @@
     }
 }
 
-.test {
-  color: blue;
-}
-
 input[type="radio"] {
   display: none;
 }
 
 .stars2 {
-  color: orange;
+  color: $primary;
   &:hover {
     cursor: pointer;
   }

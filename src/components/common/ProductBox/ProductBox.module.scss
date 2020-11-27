@@ -19,7 +19,6 @@
     align-items: flex-end;
     width: auto;
     max-width: 260px;
-    height: 250px;
 
     img {
       object-fit: cover;
@@ -32,9 +31,9 @@
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: $productBox-half-circle;
+      background-color: $heavenlyGrey;
       border-radius: 50%;
-      color: $productBox-half-circle-text;
+      color: $white;
       padding: 30px 15px 5px 15px;
     }
 
@@ -63,9 +62,9 @@
 
     h5 {
       color: $primary;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 1px;
+      font-size: $font-size;
+      line-height: $line-height;
+      letter-spacing: $letter-spacing;
       margin-bottom: 0;
     }
 
@@ -79,7 +78,7 @@
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid $productBox-underline;
+    border-bottom: 1px solid $dark-grey;
     position: relative;
 
     &::before {
@@ -88,17 +87,15 @@
       bottom: -1px;
       left: 50%;
       width: 30px;
-      border-bottom: 4px solid $orange;
+      border-bottom: 4px solid $primary;
       transform: translateX(-50%);
     }
   }
 
   .actions {
     padding: 20px 10px 20px 10px;
+    @include flex(center, space-between);
     display: flex;
-    justify-content: space-between;
-    align-items: space-between;
-    align-content: space-between;
       .price > .small {
         padding: 0;
       }
@@ -108,9 +105,9 @@
       .price > h5 {
         margin-bottom: 0;
       }
-    
+
     .olderPrice {
-      text-decoration: line-through double $darkGrey;
+      text-decoration: line-through double $main-dark;
       font-size: 22px;
       color: $lightGrey;
       text-align: right;
@@ -120,7 +117,7 @@
     }
     .outline {
       background-color: $white;
-      color: $darkGrey;
+      color: $main-dark;
       :hover {
         color: white;
         background-color: black;
@@ -158,7 +155,7 @@
 }
 
 .compare {
-  background-color: $light-green;
+  background-color: #90ee90;
 }
 
 @keyframes fadeIn {
@@ -166,13 +163,13 @@
     opacity:0;
   }
   to {
-    opacity:2;
+    opacity:1;
   }
 }
 
 @keyframes fadeOut {
   from {
-    opacity:2;
+    opacity:1;
   }
   to {
     opacity:0;

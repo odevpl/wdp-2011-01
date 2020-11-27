@@ -5,7 +5,7 @@
     .wrapper {
         width: 100%;
         min-height: 50vh;
-        border:  1px solid $grey;
+        border:  1px solid $heavenlyGrey;
 
         .list {
             margin: 0;
@@ -15,11 +15,11 @@
 
             .item {
                 display: inline-block;
-                border-bottom: 1px solid $grey;
-                border-right: 1px solid $grey;
+                border-bottom: 1px solid $heavenlyGrey;
+                border-right: 1px solid $heavenlyGrey;
                 padding: 10px;
                 text-transform: uppercase;
-                transition: &transition;
+                transition: $main-transition;
                 font-weight: 600;
                 cursor: pointer;
             }
@@ -27,9 +27,9 @@
                 display: inline-block;
                 color: $primary;
                 padding: 10px;
-                border-right:  1px solid $grey;  
+                border-right:  1px solid $heavenlyGrey;
                 text-transform: uppercase;
-                transition: &transition;
+                transition: $main-transition;
                 font-weight: 700;
                 cursor: pointer;
             }
@@ -49,14 +49,14 @@
             flex-basis: 200px;
             border-right: none;
             margin: 20px 20px 0 20px;
-            text-align: center;      
+            text-align: center;
         }
     }
-    
+
     .item {
         flex-basis: 200px;
         margin: 20px 20px 0 20px;
-        border:  1px solid $grey;
+        border:  1px solid $heavenlyGrey;
         text-align: center;
     }
 }

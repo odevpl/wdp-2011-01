@@ -9,8 +9,8 @@
 }
 
 .content {
-    background-color: $chocolate;
-    color: $border-color;
+    background-color: $dark-grey;
+    color: $milk;
     letter-spacing: 10px;
     height: 200px;
     display: grid;
@@ -33,13 +33,13 @@
         span {
             color: $primary;
         }
-    }   
+    }
 
 }
 
 .breadcrumbs {
     padding: 10px;
-    background-color: $text-color;
+    background-color: $invisibleGrey;
 
     .item {
     display: inline-block;
@@ -48,7 +48,7 @@
     }
     a {
         padding: 10px;
-        color: $form-border-color;
+        color: $heavenlyGrey;
     }
     .link:after {
         content: ">";
@@ -57,7 +57,7 @@
         width: 10px;
         top: 0;
         right: 0;
-        color: $box-shadow;
+        color: $dark-shadow;
     }
     .link_active {
         color: $primary;

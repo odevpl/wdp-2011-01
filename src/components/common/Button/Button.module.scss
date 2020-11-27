@@ -5,15 +5,15 @@
 
 .main {
   @extend %hover-effect;
-  background-color: #2a2a2a;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 24px;
+  background-color: $main-dark;
+  color: $white;
+  font-size: $font-size;
+  line-height: $line-height;
   font-weight: 600;
   padding: 10px 30px;
 
   &:not(.noHover):hover {
-    color: #ffffff !important;
+    color: $white !important;
     background-color: $primary;
     text-decoration: none;
   }
@@ -22,7 +22,7 @@
 .small {
   @extend .main;
   font-size: 10px;
-  line-height: 24px;
+  line-height: $line-height;
   padding: 5px 10px;
   font-weight: 400;
 }
@@ -31,15 +31,15 @@
   @extend %hover-effect;
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid $favorite-button;
-  color: $favorite-button;
+  border: 1px solid $main-dark;
+  color: $main-dark;
   font-size: 13px;
   line-height: 22px;
   transition: all 0.5s;
 
   &:not(.noHover):hover {
     background-color: #2a2a2a;
-    color: $favorite-button-hover-text;
+    color: $main-white;
   }
 }
 
@@ -47,15 +47,15 @@
   @extend %hover-effect;
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid $darkGrey;
+  border: 1px solid $main-dark;
   background-color: white;
-  color: $darkGrey;
+  color: $main-dark;
   font-size: 13px;
   line-height: 22px;
   transition: all 0.5s;
 
   &:not(.noHover):hover {
-    background-color: $orange;
+    background-color: $primary;
     color: white;
   }
 }
@@ -64,7 +64,7 @@
   @extend %hover-effect;
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid $darkGrey;
+  border: 1px solid $main-dark;
   background-color: white;
   color: black;
   font-size: 13px;
@@ -72,11 +72,11 @@
   transition: all 0.5s;
 
   *:first-child {
-    color: $social-facebook;
+    color: rgb(59, 89, 152);
   }
 
   &:not(.noHover):hover {
-    background-color: $social-facebook;
+    background-color: rgb(59, 89, 152);
     color: white;
     * {
       color: white;
@@ -88,7 +88,7 @@
   @extend %hover-effect;
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid $darkGrey;
+  border: 1px solid $main-dark;
   background-color: white;
   color: black;
   font-size: 13px;
@@ -96,11 +96,11 @@
   transition: all 0.5s;
 
   *:first-child {
-    color: $social-google;
+    color: rgb(218, 68, 55);
   }
 
   &:not(.noHover):hover {
-    background-color: $social-google;
+    background-color: rgb(218, 68, 55);
     color: white;
     * {
       color: white;
@@ -112,7 +112,7 @@
   @extend %hover-effect;
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid $darkGrey;
+  border: 1px solid $main-dark;
   background-color: white;
   color: black;
   font-size: 13px;
@@ -120,11 +120,11 @@
   transition: all 0.5s;
 
   *:first-child {
-    color: $social-twitter;
+    color: rgb(64, 153, 255);
   }
 
   &:not(.noHover):hover {
-    background-color: $social-twitter;
+    background-color: rgb(64, 153, 255);
     color: white;
     * {
       color: white;
@@ -136,7 +136,7 @@
   @extend %hover-effect;
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid $darkGrey;
+  border: 1px solid $main-dark;
   background-color: white;
   color: black;
   font-size: 13px;
@@ -144,11 +144,11 @@
   transition: all 0.5s;
 
   *:first-child {
-    color: $social-pinterest;
+    color: rgb(210, 76, 80);
   }
 
   &:not(.noHover):hover {
-    background-color: $social-pinterest;
+    background-color: rgb(210, 76, 80);
     color: white;
     * {
       color: white;
@@ -160,7 +160,7 @@
   @extend %hover-effect;
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid $darkGrey;
+  border: 1px solid $main-dark;
   background-color: white;
   color: black;
   font-size: 13px;
@@ -168,11 +168,11 @@
   transition: all 0.5s;
 
   *:first-child {
-    color: $social-linkedin;
+    color: rgb(47, 143, 194);
   }
 
   &:not(.noHover):hover {
-    background-color: $social-linkedin;
+    background-color: rgb(47, 143, 194);
     color: white;
     * {
       color: white;

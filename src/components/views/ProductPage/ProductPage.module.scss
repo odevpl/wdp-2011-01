@@ -3,7 +3,7 @@
 .root {
   padding: $base-padding 0;
 
-  background: linear-gradient(to bottom, $productPage-background-top 50%, $productPage-background 50%);
+  background: linear-gradient(to bottom, $heavenlyGrey 50%, $white 50%);
 
   .panelBar {
     margin-bottom: 30px;
@@ -13,24 +13,24 @@
       position: relative;
 
       h3 {
-        color: $productPage-header;
+        color: $milk;
         text-transform: uppercase;
         font-size: 20px;
         line-height: 38px;
         margin: 0;
-        letter-spacing: 1px;
+        letter-spacing: $letter-spacing;
       }
     }
 
     .nav {
-      color: $productPage-header;
+      color: $milk;
       font-size: 0.75rem;
     }
   }
 
   .productBox {
-    background-color: $productPage-background;
-    border: 1px solid $productPage-border;
+    background-color: $white;
+    border: 1px solid $heavenlyGrey;
     padding: 25px;
 
     p {
@@ -49,7 +49,7 @@
 
     .section {
       padding: 12px 0;
-      border-bottom: 1px solid $productPage-section-border;
+      border-bottom: 1px solid $heavenlyGrey;
     }
 
     .section:last-of-type {
@@ -96,10 +96,10 @@
     }
 
     .olderPrice {
-      text-decoration: line-through $productPage-old-price;
+      text-decoration: line-through $milk;
       text-align: center;
       font-size: 22px;
-      color: $productPage-old-price;
+      color: $milk;
       margin-bottom: 0;
     }
 
@@ -107,8 +107,8 @@
       text-align: center;
       font-size: 22px;
       font-weight: bold;
-      color: $productPage-price;
-      background-color: $productPage-price-background;
+      color: $white;
+      background-color: $black;
       margin-bottom: 0;
     }
 
@@ -130,7 +130,7 @@
         padding: 5px 10px;
         font-size: 13px;
         line-height: 22px;
-        border: 1px solid $productPage-input;
+        border: 1px solid $dark-grey;
         width: 66px;
         text-align: center;
         margin-right: 10px;
