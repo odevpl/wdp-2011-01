@@ -2,12 +2,12 @@
 
 .root {
   .footerMenu {
-    background-color: $footer-bg;
+    background-color: $dark-grey;
     padding: 3rem 0;
 
     .menuWrapper {
       h6 {
-        color: $headings-footer;
+        color: $white;
         text-transform: uppercase;
         margin: 0 0 1rem 0;
       }
@@ -21,10 +21,10 @@
             @extend %hover-effect;
             font-size: 14px;
             line-height: 30px;
-            color: $footer-text;
+            color: $heavenlyGrey;
 
             &:hover {
-              color: $footer-text-hover;
+              color: $white;
             }
           }
         }
@@ -43,7 +43,7 @@
   }
 
   .bottomBar {
-    background-color: $footer-claim-bg;
+    background-color: $dark-grey;
 
     :global(.container) > :global(.row) {
       height: 95px;
@@ -52,7 +52,7 @@
     .copyright {
       p {
         margin: 0;
-        color: $footer-copyrights;
+        color: $heavenlyGrey;
         font-size: 14px;
         line-height: 26px;
       }
@@ -70,11 +70,11 @@
 
           a {
             @extend %hover-effect;
-            color: $footer-icons;
+            color: $heavenlyGrey;
             text-decoration: none;
 
             &:hover {
-              color: $orange;
+              color: $primary;
             }
           }
         }

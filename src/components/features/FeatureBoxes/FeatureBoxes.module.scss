@@ -8,14 +8,12 @@
 
     .column {
       margin: 10px 10px 40px 10px;
-      border: 1px solid $feature-box-border;
+      border: 1px solid $lightGrey;
       max-width: 240px;
       min-width: 240px;
     }
   }
 }
-
-
 
 @media (min-width: 360px) and (max-width: 767px) {
   .column {

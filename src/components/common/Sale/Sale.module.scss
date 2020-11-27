@@ -4,7 +4,7 @@
 .root {
     padding: 5rem 0;
   }
- 
+
 .saleContainer {
     max-height: 300px;
     width: 100%;
@@ -31,7 +31,7 @@
         left: 60px;
         color: $milk;
         font-size: 57px;
-        text-shadow: 1px 1px  black;
+        text-shadow: $light-shadow;
         font-weight: 700;
     }
     h2 {
@@ -39,7 +39,7 @@
         left: 60px;
         bottom: 165px;
         color: $milk;
-        text-shadow: 1px 1px  black;
+        text-shadow: $light-shadow;
         font-weight: 700;
     }
     h1 {
@@ -50,10 +50,10 @@
         border: 3px solid $milk;
         padding: 5px;
         font-size: 45px;
-        text-shadow: 1px 1px  black;
+        text-shadow: $light-shadow;
     }
     span {
-        background-color: $latte;
+        background-color: $main-grey;
         width: 92%;
         height: 90%;
         position: absolute;
@@ -93,8 +93,8 @@
         grid-row-end: 3;
         margin: 0;
         padding: 0 20px 5px 0px;
-        color: $orange;
-        text-shadow: 1px 1px  $latte;
+        color: $primary;
+        text-shadow: 1px 1px  $main-grey;
     }
     .contentBold {
         font-weight: bold
@@ -126,7 +126,7 @@
     }
     h4 {
         color: $primary;
-        text-shadow: 1px 1px  $latte;
+        text-shadow: 1px 1px  $main-grey;
         display: inline-block;
         margin-top: 35px;
         margin-bottom: 0;
@@ -142,4 +142,4 @@
 
 
 
-  
+

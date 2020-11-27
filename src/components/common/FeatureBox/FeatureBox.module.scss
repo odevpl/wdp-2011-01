@@ -11,11 +11,10 @@
         border: 1px solid $primary;
     }
 
-
   .iconWrapper {
     height: 60px;
     transform: translateY(-50%);
-    color: $text-color;
+    color: $invisibleGrey;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -30,15 +29,12 @@
 
     &::before {
       content: "";
-      border: 1px solid $feature-box-border;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      border: 1px solid $lightGrey;
+      @include center();
       width: 76px;
       height: 76px;
       border-radius: 100%;
-      background-color: $circles-color;
+      background-color: $white;
       z-index: -1;
     }
 
@@ -48,11 +44,8 @@
       width: 60px;
       height: 60px;
       border-radius: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 1px solid $feature-box-border;
+      @include center();
+      border: 1px solid $lightGrey;
     }
   }
 
@@ -79,13 +72,13 @@
       color: #ffffff;
 
       &::after {
-        background-color: $orange;
-        border-color: $orange;
+        background-color: $primary;
+        border-color: $primary;
       }
     }
 
     .content {
-      color: $orange;
+      color: $primary;
     }
   }
 }

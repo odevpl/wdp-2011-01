@@ -11,7 +11,7 @@
   .hotDealsContainer {
     display: flex;
     padding: .5rem;
-    background: $footer-bg;
+    background: $dark-grey;
 
     h5 {
       text-transform: capitalize;
@@ -23,10 +23,8 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        background-color: $footer-bg;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        background-color: $dark-grey;
+        @include flex(center, center);
         height: 100%;
         li {
           display: inline-block;
@@ -69,10 +67,7 @@
     }
 
     .rightContainerMain {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @include center();
       background: rgba(0, 0, 0, 0.4);
       width: 100%;
       height: 50%;
@@ -83,7 +78,7 @@
         display: flex;
         flex-wrap: wrap;
         text-transform: uppercase;
-        color: $cream;
+        color: $main-white;
         position: relative;
 
         h2 {
@@ -105,19 +100,20 @@
         }
 
         .promoBtn {
-          background: $cream;
+          background: $main-white;
           padding: 1rem;
           border-radius: 4px;
           position: absolute;
           top: 77%;
           left: 50%;
           transform: translate(-50%, 50%);
-          color: $footer-bg;
+          color: $dark-grey;
+          transition: $main-transition;
 
           &:hover {
-            background: $footer-bg;
+            background: $primary;
             text-decoration: none;
-            color: $cream;
+            color: $invisibleGrey;
           }
         }
       }
@@ -129,17 +125,18 @@
       width: 100%;
       margin: 0;
       height: 8%;
-      background: $footer-bg;
+      background: $dark-grey;
       z-index: 99;
 
       a {
-        color: $cream;
+        color: $main-white;
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0;
+        transition: $main-transition;
 
         &:hover {
           text-decoration: none;

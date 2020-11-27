@@ -1,13 +1,13 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  border: 1px solid $form-border-color;
+  border: 1px solid $heavenlyGrey;
   display: inline-flex;
   height: 45px;
-  color: $text-color;
+  color: $invisibleGrey;
 
   .category {
-    border-right: 1px solid $form-border-color;
+    border-right: 1px solid $heavenlyGrey;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -31,7 +31,7 @@
         background: $white;
         width: 230px;
         min-width: 160px;
-        box-shadow: $box-shadow;
+        box-shadow: $dark-shadow;
         z-index: 1;
       }
       .dropdownContent a {
@@ -71,7 +71,7 @@
       width: 240px;
 
       &::placeholder {
-        color: $text-color;
+        color: $invisibleGrey;
       }
     }
 

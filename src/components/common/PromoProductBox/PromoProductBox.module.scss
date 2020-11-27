@@ -20,9 +20,9 @@
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #292929;
+      background-color: $almostBlack;
       border-radius: 50%;
-      color: #ffffff;
+      color: $white;
       padding: 30px 15px 5px 15px;
     }
 
@@ -33,10 +33,7 @@
 
     .btnAddToCart {
       display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @include center();
       text-align: center;
     }
     .timersContainer {
@@ -48,17 +45,15 @@
       align-items: center;
       .timerContainer {
         display: none;
-        color: #ffffff;
-        background: #292929;
+        color: $white;
+        background: $almostBlack;
         width: 4rem;
         height: 4rem;
         border-radius: 50%;
 
         .timerDescription {
           height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flex(center, center);
           flex-wrap: wrap;
 
           p {
@@ -85,10 +80,8 @@
   .content {
     text-align: center;
     padding: 20px;
-    display: flex;
+    @include flex(center, center);
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     margin: 2rem 0;
 
     h5 {
@@ -139,7 +132,7 @@
     }
 
     .olderPrice {
-      text-decoration: line-through double $darkGrey;
+      text-decoration: line-through double $main-dark;
       font-size: 22px;
       color: $lightGrey;
       text-align: right;
@@ -149,7 +142,7 @@
     }
     .outline {
       background-color: $white;
-      color: $darkGrey;
+      color: $main-dark;
       :hover {
         color: white;
         background-color: black;
