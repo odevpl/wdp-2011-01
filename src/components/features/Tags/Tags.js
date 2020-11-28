@@ -47,7 +47,7 @@ const Tags = ({ tagsContent }) => (
 );
 
 Tags.propTypes = {
-  tagsContent: propTypes.string,
+  tagsContent: propTypes.object,
 };
 
 export default Tags;

@@ -168,7 +168,7 @@ const ProductPage = ({
                       <input
                         className={styles.inputSmall}
                         type='number'
-                        value='2'
+                        defaultValue='2'
                       ></input>
                       <Button variant='outlineYellow'>
                         <FontAwesomeIcon icon={faMinus}></FontAwesomeIcon>
@@ -266,7 +266,7 @@ ProductPage.propTypes = {
   name: PropTypes.string.isRequired,
   stars: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
-  olderPrice: PropTypes.string.isRequired,
+  olderPrice: PropTypes.string,
   overview: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,

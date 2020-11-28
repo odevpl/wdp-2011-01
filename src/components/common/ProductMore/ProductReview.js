@@ -16,7 +16,7 @@ const ProductReview = ({ rate = 4 }) => (
       <div className={styles.stars}>
         {[1, 2, 3, 4, 5].map(star => {
           return (
-            <a key={star} href='#'>
+            <a key={star} href='/'>
               {star <= rate ? (
                 <label>
                   <input type='radio' name='rating' />

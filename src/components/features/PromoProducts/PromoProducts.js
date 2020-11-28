@@ -197,7 +197,7 @@ PromoProducts.propTypes = {
     })
   ),
   promoCategory: PropTypes.array,
-  hotDeal: PropTypes.bool,
+  hotDeal: PropTypes.array,
   name: PropTypes.string,
   spanName: PropTypes.string,
   subName: PropTypes.string,

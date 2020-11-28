@@ -42,6 +42,7 @@ class ProductMore extends React.Component {
           return showCart;
         }
       }
+      return 0;
     });
 
     return (
@@ -55,6 +56,7 @@ class ProductMore extends React.Component {
                     item[key].id === activeCart ? styles.active : styles.item;
                   return (
                     <li
+                      key={item[key].id}
                       className={preparedClass}
                       onClick={() => {
                         this.handleCartChange(item[key].id);
@@ -64,6 +66,7 @@ class ProductMore extends React.Component {
                     </li>
                   );
                 }
+                return 0;
               })}
             </ul>
             {showCart}

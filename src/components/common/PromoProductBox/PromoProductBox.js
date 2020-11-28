@@ -6,12 +6,11 @@ import Stars from '../Stars/Stars';
 import styles from './PromoProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faStar,
   faExchangeAlt,
   faShoppingBasket,
   faEye,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 class PromoProductBox extends React.Component {
   render() {
@@ -103,7 +102,7 @@ class PromoProductBox extends React.Component {
 PromoProductBox.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
-  price: PropTypes.string,
+  price: PropTypes.number,
   olderPrice: PropTypes.string,
   image: PropTypes.string,
   imageAlt: PropTypes.string,

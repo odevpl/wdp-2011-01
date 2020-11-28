@@ -14,12 +14,12 @@ const Banner = ({ description, bargain, home, furniture }) => (
       <div>
         <ul className={styles.breadcrumbs}>
           <li className={styles.item}>
-            <a href='#' className={styles.link}>
+            <a href='/' className={styles.link}>
               {home}
             </a>
           </li>
           <li className={styles.item}>
-            <a href='#' className={styles.link_active}>
+            <a href='/' className={styles.link_active}>
               {furniture}
             </a>
           </li>
