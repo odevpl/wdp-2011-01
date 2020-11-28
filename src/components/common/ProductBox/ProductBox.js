@@ -38,19 +38,19 @@ const ProductBox = ({
     <div className={styles.root}>
       <Link to={`/product/${id}`}>
         <div className={styles.photo}>
-          <img src={image} />
+          <img src={image} alt='' />
           {promo && <div className={styles.sale}>{promo}</div>}
           <div className={styles.buttons}>
-            <Link className={styles.quickView}>
+            <div to='/' className={styles.quickView}>
               <Button variant='small' className={styles.quickView}>
                 Quick View
               </Button>
-            </Link>
-            <Link className={styles.quickView}>
+            </div>
+            <div to='/' className={styles.quickView}>
               <Button variant='small' className={styles.quickView}>
                 <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
               </Button>
-            </Link>
+            </div>
           </div>
         </div>
       </Link>
@@ -69,7 +69,11 @@ const ProductBox = ({
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outline}>
-          <Button className={heart ? styles.heart : ''} variant='outline'>
+          <Button
+            className={heart ? styles.heart : ''}
+            variant='outline'
+            onClick={favouriteHandler}
+          >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
         </div>

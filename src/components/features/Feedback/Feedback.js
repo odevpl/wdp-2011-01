@@ -20,10 +20,11 @@ class Feedback extends React.Component {
     const dots = [];
     for (let i = 0; i < count; i++) {
       dots.push(
-        <li>
+        <li key={i}>
           <a
+            href='/'
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={i === activePage ? styles.active : ''}
           >
             page {i}
           </a>
@@ -51,7 +52,7 @@ class Feedback extends React.Component {
                 <div className={'col-12 ' + styles.subitem}>{item.content}</div>
               </div>
               <div className={'row subitem justify-content-center ' + styles.subitem}>
-                <img className='col-1' src={item.photo} />
+                <img className='col-1' src={item.photo} alt='' />
                 <div className='col-2'>
                   <h3>{item.name}</h3>
                   <h4>{item.position}</h4>

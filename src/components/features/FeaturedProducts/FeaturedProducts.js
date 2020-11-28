@@ -10,7 +10,10 @@ const FeaturedProducts = () => (
     <div className={styles.products}>
       <div className={styles.product}>
         <div className={styles.image}>
-          <img src='https://images.pexels.com/photos/1957478/pexels-photo-1957478.jpeg' />
+          <img
+            src='https://images.pexels.com/photos/1957478/pexels-photo-1957478.jpeg'
+            alt=''
+          />
         </div>
         <div className={styles.content}>
           <p>Office Chair</p>
@@ -24,7 +27,10 @@ const FeaturedProducts = () => (
     <div className={styles.products}>
       <div className={styles.product}>
         <div className={styles.image}>
-          <img src='https://images.pexels.com/photos/1957478/pexels-photo-1957478.jpeg' />
+          <img
+            src='https://images.pexels.com/photos/1957478/pexels-photo-1957478.jpeg'
+            alt=''
+          />
         </div>
         <div className={styles.content}>
           <p>Office Chair</p>
@@ -38,7 +44,10 @@ const FeaturedProducts = () => (
     <div className={styles.products}>
       <div className={styles.product}>
         <div className={styles.image}>
-          <img src='https://images.pexels.com/photos/1957478/pexels-photo-1957478.jpeg' />
+          <img
+            src='https://images.pexels.com/photos/1957478/pexels-photo-1957478.jpeg'
+            alt=''
+          />
         </div>
         <div className={styles.content}>
           <p>Office Chair</p>
