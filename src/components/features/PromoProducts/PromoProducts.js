@@ -98,7 +98,7 @@ class PromoProducts extends React.Component {
     const { hotDeal, name, spanName, subName, images, promoCategory } = this.props;
     const { activeCategory, activeImage, fadeRight, fadeLeft } = this.state;
     const categoryProduct = hotDeal.filter(item => item.category === activeCategory);
-
+    console.log(promoCategory);
     const currentImage = images.filter(item => item.id === activeImage);
 
     const helpClass = fadeLeft ? styles.fadeIn : styles.fadeOut;

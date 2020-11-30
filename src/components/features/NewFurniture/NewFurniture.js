@@ -9,15 +9,17 @@ import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
-    activeCategory: 'bed',
+    activeCategory: 'laptop',
     fadeTrue: true,
   };
 
-  handlePageChange(newPage) {
+  handlePageChange(e, newPage) {
+    e.preventDefault();
     this.setState({ activePage: newPage });
   }
 
-  handleFadeOut(newCategory) {
+  handleFadeOut(e, newCategory) {
+    e.preventDefault();
     this.setState({ fadeTrue: false });
     setTimeout(() => {
       this.handleFadeIn(newCategory);
@@ -55,7 +57,7 @@ class NewFurniture extends React.Component {
         <li key={i}>
           <a
             href='/'
-            onClick={() => this.handlePageChange(i)}
+            onClick={e => this.handlePageChange(e, i)}
             className={preparedClass}
           >
             page {i}
@@ -87,7 +89,7 @@ class NewFurniture extends React.Component {
                             <a
                               href='/'
                               className={preparedClass}
-                              onClick={() => this.handleFadeOut(item.id)}
+                              onClick={e => this.handleFadeOut(e, item.id)}
                             >
                               {item.name}
                             </a>
