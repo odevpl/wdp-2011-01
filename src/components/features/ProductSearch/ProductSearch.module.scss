@@ -1,5 +1,26 @@
 @import "../../../styles/settings.scss";
 
+.wrapper {
+  text-align: center;
+  display: flex;
+
+  .user {
+    .list {
+      list-style-type: none;
+      margin: 0;
+      height: 100%;
+      padding: 0;
+      li {
+        display: inline;
+        margin: 5px; 
+      }
+      .topMenuText {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
 .root {
   border: 1px solid $heavenlyGrey;
   display: inline-flex;
@@ -7,7 +28,6 @@
   color: $invisibleGrey;
 
   .category {
-    border-right: 1px solid $heavenlyGrey;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -15,38 +35,6 @@
     width: 230px;
     .icon:first-child {
       color: $primary;
-    }
-    .dropdown {
-      position: relative;
-      .dropdownContainer {
-        @extend %hover-effect;
-        color: $primary;
-        text-transform: capitalize;
-        letter-spacing: $letter-spacing;
-      }
-      .dropdownContent {
-        display: none;
-        position: absolute;
-        top:34px;
-        background: $white;
-        width: 230px;
-        min-width: 160px;
-        box-shadow: $dark-shadow;
-        z-index: 1;
-      }
-      .dropdownContent a {
-        @extend %hover-effect;
-        color: $primary;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-transform: uppercase;
-      }
-      .dropdownContent a:hover {
-        background: $primary;
-        color: $white;
-        font-weight: bolder;
-      }
     }
   }
   .category:hover {
@@ -68,7 +56,6 @@
       padding-left: 10px;
       font-size: 14px;
       outline: none;
-      width: 240px;
 
       &::placeholder {
         color: $invisibleGrey;

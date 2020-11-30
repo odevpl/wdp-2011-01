@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faListUl, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import {
+  faUser,
+  faSearch,
+  faShoppingCart,
+  faLock,
+} from '@fortawesome/free-solid-svg-icons';
 import BurgerMenu from '../../features/BurgerMenu/BurgerMenu';
 import styles from './ProductSearch.module.scss';
 
@@ -11,21 +16,6 @@ const ProductSearch = () => (
   <div className={styles.wrapper}>
     <form action='' className={styles.root}>
       <div className={styles.category}>
-        <FontAwesomeIcon className={styles.icon} icon={faListUl} />
-        <div className={styles.dropdown}>
-          <div className={styles.dropdownContainer}>
-            <span>select category</span>
-          </div>
-          <div className={styles.dropdownContent}>
-            <a href='/shop/furniture'>furniture</a>
-            <a href='/'>chair</a>
-            <a href='/'>table</a>
-            <a href='/'>sofa</a>
-            <a href='/'>bedroom</a>
-            <a href='/'>blog</a>
-          </div>
-          <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
-        </div>
         <div className={styles.searchField}>
           <input placeholder='Search products...' type='text' />
           <Button className={styles.searchButton}>
@@ -34,6 +24,28 @@ const ProductSearch = () => (
         </div>
       </div>
     </form>
+    <div className={styles.user}>
+      <ul className={styles.list}>
+        <li>
+          <a href='/'>
+            <FontAwesomeIcon className={styles.icon} icon={faUser} />
+            <span className={styles.topMenuText}>Login</span>
+          </a>
+        </li>
+        <li>
+          <a href='/'>
+            <FontAwesomeIcon className={styles.icon} icon={faLock} />
+            <span className={styles.topMenuText}>Register</span>
+          </a>
+        </li>
+        <li>
+          <a href='/'>
+            <FontAwesomeIcon className={styles.icon} icon={faShoppingCart} />
+            <span className={styles.topMenuText}>Cart</span>
+          </a>
+        </li>
+      </ul>
+    </div>
     <span className={styles.burgerWrapper}>
       {' '}
       <BurgerMenu className={styles.burger} />
