@@ -3,13 +3,7 @@ import PropTypes from 'prop-types';
 
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faUser,
-  faSearch,
-  faShoppingCart,
-  faLock,
-} from '@fortawesome/free-solid-svg-icons';
-import BurgerMenu from '../../features/BurgerMenu/BurgerMenu';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import styles from './ProductSearch.module.scss';
 
 const ProductSearch = () => (
@@ -24,32 +18,6 @@ const ProductSearch = () => (
         </div>
       </div>
     </form>
-    <div className={styles.user}>
-      <ul className={styles.list}>
-        <li>
-          <a href='/'>
-            <FontAwesomeIcon className={styles.icon} icon={faUser} />
-            <span className={styles.topMenuText}>Login</span>
-          </a>
-        </li>
-        <li>
-          <a href='/'>
-            <FontAwesomeIcon className={styles.icon} icon={faLock} />
-            <span className={styles.topMenuText}>Register</span>
-          </a>
-        </li>
-        <li>
-          <a href='/'>
-            <FontAwesomeIcon className={styles.icon} icon={faShoppingCart} />
-            <span className={styles.topMenuText}>Cart</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <span className={styles.burgerWrapper}>
-      {' '}
-      <BurgerMenu className={styles.burger} />
-    </span>
   </div>
 );
 

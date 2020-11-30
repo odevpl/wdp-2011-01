@@ -26,6 +26,7 @@ class PromoProductBox extends React.Component {
       starChange,
       stars,
     } = this.props;
+
     return (
       <div className={styles.root}>
         <div className={`${styles.photo}`}>
