@@ -6,9 +6,9 @@ import styles from './PromoProducts.module.scss';
 
 class PromoProducts extends React.Component {
   state = {
-    activeCategory: 'bed',
+    activeCategory: 'laptop',
     activeImage: 1,
-    activeCategoryArr: ['bed', 'chair', 'sofa'],
+    activeCategoryArr: ['laptop', 'mouse', 'keyboard'],
     fadeRight: true,
     fadeLeft: true,
   };
@@ -23,7 +23,7 @@ class PromoProducts extends React.Component {
 
   startAnimationSlide() {
     let index = this.state.activeImage - 1;
-    this.interval = setInterval(() => {
+    const interval = setInterval(() => {
       this.handleFadeInLeft();
       setTimeout(() => {
         this.handleFadeOutLeft();
@@ -34,9 +34,11 @@ class PromoProducts extends React.Component {
         ],
       });
     }, 4000);
+    console.log(interval);
   }
 
   stopAnimationSlide() {
+    console.log(this.interval);
     clearInterval(this.interval);
     this.setState({ fadeLeft: true });
     setTimeout(() => {
@@ -99,7 +101,6 @@ class PromoProducts extends React.Component {
     const { activeCategory, activeImage, fadeRight, fadeLeft } = this.state;
     const categoryProduct = hotDeal.filter(item => item.category === activeCategory);
     const currentImage = images.filter(item => item.id === activeImage);
-
     const helpClass = fadeLeft ? styles.fadeIn : styles.fadeOut;
     return (
       <div className={styles.root}>
@@ -119,7 +120,7 @@ class PromoProducts extends React.Component {
                         <li key={id}>
                           <a
                             href='/'
-                            onClick={e => this.handleCategoryChange(e, item.id)}
+                            onClick={e => this.handleCategoryChange(e, item.category)}
                             className={preparedClass}
                           >
                             page {id}
@@ -152,7 +153,7 @@ class PromoProducts extends React.Component {
                 <div className={styles.rightContainerMain}>
                   <div className={styles.description}>
                     <h2>
-                      {name}
+                      {`${name} `}
                       <span>{spanName} </span>
                     </h2>
                     <p>{subName}</p>

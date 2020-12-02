@@ -180,7 +180,6 @@ const initialState = {
       id: 'bart-electronic-laptop-2',
       name: 'Bart Electronic Laptop 2',
       category: 'laptop',
-      promoCategory: true,
       image: 'images/Laptop/laptop2.jpg',
       imageAlt: 'laptop',
       price: 30,
@@ -189,6 +188,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       hotDeal: true,
+      promoCategory: true,
       heart: false,
       arrow: true,
       overview:
@@ -211,7 +211,6 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       heart: true,
-      hotDeal: false,
     },
     {
       id: 'bart-electronic-laptop-4',
@@ -244,7 +243,6 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
       heart: true,
-      hotDeal: false,
     },
     {
       id: 'bart-electronic-laptop-6',
@@ -534,6 +532,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       hotDeal: true,
+      promoCategory: true,
       heart: false,
       arrow: true,
       overview:
@@ -556,7 +555,6 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       heart: true,
-      hotDeal: false,
     },
     {
       id: 'bart-electronic-mouse-4',
@@ -588,7 +586,6 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
       heart: true,
-      hotDeal: false,
     },
     {
       id: 'bart-electronic-mouse-6',
@@ -878,6 +875,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       hotDeal: true,
+      promoCategory: true,
       heart: false,
       arrow: true,
       overview:
@@ -900,7 +898,6 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       heart: true,
-      hotDeal: false,
     },
     {
       id: 'bart-electronic-keyboard-4',
@@ -921,7 +918,6 @@ const initialState = {
       id: 'bart-electronic-keyboard-5',
       name: 'Bart Electronic Keyboard 5',
       category: 'keyboard',
-      promoCategory: true,
       image: 'images/Keyboard/keyboard5.jpg',
       imageAlt: 'sofa',
       price: 30,
@@ -933,7 +929,6 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
       heart: true,
-      hotDeal: false,
     },
     {
       id: 'bart-electronic-keyboard-6',
@@ -1215,7 +1210,6 @@ const initialState = {
       id: 'bart-electronic-smartphone-2',
       name: 'Bart Electronic Smartphone 2',
       category: 'smartphone',
-      promoCategory: true,
       image: 'images/Smartphone/smartphone2.jpg',
       imageAlt: 'chair',
       price: 30,
@@ -1223,7 +1217,6 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      hotDeal: true,
       heart: false,
       arrow: true,
       overview:
@@ -1246,7 +1239,6 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       heart: true,
-      hotDeal: false,
     },
     {
       id: 'bart-electronic-smartphone-4',
@@ -1278,7 +1270,6 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
       heart: true,
-      hotDeal: false,
     },
     {
       id: 'bart-electronic-smartphone-6',
@@ -1567,7 +1558,6 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      hotDeal: true,
       heart: false,
       arrow: true,
       overview:
@@ -1590,7 +1580,6 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       heart: true,
-      hotDeal: false,
     },
     {
       id: 'bart-electronic-headphone-4',
@@ -1622,7 +1611,6 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
       heart: true,
-      hotDeal: false,
     },
     {
       id: 'bart-electronic-headphone-6',
