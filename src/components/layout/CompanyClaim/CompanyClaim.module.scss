@@ -34,6 +34,8 @@
 
         &:hover a {
           color: $primary;
+          transform: translateY(-8%);
+          box-shadow: 0 0 10px #17DAA3;
         }
 
         a {
@@ -42,10 +44,16 @@
           text-decoration: none;
           color: $white;
           transition: color $transition; 
+          transition: box-shadow $transition; 
+          transition: border-bottom $transition;
+          transition: transform $transition;
+          padding: 5px;
+          border-radius: 50%;
 
           .icon {
             color: $white;
             transition: color $transition; 
+            transform: translateX(2.5px);
           }
         }
       }
@@ -108,4 +116,11 @@
   .logo {
     width: 40px;
   }
+}
+
+@media (min-width: 769px) {
+
+ .burgerWrapper {
+   display: none;
+ }
 }

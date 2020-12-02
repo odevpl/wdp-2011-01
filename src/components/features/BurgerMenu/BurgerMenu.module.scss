@@ -2,7 +2,6 @@
 
 .navbar {
   position: relative;
-  top: 35%;
   z-index: 9999;
 
   .menuBars {
@@ -19,8 +18,53 @@
     width: 250px;
     height: 100vh;
     transition: $main-transition;
-  }
+    
+    .navMenuItems {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
 
+      .navToggle {
+        position: relative;
+        left: 80%;
+        width: 40px;
+        transition: $main-transition;
+        &:hover {
+          transform: translateY(-8%);
+          box-shadow: 0 0 10px red;
+          border-bottom: 1px solid red;
+          color: $white;
+        }
+      }
+      
+      .item {
+        margin: 0 0 0 10px;
+        padding: 10px;
+
+        span {
+          margin-left: 10px;
+        }
+        
+        span.icon {
+          transform: translateX(2.5px);
+        }
+
+        a {
+          text-decoration: none;
+          transition: $main-transition;
+          border-radius: 50%;
+          padding: 10px 15px 10px 15px;
+        
+          &:hover {
+            transform: translateY(-8%);
+            box-shadow: 0 0 10px #17DAA3;
+            border-bottom: 3px solid #17DAA3;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
 }
 
 .hideBurger {
@@ -29,6 +73,15 @@
 
 .iconBurger {
   font-size: 40px;
+  position: relative;
+  top: 30px;
+  transition: $main-transition;
+  &:hover {
+    transform: translateY(-8%);
+    box-shadow: 0 0 10px #17DAA3;
+    border-bottom: 1px solid #17DAA3;
+    color: $white;
+  }
 }
 
 .iconClose {

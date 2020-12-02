@@ -22,7 +22,7 @@ const BurgerMenu = ({ categories }) => {
         >
           <ul className={styles.navMenuItems}>
             <li className={styles.navToggle}>
-              <Link to='/' className={styles.menuBars}>
+              <Link to='/'>
                 <AiIcons.AiOutlineClose
                   onClick={showSidebar}
                   className={styles.iconClose}
