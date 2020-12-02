@@ -10,6 +10,7 @@
 
 .iconWrapper {
   flex-grow: 2;
+  margin-left: 20%;
 
 .icons {
   justify-content: center;
@@ -58,10 +59,18 @@
 
 .compRow {
   flex-wrap: nowrap !important;
+  position: relative;
+  height: 100px;
 }
 
-.burgerWrapper {
-  margin: 0 20px 0 20px;
+.burgerWrapper {  
+  height: 100%;
+  position: absolute;
+  display: flex;
+  
+  .burger {
+    height: 100%;
+  }
 }
 
 @media (min-width: 445px) and (max-width: 768px) {

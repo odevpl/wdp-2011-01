@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './Header.module.scss';
 
 import CompanyClaim from '../CompanyClaim/CompanyClaim';
-import MenuBar from '../MenuBar/MenuBar';
+import MenuBar from '../MenuBar/MenuBarContainer';
 
 const Header = props => (
   <header className={styles.root}>

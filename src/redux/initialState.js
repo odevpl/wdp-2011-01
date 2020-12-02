@@ -1,10 +1,48 @@
+import React from 'react';
+import * as FaIcons from 'react-icons/fa';
+
 const initialState = {
   categories: [
-    { id: 'laptop', name: 'Laptop', fade: true, amount: 6 },
-    { id: 'mouse', name: 'Mouse', fade: true, amount: 4 },
-    { id: 'keyboard', name: 'Keyboard', fade: false, amount: 5 },
-    { id: 'smartphone', name: 'Smartphone', fade: false, amount: 4 },
-    { id: 'headphone', name: 'Headphone', fade: false, amount: 6 },
+    {
+      id: 'laptop',
+      name: 'Laptop',
+      path: 'Laptop',
+      icon: <FaIcons.FaLaptop />,
+      fade: true,
+      amount: 6,
+    },
+    {
+      id: 'mouse',
+      name: 'Mouse',
+      path: 'Mouse',
+      icon: <FaIcons.FaMouse />,
+      fade: true,
+      amount: 4,
+    },
+    {
+      id: 'keyboard',
+      name: 'Keyboard',
+      path: 'Keyboard',
+      icon: <FaIcons.FaKeyboard />,
+      fade: false,
+      amount: 5,
+    },
+    {
+      id: 'smartphone',
+      name: 'Smartphone',
+      path: 'Smartphone',
+      icon: <FaIcons.FaPhone />,
+      fade: false,
+      amount: 4,
+    },
+    {
+      id: 'headphone',
+      name: 'Headphone',
+      path: 'Headphone',
+      icon: <FaIcons.FaHeadphones />,
+      fade: false,
+      amount: 6,
+    },
   ],
 
   more: [

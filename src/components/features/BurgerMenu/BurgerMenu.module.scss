@@ -1,5 +1,44 @@
 @import "../../../styles/settings.scss";
 
-.menu {
-  right: 50px;
+.navbar {
+  position: relative;
+  top: 35%;
+  z-index: 9999;
+
+  .menuBars {
+    background: none;
+    margin-left: 20px;
+  }
+  
+  .navMenu.active {
+    display: none;
+  }
+
+  .navMenu {
+    background: $black;
+    width: 250px;
+    height: 100vh;
+    transition: $main-transition;
+  }
+
+}
+
+.hideBurger {
+  display: none;
+}
+
+.iconBurger {
+  font-size: 40px;
+}
+
+.iconClose {
+  font-size: 40px;
+}
+
+.overlay {
+  position: absolute;
+  background-color: lightcoral;
+  min-width: 768px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
 }
