@@ -52,7 +52,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1201px) {
+@media (min-width: 769px) and (max-width: 1201px) {
 
   .root {
     height: 130px;
@@ -61,6 +61,7 @@
   .search {
     text-align: center;
     margin: 10px 0 10px 0;
+    padding: 0;
   }
 
   .menu {
@@ -73,5 +74,9 @@
 @media (max-width: 768px) {
   .root .menu {
     display: none;
+  }
+
+  .search {
+    text-align: center;
   }
 }

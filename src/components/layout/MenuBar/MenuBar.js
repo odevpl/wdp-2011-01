@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import ProductSearch from '../../features/ProductSearch/ProductSearch';
-
 import styles from './MenuBar.module.scss';
 
-const MenuBar = ({ children }) => (
+const MenuBar = ({ children, categories }) => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
@@ -19,24 +17,13 @@ const MenuBar = ({ children }) => (
                 Home
               </a>
             </li>
-            <li>
-              <a href='/shop/furniture'>Furniture</a>
-            </li>
-            <li>
-              <a href='/shop/chair'>Chair</a>
-            </li>
-            <li>
-              <a href='/shop/table'>Table</a>
-            </li>
-            <li>
-              <a href='/shop/sofa'>Sofa</a>
-            </li>
-            <li>
-              <a href='/shop/bedroom'>Bedroom</a>
-            </li>
-            <li>
-              <a href='/shop/blog'>Blog</a>
-            </li>
+            {categories.map(item => {
+              return (
+                <li key={item.id}>
+                  <a href={`/shop/${item.id}`}>{item.name}</a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
@@ -46,6 +33,7 @@ const MenuBar = ({ children }) => (
 
 MenuBar.propTypes = {
   children: PropTypes.node,
+  categories: PropTypes.array,
 };
 
 export default MenuBar;
