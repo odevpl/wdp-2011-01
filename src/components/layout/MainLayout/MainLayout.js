@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -9,22 +9,19 @@ import Sale from '../../common/Sale/SaleContainer';
 
 const MainLayout = ({ children }) => {
   const [sale, setSale] = useState(true);
-  let history = useHistory();
-  useEffect(() => {
-    console.log(history.location.pathname);
-    setSale(true);
-  }, [history.location.pathname]);
+  const history = useHistory();
 
-  const closeSale = () => {
-    setSale(false);
-  };
+  history.listen(() => {
+    setSale(true);
+  });
+
   return (
     <div>
       <Header />
       {children}
       <StickyBar />
       <Footer />
-      <Sale closeSale={closeSale} sale={sale} />
+      <Sale sale={sale} setSale={setSale} />
     </div>
   );
 };
