@@ -3,9 +3,16 @@
 .root {
   margin: 2rem 0;
 
+  .row {
+    justify-content: space-between;
+  }
+
   .leftContainer {
     padding: 0;
     border: 1px solid #e1e1e1;
+    max-width: 420px;
+    min-width: 360px;
+    max-height: 453px;
   }
 
   .hotDealsContainer {
@@ -25,7 +32,7 @@
         padding: 0;
         list-style: none;
         background-color: $dark-grey;
-        @include flex(center, center);
+        @include flex(center, flex-end);
         height: 100%;
         li {
           display: inline-block;
@@ -62,6 +69,8 @@
     position: relative;
     padding: 0;
     min-height: 450px;
+    max-width: 420px;
+    min-width: 360px;
 
     img {
       width: 100%;
@@ -106,7 +115,7 @@
           padding: 1rem;
           border-radius: 4px;
           position: absolute;
-          top: 77%;
+          top: 88%;
           left: 50%;
           transform: translate(-50%, 50%);
           color: $dark-grey;
@@ -190,5 +199,52 @@
   }
   to {
     opacity: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1600px) {
+  .root .row {
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    .leftContainer {
+      min-width: 360px;
+      max-width: 420px;
+    }
+    
+    .rightContainer {
+      min-width: 360px;
+      max-width: 500px;
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+  .root .row {
+    flex-direction: column;
+    align-items: center;
+
+    .leftContainer {
+      margin-bottom: 40px;
+    }
+
+    .rightContainer {
+      max-width: 420px;
+
+      .description {
+        height: 80%;
+
+        p {
+          font-size: 20px;
+        }
+
+        .promoBtn {
+          top: 73%;
+        }
+      }
+      .navigation {
+        bottom: 77px;
+      }
+    }
   }
 }
