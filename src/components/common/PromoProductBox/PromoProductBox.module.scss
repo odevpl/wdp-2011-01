@@ -4,6 +4,28 @@
   background-color: #ffffff;
   width: 100%;
   height: 100%;
+
+  .btnAddToCart {
+    display: none;
+    @include center();
+    text-align: center;
+    top: 113%;
+    cursor: pointer;
+  }
+
+  &:hover {
+    .btnAddToCart {
+      display: block;
+    }
+  }
+
+  .happyHour {
+    position: absolute;
+    top: 20%;
+    left: 14%;
+    font-size: 14px;
+  }
+
   .photo {
     position: relative;
     align-items: flex-end;
@@ -29,51 +51,6 @@
     .buttons {
       display: flex;
       justify-content: space-between;
-    }
-
-    .btnAddToCart {
-      display: none;
-      @include center();
-      text-align: center;
-    }
-    .timersContainer {
-      position: absolute;
-      top: 90%;
-      left: 50%;
-      transform: translate(-50%, -70%);
-      display: flex;
-      align-items: center;
-      .timerContainer {
-        display: none;
-        color: $white;
-        background: $almostBlack;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
-
-        .timerDescription {
-          height: 100%;
-          @include flex(center, center);
-          flex-wrap: wrap;
-
-          p {
-            text-transform: uppercase;
-            margin: 0;
-          }
-
-          p:first-child {
-            width: 100%;
-            text-align: center;
-            font-weight: bolder;
-            font-size: 1.4rem;
-          }
-        }
-      }
-    }
-    &:hover {
-      .btnAddToCart, .timerContainer {
-        display: block;
-      }
     }
   }
 
