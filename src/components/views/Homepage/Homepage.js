@@ -13,7 +13,6 @@ const Homepage = () => (
   <div className={styles.root}>
     <PromoProducts />
     <FeatureBoxes />
-    <Sale />
     <NewFurniture />
     <Feedback />
   </div>
