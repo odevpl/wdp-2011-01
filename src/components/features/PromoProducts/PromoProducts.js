@@ -11,45 +11,57 @@ class PromoProducts extends React.Component {
     activeCategoryArr: ['laptop', 'mouse', 'keyboard'],
     fadeRight: true,
     fadeLeft: true,
+    index: 0,
+    interval: null,
+    timeout: null,
   };
   /* -------------------- LEFT CONTAINER -------------------- */
   componentDidMount() {
-    this.startAnimationSlide();
+    this.intervalTimer();
   }
 
-  componentWillUnmount() {
-    this.stopAnimationSlide();
+  intervalTimer = () => {
+    this.setState({ index: this.state.index === 0 ? 1 : 2 });
+    this.setState({ interval: setInterval(this.startAnimationSlide, 4000) });
+  };
+
+  stopIntervalTimer() {
+    clearInterval(this.state.interval);
   }
 
-  startAnimationSlide() {
-    let index = this.state.activeImage - 1;
-    const interval = setInterval(() => {
-      this.handleFadeInLeft();
-      setTimeout(() => {
-        this.handleFadeOutLeft();
-      }, 2000);
-      this.setState({
-        activeCategory: this.state.activeCategoryArr[
-          index++ % this.state.activeCategoryArr.length
-        ],
-      });
-    }, 4000);
-    console.log(interval);
+  timeOutTimer() {
+    this.setState({ timeout: setTimeout(this.intervalTimer, 10000) });
   }
+
+  stopTimeOutTimer() {
+    clearTimeout(this.state.timeout);
+  }
+
+  startAnimationSlide = () => {
+    this.handleFadeInLeft();
+    setTimeout(() => {
+      this.handleFadeOutLeft();
+    }, 2000);
+    this.setState({
+      activeCategory: this.state.activeCategoryArr[
+        this.state.index++ % this.state.activeCategoryArr.length
+      ],
+    });
+  };
 
   stopAnimationSlide() {
-    console.log(this.interval);
-    clearInterval(this.interval);
-    this.setState({ fadeLeft: true });
-    setTimeout(() => {
-      this.startAnimationSlide();
-    }, 10000);
+    this.stopTimeOutTimer();
+    this.stopIntervalTimer();
+    this.timeOutTimer();
   }
 
   handleCategoryChange(e, categoryId) {
     e.preventDefault();
+    if (categoryId !== this.state.activeCategory) {
+      this.handleFadeInLeft();
+    }
     this.setState({ activeCategory: categoryId });
-    this.stopAnimationSlide();
+    this.stopAnimationSlide(categoryId);
   }
 
   handleFadeOutLeft() {
@@ -135,6 +147,7 @@ class PromoProducts extends React.Component {
                 <div
                   key={item.id}
                   className={`col-12 ${styles.promoBoxContainer} ${helpClass}`}
+                  onMouseEnter={e => this.handleCategoryChange(e, activeCategory)}
                 >
                   <PromoProductBox {...item} />
                 </div>
