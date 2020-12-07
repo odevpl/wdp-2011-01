@@ -37,16 +37,13 @@
       font-weight: 500;
       letter-spacing: $letter-spacing;
       transition: $main-transition;
+      cursor: pointer;
 
       &:hover,
       &.active {
         background-color: $primary;
         color: $white;
         border-color: $primary;
-      }
-
-      &.active {
-        border-color: $invisibleGrey;
       }
     }
   }
