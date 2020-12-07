@@ -13,7 +13,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const CompanyClaim = () => {
   const width = window.innerWidth;
-
   return (
     <div className={styles.root}>
       <div className={`row align-items-center ${styles.compRow}`}>

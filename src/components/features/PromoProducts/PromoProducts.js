@@ -117,8 +117,8 @@ class PromoProducts extends React.Component {
     return (
       <div className={styles.root}>
         <div className='container'>
-          <div className='row'>
-            <div className={`col-4 ${styles.leftContainer}`}>
+          <div className={`row + ${styles.row}`}>
+            <div className={`col-5 ${styles.leftContainer}`}>
               <div className={styles.hotDealsContainer}>
                 <div className='col-8'>
                   <h5>hot deals</h5>
@@ -153,7 +153,7 @@ class PromoProducts extends React.Component {
                 </div>
               ))}
             </div>
-            <div className={`col-8 ${styles.rightContainer}`}>
+            <div className={`col-6 ${styles.rightContainer}`}>
               {currentImage.map((item, id) => (
                 <img
                   key={id}
