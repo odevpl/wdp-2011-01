@@ -2,10 +2,17 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Sale.module.scss';
 import { FaRegWindowClose } from 'react-icons/fa';
+import { useHistory } from 'react-router-dom';
 
-const Sale = ({ saleContent, sale, setSale }) => {
+const Sale = ({ saleContent }) => {
+  const [sale, setSale] = useState(true);
   const random = saleContent[Math.floor(Math.random() * saleContent.length)];
   const ref = useRef(null);
+  const history = useHistory();
+
+  history.listen(() => {
+    setSale(true);
+  });
 
   const closeSale = () => {
     setSale(false);
@@ -19,20 +26,20 @@ const Sale = ({ saleContent, sale, setSale }) => {
 
   const closeSaleOutside = e => {
     if (ref.current && !ref.current.contains(e.target)) {
-      setSale(false);
+      setSale(!sale);
     }
   };
 
   const moveToProduct = e => {
-    console.log(ref.current);
+    console.log('advert');
   };
 
   useEffect(() => {
     document.addEventListener('keydown', closeSaleKey);
     document.addEventListener('click', closeSaleOutside);
     return () => {
-      document.removeEventListener('keydown', closeSaleKey, true);
-      document.removeEventListener('click', closeSaleOutside, true);
+      document.removeEventListener('keydown', closeSaleKey);
+      document.removeEventListener('click', closeSaleOutside);
     };
   });
 
