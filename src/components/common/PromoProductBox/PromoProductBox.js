@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 import Stars from '../Stars/Stars';
-
+import HappyHourAd from '../../features/HappyHourAd/HappyHourAd';
 import styles from './PromoProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -36,32 +36,9 @@ class PromoProductBox extends React.Component {
               <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
             </Button>
           </div>
-          <div className={styles.timersContainer}>
-            <div className={styles.timerContainer}>
-              <div className={styles.timerDescription}>
-                <p>25</p>
-                <p>days</p>
-              </div>
-            </div>
-            <div className={styles.timerContainer}>
-              <div className={styles.timerDescription}>
-                <p>10</p>
-                <p>hrs</p>
-              </div>
-            </div>
-            <div className={styles.timerContainer}>
-              <div className={styles.timerDescription}>
-                <p>25</p>
-                <p>min</p>
-              </div>
-            </div>
-            <div className={styles.timerContainer}>
-              <div className={styles.timerDescription}>
-                <p>25</p>
-                <p>sec</p>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div className={styles.happyHour}>
+          <HappyHourAd />
         </div>
         <div className={styles.content}>
           <h5>{name}</h5>
