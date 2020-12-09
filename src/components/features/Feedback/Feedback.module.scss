@@ -32,6 +32,8 @@
     }
 
     .item {
+      animation: fade 6s;
+
       * {
         border-bottom: none;
       }
@@ -40,8 +42,22 @@
         margin: 10px 0;
       }
 
+      .clientData {
+        width: 100%;
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .clientName {
+          margin-left: 1rem;
+        }
+      }
+
       img {
-        height: auto;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
       }
 
       h3 {
@@ -53,9 +69,15 @@
       }
     }
 
+    @keyframes fade {
+      0% {opacity: 0;}
+      50% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+
     .dots {
       position: absolute;
-      right: 0;
+      right: -0.5rem;
       top: 0;
 
       ul {
