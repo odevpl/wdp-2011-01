@@ -12,9 +12,9 @@ import PromoProducts from '../../features/PromoProducts/PromoProductsContainer';
 const Homepage = () => (
   <div className={styles.root}>
     <PromoProducts />
-    <FeatureBoxes />
     <NewFurniture />
     <Feedback />
+    <FeatureBoxes />
   </div>
 );
 
