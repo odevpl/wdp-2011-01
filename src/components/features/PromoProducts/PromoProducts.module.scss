@@ -189,13 +189,13 @@
     opacity: 0;
   }
   to {
-    opacity: 2;
+    opacity: 1;
   }
 }
 
 @keyframes fadeOut {
   from {
-    opacity: 2;
+    opacity: 1;
   }
   to {
     opacity: 0;
@@ -206,12 +206,12 @@
   .root .row {
     flex-direction: row;
     justify-content: space-evenly;
-    
+
     .leftContainer {
       min-width: 360px;
       max-width: 420px;
     }
-    
+
     .rightContainer {
       min-width: 360px;
       max-width: 500px;

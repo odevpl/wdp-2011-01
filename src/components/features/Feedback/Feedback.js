@@ -10,12 +10,25 @@ class Feedback extends React.Component {
     activePage: 0,
   };
 
-  handlePageChange(no) {}
+  componentDidMount() {
+    setInterval(() => {
+      if (this.state.activePage < 2) {
+        this.setState({ activePage: this.state.activePage + 1 });
+      } else {
+        this.setState({ activePage: 0 });
+      }
+    }, 6000);
+  }
+
+  handlePageChange(e, i) {
+    e.preventDefault();
+    this.setState({ activePage: i });
+  }
 
   render() {
     const { feedback, count } = this.props;
     const { activePage } = this.state;
-    const item = feedback[0];
+    const item = feedback[this.state.activePage];
 
     const dots = [];
     for (let i = 0; i < count; i++) {
@@ -23,7 +36,7 @@ class Feedback extends React.Component {
         <li key={i}>
           <a
             href='/'
-            onClick={() => this.handlePageChange(i)}
+            onClick={e => this.handlePageChange(e, i)}
             className={i === activePage ? styles.active : ''}
           >
             page {i}
@@ -51,9 +64,9 @@ class Feedback extends React.Component {
                 </div>
                 <div className={'col-12 ' + styles.subitem}>{item.content}</div>
               </div>
-              <div className={'row subitem justify-content-center ' + styles.subitem}>
-                <img className='col-1' src={item.photo} alt='' />
-                <div className='col-2'>
+              <div className={styles.clientData}>
+                <img src={item.photo} alt='' />
+                <div className={styles.clientName}>
                   <h3>{item.name}</h3>
                   <h4>{item.position}</h4>
                 </div>
