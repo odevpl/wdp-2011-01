@@ -49,11 +49,47 @@
       margin: 0 10px 0 10px;
     }
 
-    .search {
-      border: 0;
-      background-color: transparent;
-      outline: none;
+    .autoContainer {
+      position: absolute;
+      border-width: 0px 1px 1px 1px;
+      border-style: solid;
+      border-color: $primary;
+      background-color: $main-white;
+      top: 32px;
       width: 100%;
+      max-height: 30rem;
+      height: auto;
+      overflow: scroll;
+      overflow-x: hidden;
+      z-index: 99;
+
+      .option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+
+        &:hover {
+          background: $main-dark;
+          .link{
+            color: $primary;
+            transform: translateY(-8%);
+            box-shadow: 0 0 10px #17DAA3;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .option,
+      .link {
+        font-size: $font-size*1.2;
+        color: $black;
+        margin: .5rem 0;
+        text-decoration: none;
+        cursor: pointer;
+        padding: .5rem;
+      }
     }
   }
 }
@@ -84,4 +120,3 @@ button:focus {
     width: 60%
   }
 }
-

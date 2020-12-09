@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ProductSearch from '../../features/ProductSearch/ProductSearch';
+import ProductSearch from '../../features/ProductSearch/ProductSearchContainer';
 import styles from './MenuBar.module.scss';
 
 const MenuBar = ({ children, categories }) => {
