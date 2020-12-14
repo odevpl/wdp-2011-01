@@ -5,7 +5,7 @@ import { FaRegWindowClose } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
 
 const Sale = ({ saleContent }) => {
-  const [sale, setSale] = useState(true);
+  const [sale, setSale] = useState(false);
   const random = saleContent[Math.floor(Math.random() * saleContent.length)];
   const ref = useRef(null);
   const history = useHistory();

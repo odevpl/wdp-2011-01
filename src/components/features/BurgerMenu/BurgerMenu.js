@@ -38,7 +38,7 @@ const BurgerMenu = ({ categories }) => {
             {categories.map((item, index) => {
               return (
                 <li key={index} className={styles.item}>
-                  <Link to={`/${item.path}`}>
+                  <Link to={`shop/${item.path}`}>
                     {item.icon}
                     <span>{item.name}</span>
                   </Link>

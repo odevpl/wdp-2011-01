@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
@@ -30,15 +29,17 @@ const ProductBox = ({
     e.preventDefault();
     handleFavourite(id);
   };
+
   const compareHandler = e => {
     e.preventDefault();
     handleCompare(id);
   };
+
   return (
     <div className={styles.root}>
       <Link to={`/product/${id}`}>
         <div className={styles.photo}>
-          <img src={image} alt='' />
+          <img src={`../${image}`} alt='' />
           {promo && <div className={styles.sale}>{promo}</div>}
           <div className={styles.buttons}>
             <div to='/' className={styles.quickView}>
@@ -89,14 +90,13 @@ const ProductBox = ({
 
         <div className={styles.outline}></div>
         <div className={styles.outline}></div>
-
-        <div className={styles.olderPrice}>
-          <span className='text-right'>{olderPrice}</span>
-        </div>
         <div className={styles.price}>
-          <Button noHover variant='small'>
+          <Button noHover className={styles.button} variant='small'>
             <h5>$ {price}</h5>
           </Button>
+          <div className={styles.olderPrice}>
+            <span className='text-right'>{olderPrice}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -112,8 +112,8 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   image: PropTypes.node,
-  handleFavourite: PropTypes.func.isRequired,
-  handleCompare: PropTypes.func.isRequired,
+  handleFavourite: PropTypes.func,
+  handleCompare: PropTypes.func,
   heart: PropTypes.bool,
   handleStar: PropTypes.func,
   handleStyle: PropTypes.func,
