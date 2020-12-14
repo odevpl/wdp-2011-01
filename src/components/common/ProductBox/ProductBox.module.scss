@@ -94,8 +94,21 @@
 
   .actions {
     padding: 20px 10px 20px 10px;
-    @include flex(center, space-between);
+    @include flex(center, flex-start);
     display: flex;
+      .price {
+        display: flex;
+        position: absolute;
+        right: 6%;
+
+        .olderPrice {
+          text-decoration: line-through double $main-dark;
+          font-size: 22px;
+          color: $lightGrey;
+          margin-left: 10px;
+        }
+        
+      }
       .price > .small {
         padding: 0;
       }
@@ -106,12 +119,6 @@
         margin-bottom: 0;
       }
 
-    .olderPrice {
-      text-decoration: line-through double $main-dark;
-      font-size: 22px;
-      color: $lightGrey;
-      text-align: right;
-    }
     .price h5 {
       margin-bottom: 0;
     }
@@ -132,7 +139,7 @@
     .buttons {
       visibility: visible;
     }
-    .price div {
+    .price .button {
       background-color: $primary;
       color: $white;
       font-weight: bold;
