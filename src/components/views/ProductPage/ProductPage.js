@@ -33,6 +33,7 @@ const ProductPage = ({
   overview,
   quantity,
   category,
+  manufacturer,
 }) => {
   var availability = 'Unavailable';
   if (quantity > 0) {
@@ -45,7 +46,7 @@ const ProductPage = ({
         <div className={styles.panelBar}>
           <div className='row no-gutters align-items-end'>
             <div className={'col ' + styles.heading}>
-              <h3>Furniture</h3>
+              <h3>{category}</h3>
             </div>
             <div className={'col-auto ' + styles.nav}>
               <p>
@@ -115,6 +116,7 @@ const ProductPage = ({
                 <div className='row'>
                   <div className='col'>
                     <h5>{name}</h5>
+                    <p>From {manufacturer}</p>
                   </div>
                   <div className='col-auto'>
                     <Button variant='outlineYellow'>
@@ -270,6 +272,7 @@ ProductPage.propTypes = {
   overview: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
+  manufacturer: PropTypes.string.isRequired,
 };
 
 export default ProductPage;
