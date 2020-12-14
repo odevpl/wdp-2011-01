@@ -2315,6 +2315,14 @@ const initialState = {
       reduce: '-30%',
     },
   ],
+  saleFeedback: {
+    id: 1,
+    img: `${window.location.origin}/images/feedback.jpg`,
+    title: 'NOBODY LIKES ADVERTS',
+    subtitle: 'so...',
+    promo: 'we will just move you to previous site',
+    reduce: '(-:',
+  },
   tagsContent: {
     firstTag: 'Table',
     secondTag: 'Chair',
