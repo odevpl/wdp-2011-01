@@ -66,7 +66,7 @@
       .option {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
         padding: 5px;
 
@@ -85,7 +85,6 @@
       .link {
         font-size: $font-size*1.2;
         color: $black;
-        margin: .5rem 0;
         text-decoration: none;
         cursor: pointer;
         padding: .5rem;
@@ -115,8 +114,17 @@ button:focus {
 }
 
 @media (min-width: 951px) {
-
   .root {
     width: 60%
+  }
+}
+
+.test {
+  background: $main-dark;
+  .link{
+    color: $primary !important;
+    transform: translateY(-8%);
+    box-shadow: 0 0 10px #17DAA3;
+    border-radius: 50%;
   }
 }
