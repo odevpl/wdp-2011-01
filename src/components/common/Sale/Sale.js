@@ -11,7 +11,7 @@ const Sale = ({ saleContent }) => {
   const history = useHistory();
 
   history.listen(() => {
-    setSale(true);
+    setSale(false);
   });
 
   const closeSale = () => {
@@ -30,10 +30,6 @@ const Sale = ({ saleContent }) => {
     }
   };
 
-  const moveToProduct = e => {
-    console.log('advert');
-  };
-
   useEffect(() => {
     document.addEventListener('keydown', closeSaleKey);
     document.addEventListener('click', closeSaleOutside);
@@ -46,7 +42,7 @@ const Sale = ({ saleContent }) => {
   return (
     sale && (
       <div key={random.id} className={styles.root}>
-        <div ref={ref} className={styles.main} onClick={moveToProduct}>
+        <div ref={ref} className={styles.main}>
           <div key={random.id} className={styles.saleContainer}>
             <img src={random.img} alt='' />
             <div className={styles.saleContent}>

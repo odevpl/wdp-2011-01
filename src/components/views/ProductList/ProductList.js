@@ -63,9 +63,6 @@ const ProductList = ({ products }) => {
                   <option>Alphabet - Z-A</option>
                 </select>
               </div>
-              <div className={styles.textFilter}>
-                <input placeholder='Filter by' type='text' />
-              </div>
             </div>
           </section>
         </Row>

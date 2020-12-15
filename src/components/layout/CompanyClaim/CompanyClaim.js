@@ -29,13 +29,13 @@ const CompanyClaim = () => {
             <div>
               <ul className={styles.list}>
                 <li>
-                  <a href='/'>
+                  <a href='/login'>
                     <FontAwesomeIcon className={styles.icon} icon={faUser} />
                     <span className={styles.topMenuText}>Login</span>
                   </a>
                 </li>
                 <li>
-                  <a href='/'>
+                  <a href='/register'>
                     <FontAwesomeIcon className={styles.icon} icon={faLock} />
                     <span className={styles.topMenuText}>Register</span>
                   </a>
