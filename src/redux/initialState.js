@@ -64,23 +64,27 @@ const initialState = {
   brands: [
     {
       id: 'Brand-1',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://www.designhill.com/design-blog/wp-content/uploads/2015/03/Computer-Logo-Designs.png',
     },
     {
       id: 'Brand-2',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+      image:
+        'https://brandongaille.com/wp-content/uploads/2013/07/HP-Company-Logos.jpg',
     },
     {
       id: 'Brand-3',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://logoeps.com/wp-content/uploads/2013/07/apple-computer-brand-vector-logo.png',
     },
     {
       id: 'Brand-4',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+      image:
+        'https://images-platform.99static.com//pWE2G5QeOLg6uoK3dzt3FionJZ0=/385x0:1621x1236/fit-in/590x590/99designs-contests-attachments/59/59115/attachment_59115475',
     },
     {
       id: 'Brand-5',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image: 'https://www.globalbrandsmagazine.com/wp-content/uploads/2013/10/LT.png',
     },
     {
       id: 'Brand-6',
@@ -88,75 +92,89 @@ const initialState = {
     },
     {
       id: 'Brand-7',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://www.designhill.com/design-blog/wp-content/uploads/2015/03/Computer-Logo-Designs.png',
     },
     {
       id: 'Brand-8',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://logoeps.com/wp-content/uploads/2013/07/apple-computer-brand-vector-logo.png',
     },
     {
       id: 'Brand-9',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://brandongaille.com/wp-content/uploads/2013/07/HP-Company-Logos.jpg',
     },
     {
       id: 'Brand-10',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image: 'https://www.globalbrandsmagazine.com/wp-content/uploads/2013/10/LT.png',
     },
     {
       id: 'Brand-11',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://images-platform.99static.com//pWE2G5QeOLg6uoK3dzt3FionJZ0=/385x0:1621x1236/fit-in/590x590/99designs-contests-attachments/59/59115/attachment_59115475',
     },
     {
       id: 'Brand-12',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://logoeps.com/wp-content/uploads/2013/07/apple-computer-brand-vector-logo.png',
     },
     {
       id: 'Brand-13',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+      image:
+        'https://brandongaille.com/wp-content/uploads/2013/07/HP-Company-Logos.jpg',
     },
     {
       id: 'Brand-14',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://www.designhill.com/design-blog/wp-content/uploads/2015/03/Computer-Logo-Designs.png',
     },
     {
       id: 'Brand-15',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+      image: 'https://www.globalbrandsmagazine.com/wp-content/uploads/2013/10/LT.png',
     },
     {
       id: 'Brand-16',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://images-platform.99static.com//pWE2G5QeOLg6uoK3dzt3FionJZ0=/385x0:1621x1236/fit-in/590x590/99designs-contests-attachments/59/59115/attachment_59115475',
     },
     {
       id: 'Brand-17',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+      image: 'https://www.globalbrandsmagazine.com/wp-content/uploads/2013/10/LT.png',
     },
     {
       id: 'Brand-18',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://brandongaille.com/wp-content/uploads/2013/07/HP-Company-Logos.jpg',
     },
     {
       id: 'Brand-19',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://logoeps.com/wp-content/uploads/2013/07/apple-computer-brand-vector-logo.png',
     },
     {
       id: 'Brand-20',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image: 'https://www.globalbrandsmagazine.com/wp-content/uploads/2013/10/LT.png',
     },
     {
       id: 'Brand-21',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://www.designhill.com/design-blog/wp-content/uploads/2015/03/Computer-Logo-Designs.png',
     },
     {
       id: 'Brand-22',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://images-platform.99static.com//pWE2G5QeOLg6uoK3dzt3FionJZ0=/385x0:1621x1236/fit-in/590x590/99designs-contests-attachments/59/59115/attachment_59115475',
     },
     {
       id: 'Brand-23',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://logoeps.com/wp-content/uploads/2013/07/apple-computer-brand-vector-logo.png',
     },
     {
       id: 'Brand-24',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://brandongaille.com/wp-content/uploads/2013/07/HP-Company-Logos.jpg',
     },
   ],
   products: [
