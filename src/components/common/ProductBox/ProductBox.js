@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './ProductBox.module.scss';
@@ -14,7 +14,6 @@ const ProductBox = ({
   price,
   promo,
   heart,
-  arrow,
   stars,
   olderPrice,
   handleFavourite,
@@ -24,6 +23,7 @@ const ProductBox = ({
   starChange,
   handleCompare,
   compare,
+  manufacturer,
 }) => {
   const favouriteHandler = e => {
     e.preventDefault();
@@ -49,7 +49,7 @@ const ProductBox = ({
             </div>
             <div to='/' className={styles.quickView}>
               <Button variant='small' className={styles.quickView}>
-                <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+                <FontAwesomeIcon icon={faShoppingBasket}> </FontAwesomeIcon> ADD TO CART
               </Button>
             </div>
           </div>
@@ -59,6 +59,7 @@ const ProductBox = ({
         <Link to={`/product/${id}`}>
           <h5>{name}</h5>
         </Link>
+        <p className={styles.manufacturer}>by {manufacturer}</p>
         <Stars
           rate={stars}
           handleStar={handleStar}
@@ -67,7 +68,7 @@ const ProductBox = ({
           starChange={starChange}
         />
       </div>
-      <div className={styles.line}></div>
+      <div className={styles.line}> </div>
       <div className={styles.actions}>
         <div className={styles.outline}>
           <Button
@@ -88,8 +89,8 @@ const ProductBox = ({
           </Button>
         </div>
 
-        <div className={styles.outline}></div>
-        <div className={styles.outline}></div>
+        <div className={styles.outline}> </div>
+        <div className={styles.outline}> </div>
         <div className={styles.price}>
           <Button noHover className={styles.button} variant='small'>
             <h5>$ {price}</h5>
@@ -108,7 +109,7 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
-  olderPrice: PropTypes.string,
+  olderPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
   image: PropTypes.node,
@@ -120,6 +121,7 @@ ProductBox.propTypes = {
   starChange: PropTypes.bool,
   compare: PropTypes.bool,
   arrow: PropTypes.bool,
+  manufacturer: PropTypes.string,
 };
 
 export default ProductBox;

@@ -68,6 +68,10 @@
       margin-bottom: 0;
     }
 
+    .manufacturer {
+     font-size: 0.8rem;
+     color: $heavenlyGrey;
+    }
     .stars {
       a {
         text-decoration: none;
@@ -107,7 +111,7 @@
           color: $lightGrey;
           margin-left: 10px;
         }
-        
+
       }
       .price > .small {
         padding: 0;
