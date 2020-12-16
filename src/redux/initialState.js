@@ -65,6 +65,7 @@ const initialState = {
     {
       id: 'Brand-1',
       image: 'https://freedesignfile.com/upload/2017/08/tech-logo-vector.jpg',
+
     },
     {
       id: 'Brand-2',
@@ -74,6 +75,7 @@ const initialState = {
     {
       id: 'Brand-3',
       image:
+
         'https://media.istockphoto.com/vectors/creative-pixelated-t-letter-talk-circle-bubble-logo-design-symbol-vector-id1152739513?b=1&k=6&m=1152739513&s=612x612&w=0&h=sAHya5zwkxUJ0Mzw1kpt_pLdSyvf-1uX467nZV7cUvw=',
     },
     {
@@ -122,6 +124,7 @@ const initialState = {
       id: 'Brand-13',
       image:
         'https://images.assetsdelivery.com/compings_v2/vastard/vastard1903/vastard190300426.jpg',
+
     },
     {
       id: 'Brand-14',
@@ -145,6 +148,7 @@ const initialState = {
     {
       id: 'Brand-18',
       image:
+
         'https://previews.123rf.com/images/heryanto211/heryanto2111907/heryanto211190700067/127621960-technology-logo-computer-and-data-related-business-hi-tech-and-innovative.jpg',
     },
     {
@@ -160,6 +164,7 @@ const initialState = {
       id: 'Brand-21',
       image:
         'https://images.assetsdelivery.com/compings_v2/vastard/vastard1903/vastard190300426.jpg',
+
     },
     {
       id: 'Brand-22',
