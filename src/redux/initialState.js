@@ -471,6 +471,7 @@ const initialState = {
       quantity: 1,
     },
   ],
+
   promoProducts: {
     name: 'indoor',
     spanName: 'furniture',
@@ -543,10 +544,61 @@ const initialState = {
     content2b: 'CHAIR',
     content2c: 'COLLECTION',
     price: '$200.00',
-    content3a: 'SPECIAL',
+    content3a: 'SPECIAL ',
     content3b: 'COLLECTION',
     info: 'SAVE UP 45% OF FURNITURE',
   },
+
+  gallery: [
+    {
+      id: 'feature-1',
+      image: 'src=../../images/bed1.jpeg',
+    },
+    {
+      id: 'feature-2',
+      image: 'src=../../images/bed2.jpeg',
+    },
+    {
+      id: 'feature-3',
+      image: 'src=../../images/bed3.jpeg',
+    },
+    {
+      id: 'topseller-1',
+      image: 'src=../../images/bed4.jpeg',
+    },
+    {
+      id: 'topseller-2',
+      image: 'src=../../images/bed5.jpeg',
+    },
+    {
+      id: 'topseller-3',
+      image: 'src=../../images/bed6.jpeg',
+    },
+    {
+      id: 'saleoff-1',
+      image: 'src=../../images/bed7.jpeg',
+    },
+    {
+      id: 'saleoff-2',
+      image: 'src=../../images/bed8.jpeg',
+    },
+    {
+      id: 'saleoff-3',
+      image: 'src=../../images/chair1.jpeg',
+    },
+    {
+      id: 'topratted-1',
+      image: 'src=../../images/table1.jpeg',
+    },
+    {
+      id: 'topratted-2',
+      image: 'src=../../images/table2.jpeg',
+    },
+    {
+      id: 'topratted-3',
+      image: 'src=../../images/sofa2.jpeg',
+    },
+  ],
 };
 
 export default initialState;
