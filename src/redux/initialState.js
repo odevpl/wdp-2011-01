@@ -65,99 +65,121 @@ const initialState = {
   brands: [
     {
       id: 'Brand-1',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image: 'https://freedesignfile.com/upload/2017/08/tech-logo-vector.jpg',
+
     },
     {
       id: 'Brand-2',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+      image:
+        'https://images.assetsdelivery.com/compings_v2/vastard/vastard1903/vastard190300426.jpg',
     },
     {
       id: 'Brand-3',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+
+        'https://media.istockphoto.com/vectors/creative-pixelated-t-letter-talk-circle-bubble-logo-design-symbol-vector-id1152739513?b=1&k=6&m=1152739513&s=612x612&w=0&h=sAHya5zwkxUJ0Mzw1kpt_pLdSyvf-1uX467nZV7cUvw=',
     },
     {
       id: 'Brand-4',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+      image: 'https://freedesignfile.com/upload/2017/08/tech-logo-vector.jpg',
     },
     {
       id: 'Brand-5',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://images.assetsdelivery.com/compings_v2/vastard/vastard1903/vastard190300426.jpg',
     },
     {
       id: 'Brand-6',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+      image:
+        'https://media.istockphoto.com/vectors/creative-pixelated-t-letter-talk-circle-bubble-logo-design-symbol-vector-id1152739513?b=1&k=6&m=1152739513&s=612x612&w=0&h=sAHya5zwkxUJ0Mzw1kpt_pLdSyvf-1uX467nZV7cUvw=',
     },
     {
       id: 'Brand-7',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://previews.123rf.com/images/heryanto211/heryanto2111907/heryanto211190700067/127621960-technology-logo-computer-and-data-related-business-hi-tech-and-innovative.jpg',
     },
     {
       id: 'Brand-8',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image: 'https://freedesignfile.com/upload/2017/08/tech-logo-vector.jpg',
     },
     {
       id: 'Brand-9',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://images.assetsdelivery.com/compings_v2/vastard/vastard1903/vastard190300426.jpg',
     },
     {
       id: 'Brand-10',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://media.istockphoto.com/vectors/creative-pixelated-t-letter-talk-circle-bubble-logo-design-symbol-vector-id1152739513?b=1&k=6&m=1152739513&s=612x612&w=0&h=sAHya5zwkxUJ0Mzw1kpt_pLdSyvf-1uX467nZV7cUvw=',
     },
     {
       id: 'Brand-11',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://previews.123rf.com/images/heryanto211/heryanto2111907/heryanto211190700067/127621960-technology-logo-computer-and-data-related-business-hi-tech-and-innovative.jpg',
     },
     {
       id: 'Brand-12',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image: 'https://freedesignfile.com/upload/2017/08/tech-logo-vector.jpg',
     },
     {
       id: 'Brand-13',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+      image:
+        'https://images.assetsdelivery.com/compings_v2/vastard/vastard1903/vastard190300426.jpg',
+
     },
     {
       id: 'Brand-14',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://previews.123rf.com/images/heryanto211/heryanto2111907/heryanto211190700067/127621960-technology-logo-computer-and-data-related-business-hi-tech-and-innovative.jpg',
     },
     {
       id: 'Brand-15',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+      image:
+        'https://media.istockphoto.com/vectors/creative-pixelated-t-letter-talk-circle-bubble-logo-design-symbol-vector-id1152739513?b=1&k=6&m=1152739513&s=612x612&w=0&h=sAHya5zwkxUJ0Mzw1kpt_pLdSyvf-1uX467nZV7cUvw=',
     },
     {
       id: 'Brand-16',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image: 'https://freedesignfile.com/upload/2017/08/tech-logo-vector.jpg',
     },
     {
       id: 'Brand-17',
-      image: 'https://cdn.logojoy.com/wp-content/uploads/2018/05/01111022/1357.png',
+      image:
+        'https://images.assetsdelivery.com/compings_v2/vastard/vastard1903/vastard190300426.jpg',
     },
     {
       id: 'Brand-18',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+
+        'https://previews.123rf.com/images/heryanto211/heryanto2111907/heryanto211190700067/127621960-technology-logo-computer-and-data-related-business-hi-tech-and-innovative.jpg',
     },
     {
       id: 'Brand-19',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://media.istockphoto.com/vectors/creative-pixelated-t-letter-talk-circle-bubble-logo-design-symbol-vector-id1152739513?b=1&k=6&m=1152739513&s=612x612&w=0&h=sAHya5zwkxUJ0Mzw1kpt_pLdSyvf-1uX467nZV7cUvw=',
     },
     {
       id: 'Brand-20',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image: 'https://freedesignfile.com/upload/2017/08/tech-logo-vector.jpg',
     },
     {
       id: 'Brand-21',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://images.assetsdelivery.com/compings_v2/vastard/vastard1903/vastard190300426.jpg',
+
     },
     {
       id: 'Brand-22',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://media.istockphoto.com/vectors/creative-pixelated-t-letter-talk-circle-bubble-logo-design-symbol-vector-id1152739513?b=1&k=6&m=1152739513&s=612x612&w=0&h=sAHya5zwkxUJ0Mzw1kpt_pLdSyvf-1uX467nZV7cUvw=',
     },
     {
       id: 'Brand-23',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image:
+        'https://previews.123rf.com/images/heryanto211/heryanto2111907/heryanto211190700067/127621960-technology-logo-computer-and-data-related-business-hi-tech-and-innovative.jpg',
     },
     {
       id: 'Brand-24',
-      image: 'https://www.graphicsbeam.com/wp-content/uploads/2012/10/Furnicom.jpg',
+      image: 'https://freedesignfile.com/upload/2017/08/tech-logo-vector.jpg',
     },
   ],
   products: [
