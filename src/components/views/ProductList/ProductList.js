@@ -49,8 +49,8 @@ const ProductList = ({ products }) => {
   return (
     <div className={styles.root}>
       <Grid>
-        <Row>
-          <section className={styles.filters}>
+        <Row className={styles.mobile}>
+          <section className={styles.mobileFilters}>
             <div className={styles.filtersContainer}>
               <div className={styles.selectFilter}>
                 <select onChange={e => filter(e)}>
@@ -62,9 +62,6 @@ const ProductList = ({ products }) => {
                   <option>Alphabet - A-Z</option>
                   <option>Alphabet - Z-A</option>
                 </select>
-              </div>
-              <div className={styles.textFilter}>
-                <input placeholder='Filter by' type='text' />
               </div>
             </div>
           </section>

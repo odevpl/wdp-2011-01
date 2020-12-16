@@ -3,25 +3,23 @@
 .root {
   padding: $base-padding 0;
   
-  .filters {
+  .mobileFilters {
     width: 100%;
     
     .filtersContainer {
       display: flex;
       height: 50px;
       align-items: center;
+      justify-content: center;
       
       
       .selectFilter {
-        margin-right: 3%;
+        width: 80%;
         
-        select {
-          height: 40px;
-       }
-    }
-
-      .textFilter input {
-        height: 40px;
+          select {
+            height: 40px;
+            width: 100%;
+        }
       }
     }
   }
@@ -40,4 +38,11 @@
     display: none;
   }
 
+}
+
+@media (min-width: 769px) {
+
+  .mobileFilters {
+    display: none;
+  }
 }
