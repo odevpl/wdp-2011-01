@@ -51,17 +51,16 @@
 
     .autoContainer {
       position: absolute;
-      border-width: 0px 1px 1px 1px;
       border-style: solid;
-      border-color: $primary;
       background-color: $main-white;
       top: 32px;
-      width: 100%;
+      width: 100.7%;
       max-height: 30rem;
       height: auto;
       overflow: scroll;
       overflow-x: hidden;
       z-index: 99;
+      transform: translateX(-1.5px);
 
       .option {
         display: flex;
@@ -71,8 +70,7 @@
         padding: 5px;
 
         &:hover {
-          background: $main-dark;
-          .link{
+          .link {
             color: $primary;
             transform: translateY(-8%);
             box-shadow: 0 0 10px #17DAA3;
@@ -83,7 +81,7 @@
 
       .option,
       .link {
-        font-size: $font-size*1.2;
+        font-size: $font-size;
         color: $black;
         text-decoration: none;
         cursor: pointer;
@@ -120,11 +118,17 @@ button:focus {
 }
 
 .test {
-  background: $main-dark;
   .link{
     color: $primary !important;
     transform: translateY(-8%);
     box-shadow: 0 0 10px #17DAA3;
     border-radius: 50%;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 500px) {
+
+  .root .autoContainer .option .link {
+    font-size: 12px;
   }
 }
