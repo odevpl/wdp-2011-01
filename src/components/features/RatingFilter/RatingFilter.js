@@ -12,6 +12,7 @@ const RatingFilters = ({
   category,
   categoryProducts,
   setCategoryProducts,
+  setRatingValues,
 }) => {
   const [starRating, setStarRating] = useState(0);
   const handleStarRating = rating => {
@@ -20,13 +21,14 @@ const RatingFilters = ({
   };
 
   useEffect(() => {
+    setRatingValues(starRating);
     const filteredProduct = categoryProducts.filter(
       product => product.stars >= starRating
     );
     setTimeout(() => {
       setCategoryProducts(filteredProduct);
     }, 500);
-  }, [categoryProducts, setCategoryProducts, starRating]);
+  }, [categoryProducts, setCategoryProducts, setRatingValues, starRating]);
 
   return (
     <div className={styles.root}>
@@ -75,6 +77,7 @@ RatingFilters.propTypes = {
   category: PropTypes.string,
   categoryProducts: PropTypes.array,
   setCategoryProducts: PropTypes.func,
+  setRatingValues: PropTypes.func,
 };
 
 export default RatingFilters;
