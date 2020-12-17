@@ -8,18 +8,24 @@ const CompanyFilter = ({
   companies,
   categoryProducts,
   setCategoryProducts,
+  setCompanyValues,
 }) => {
   const [filteredCompany, setFilteredCompany] = useState([]);
   const [chosenCompany, setChosenCompany] = useState(false);
-
   const noDuplicateCompanies = {};
   for (let i = 0; i < companies.length; i++) {
     noDuplicateCompanies[companies[i]] = (noDuplicateCompanies[companies[i]] || 0) + 1;
   }
 
   const uniqueCompany = [];
-  for (const [key, value] of Object.entries(noDuplicateCompanies)) {
-    uniqueCompany.push({ name: key, amount: value });
+  for (let key in noDuplicateCompanies) {
+    const productByManufacturer = products.filter(product => {
+      return product.manufacturer === key && product.category === category;
+    });
+    uniqueCompany.push({
+      name: key,
+      amount: productByManufacturer.length,
+    });
   }
 
   const handleChange = e => {
@@ -38,15 +44,26 @@ const CompanyFilter = ({
   };
 
   useEffect(() => {
-    console.log(filteredCompany);
-    let filteredProductList = categoryProducts.filter(product =>
-      filteredCompany.includes(product.manufacturer)
-    );
-    console.log(filteredProductList);
-    setTimeout(() => {
-      setCategoryProducts(filteredProductList);
-    }, 500);
-  }, [categoryProducts, chosenCompany, filteredCompany, setCategoryProducts]);
+    setCompanyValues(filteredCompany);
+    if (filteredCompany.length === 0) {
+      setCategoryProducts(products.filter(item => item.category === category));
+    } else {
+      let filteredProductList = categoryProducts.filter(product =>
+        filteredCompany.includes(product.manufacturer)
+      );
+      setTimeout(() => {
+        setCategoryProducts(filteredProductList);
+      }, 500);
+    }
+  }, [
+    category,
+    categoryProducts,
+    chosenCompany,
+    filteredCompany,
+    products,
+    setCategoryProducts,
+    setCompanyValues,
+  ]);
 
   return (
     <div className={styles.root}>
@@ -81,6 +98,7 @@ CompanyFilter.propTypes = {
   companies: PropTypes.array,
   categoryProducts: PropTypes.array,
   setCategoryProducts: PropTypes.func,
+  setCompanyValues: PropTypes.func,
 };
 
 export default CompanyFilter;

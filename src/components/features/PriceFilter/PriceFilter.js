@@ -8,6 +8,7 @@ const PriceFilter = ({
   getProductByPrice,
   categoryProducts,
   setCategoryProducts,
+  setPriceValues,
 }) => {
   const [fromPrice, setFromPrice] = useState(0);
   const [toPrice, setToPrice] = useState(Math.max(...getProductByPrice));
@@ -17,7 +18,7 @@ const PriceFilter = ({
       setFromPrice(0);
     }
     if (e.target.value.length > 0) {
-      setFromPrice(e.target.value);
+      setFromPrice(parseInt(e.target.value));
     }
   };
 
@@ -26,20 +27,30 @@ const PriceFilter = ({
       setToPrice(Math.max(...getProductByPrice));
     }
     if (e.target.value.length > 0) {
-      setToPrice(e.target.value);
+      setToPrice(parseInt(e.target.value));
     }
   };
 
   useEffect(() => {
+    setPriceValues({ from: fromPrice, to: toPrice });
     setCategoryProducts(products.filter(item => item.category === category));
 
     const filteredProduct = categoryProducts.filter(
       product => product.price >= fromPrice && product.price <= toPrice
     );
+
     setTimeout(() => {
       setCategoryProducts(filteredProduct);
     }, 1000);
-  }, [category, categoryProducts, fromPrice, products, setCategoryProducts, toPrice]);
+  }, [
+    category,
+    categoryProducts,
+    fromPrice,
+    products,
+    setCategoryProducts,
+    setPriceValues,
+    toPrice,
+  ]);
 
   return (
     <div className={styles.root}>
@@ -59,6 +70,7 @@ PriceFilter.propTypes = {
   category: PropTypes.string,
   categoryProducts: PropTypes.array,
   setCategoryProducts: PropTypes.func,
+  setPriceValues: PropTypes.func,
 };
 
 export default PriceFilter;
