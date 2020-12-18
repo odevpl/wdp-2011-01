@@ -7,6 +7,12 @@ export const getProductById = ({ products }, productId) => {
   return filtered.length ? filtered[0] : { error: true };
 };
 
+export const getProductByManufacturer = ({ products }) =>
+  products.map(product => product.manufacturer);
+
+export const getProductByPrice = ({ products }) =>
+  products.map(product => product.price);
+
 export const getPromoCategory = ({ products }) =>
   products.filter(category => category.promoCategory === true);
 

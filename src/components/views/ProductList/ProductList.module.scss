@@ -2,42 +2,21 @@
 
 .root {
   padding: $base-padding 0;
-  
-  .filters {
-    width: 100%;
-    
-    .filtersContainer {
+  .content {
+    height: auto;
+    .noProduct {
       display: flex;
-      height: 50px;
+      justify-content: center;
       align-items: center;
-      
-      
-      .selectFilter {
-        margin-right: 3%;
-        
-        select {
-          height: 40px;
-       }
-    }
-
-      .textFilter input {
-        height: 40px;
+      margin: auto 0;
+      width: 100%;
+      height: 100%;
+      p {
+        margin: 15rem 0;
+        font-size: 2rem;
+        text-align: center;
+        color: $main-grey;
       }
     }
   }
-  .content {
-    height: auto;
-  }
-
-  .filters {
-    height: auto;
-  }
-}
-
-@media (min-width: 360px) and (max-width: 768px) {
-
-  .filters {
-    display: none;
-  }
-
 }

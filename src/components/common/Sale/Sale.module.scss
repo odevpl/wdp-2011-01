@@ -16,8 +16,8 @@
 }
 .saleContainer {
     position: relative;
-    height: 30vh;
-    width: 70vw;
+    height: 30rem;
+    width: 50rem;
 
     img {
       position: absolute;
@@ -100,6 +100,14 @@
         height: 100%;
         color: $main-dark;
       }
+  }
+  .imgFeedback {
+    -webkit-filter: blur(3px) brightness(1);
+    filter: blur(3px) brightness(1);
+  }
+  .timer {
+    color: red;
+    margin-left: 1rem;
   }
 }
 
