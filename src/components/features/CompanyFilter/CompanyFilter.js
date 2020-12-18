@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './CompanyFilter.module.scss';
 
@@ -6,12 +6,13 @@ const CompanyFilter = ({
   products,
   category,
   companies,
-  categoryProducts,
   setCategoryProducts,
   setCompanyValues,
+  setInitializer,
+  initializer,
 }) => {
   const [filteredCompany, setFilteredCompany] = useState([]);
-  const [chosenCompany, setChosenCompany] = useState(false);
+
   const noDuplicateCompanies = {};
   for (let i = 0; i < companies.length; i++) {
     noDuplicateCompanies[companies[i]] = (noDuplicateCompanies[companies[i]] || 0) + 1;
@@ -29,41 +30,21 @@ const CompanyFilter = ({
   }
 
   const handleChange = e => {
-    setChosenCompany(!chosenCompany);
+    setInitializer(!initializer);
     setCategoryProducts(products.filter(item => item.category === category));
     if (e.target.checked) {
       if (filteredCompany.indexOf(e.target.name) === -1) {
         filteredCompany.push(e.target.name);
+        setCompanyValues(filteredCompany);
       }
     } else {
       if (filteredCompany.indexOf(e.target.name) > -1) {
         const index = filteredCompany.indexOf(e.target.name);
         filteredCompany.splice(index, 1);
+        setCompanyValues(filteredCompany);
       }
     }
   };
-
-  useEffect(() => {
-    setCompanyValues(filteredCompany);
-    if (filteredCompany.length === 0) {
-      setCategoryProducts(products.filter(item => item.category === category));
-    } else {
-      let filteredProductList = categoryProducts.filter(product =>
-        filteredCompany.includes(product.manufacturer)
-      );
-      setTimeout(() => {
-        setCategoryProducts(filteredProductList);
-      }, 500);
-    }
-  }, [
-    category,
-    categoryProducts,
-    chosenCompany,
-    filteredCompany,
-    products,
-    setCategoryProducts,
-    setCompanyValues,
-  ]);
 
   return (
     <div className={styles.root}>
@@ -96,9 +77,10 @@ CompanyFilter.propTypes = {
   products: PropTypes.array,
   category: PropTypes.string,
   companies: PropTypes.array,
-  categoryProducts: PropTypes.array,
   setCategoryProducts: PropTypes.func,
   setCompanyValues: PropTypes.func,
+  initializer: PropTypes.bool,
+  setInitializer: PropTypes.func,
 };
 
 export default CompanyFilter;

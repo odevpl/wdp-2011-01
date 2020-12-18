@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 import CompanyFilter from '../../features/CompanyFilter/CompanyFilterContainer';
@@ -10,36 +10,50 @@ import Brands from '../../layout/Brands/BrandsContainer';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import { useHistory } from 'react-router-dom';
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products, getProductByPrice }) => {
   const [category, setCategory] = useState(window.location.pathname.split('/')[2]);
-  const history = useHistory();
   const [categoryProducts, setCategoryProducts] = useState(
     products.filter(item => item.category === category)
   );
-
   const [companyValues, setCompanyValues] = useState([]);
-  const [priceValues, setPriceValues] = useState({ from: 0, to: 0 });
-  const [ratingValues, setRatingValues] = useState(5);
+  const [ratingValues, setRatingValues] = useState(0);
+  const [priceValuesTo, setPriceValuesTo] = useState(Math.max(...getProductByPrice));
+  const [priceValuesFrom, setPriceValuesFrom] = useState(0);
+  const [initializer, setInitializer] = useState(false);
+
+  const history = useHistory();
+  const initialLoad = useRef(false);
 
   history.listen(() => {
     setCategory(window.location.pathname.split('/')[2]);
     setCategoryProducts(products.filter(item => item.category === category));
   });
 
-  console.log(categoryProducts);
+  if (companyValues.length === 0) {
+    setCompanyValues(['Apple', 'Samsung', 'Motorola', 'Xiaomi', 'Huawei']);
+  }
 
   useEffect(() => {
-    //   const filteredProduct = categoryProducts.filter((product) => {
-    //     return (
-    //       (product.star >= ratingValues)
-    //       // (product.price >= priceValues.from && product.price <= priceValues.to)
-    //     )
-    //   })
-    //   console.log(filteredProduct, categoryProducts)
-    //   setCategoryProducts(filteredProduct)
-    // }, [companyValues, priceValues, ratingValues]);
-    console.log(companyValues, priceValues, ratingValues);
-  });
+    if (initialLoad.current) {
+      const filteredProduct = categoryProducts.filter(product => {
+        return (
+          product.stars >= ratingValues &&
+          companyValues.includes(product.manufacturer) &&
+          product.price >= priceValuesFrom && product.price <= priceValuesTo
+        );
+      });
+      setCategoryProducts(filteredProduct);
+    } else {
+      initialLoad.current = true;
+    }
+  }, [
+    priceValuesFrom,
+    priceValuesTo,
+    initializer,
+    categoryProducts,
+    ratingValues,
+    companyValues,
+  ]);
 
   return (
     <div className={styles.root}>
@@ -77,21 +91,24 @@ const ProductList = ({ products }) => {
               <CompanyFilter
                 setCompanyValues={setCompanyValues}
                 category={category}
-                categoryProducts={categoryProducts}
                 setCategoryProducts={setCategoryProducts}
+                companyValues={companyValues}
+                setInitializer={setInitializer}
+                initializer={initializer}
               />
               <PriceFilter
-                setPriceValues={setPriceValues}
+                setPriceValuesTo={setPriceValuesTo}
+                setPriceValuesFrom={setPriceValuesFrom}
                 category={category}
-                categoryProducts={categoryProducts}
                 setCategoryProducts={setCategoryProducts}
               />
               <RatingFilters
                 setRatingValues={setRatingValues}
                 products={products}
                 category={category}
-                categoryProducts={categoryProducts}
                 setCategoryProducts={setCategoryProducts}
+                setInitializer={setInitializer}
+                initializer={initializer}
               />
             </div>
           </Col>
@@ -106,6 +123,7 @@ const ProductList = ({ products }) => {
 
 ProductList.propTypes = {
   products: PropTypes.array,
+  getProductByPrice: PropTypes.array,
 };
 
 export default ProductList;
