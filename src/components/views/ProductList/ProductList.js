@@ -35,11 +35,13 @@ const ProductList = ({ products, getProductByPrice }) => {
 
   useEffect(() => {
     if (initialLoad.current) {
+      console.log(companyValues);
       const filteredProduct = categoryProducts.filter(product => {
         return (
           product.stars >= ratingValues &&
           companyValues.includes(product.manufacturer) &&
-          product.price >= priceValuesFrom && product.price <= priceValuesTo
+          product.price >= priceValuesFrom &&
+          product.price <= priceValuesTo
         );
       });
       setCategoryProducts(filteredProduct);
@@ -50,9 +52,9 @@ const ProductList = ({ products, getProductByPrice }) => {
     priceValuesFrom,
     priceValuesTo,
     initializer,
+    companyValues,
     categoryProducts,
     ratingValues,
-    companyValues,
   ]);
 
   return (

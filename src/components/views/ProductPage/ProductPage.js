@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import styles from './ProductPage.module.scss';
 import Button from '../../common/Button/Button';
 import Stars from '../../common/Stars/StarsContainer';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import {
   faChevronLeft,
   faChevronRight,
@@ -13,7 +15,6 @@ import {
   faEnvelope,
   faMinus,
   faPlus,
-  faExpandAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
@@ -34,6 +35,7 @@ const ProductPage = ({
   quantity,
   category,
   manufacturer,
+  id,
 }) => {
   var availability = 'Unavailable';
   if (quantity > 0) {
@@ -42,108 +44,85 @@ const ProductPage = ({
 
   return (
     <div className={styles.root}>
-      <div className='container'>
-        <div className={styles.panelBar}>
-          <div className='row no-gutters align-items-end'>
-            <div className={'col ' + styles.heading}>
-              <h3>{category}</h3>
-            </div>
-            <div className={'col-auto ' + styles.nav}>
-              <p>
-                Home {'>'} Furniture {'>'} Chair
-              </p>
-            </div>
-          </div>
-        </div>
+      <Grid>
+        <Row className={styles.panelBar}>
+          <Col className={styles.heading}>
+            <h3 className={styles.categoryIdentyfier}>
+              Electronic {'> '} {category}
+            </h3>
+          </Col>
+        </Row>
         <div className={styles.productBox}>
-          <div className='row'>
-            <div className='col-5'>
-              <div className='row'>
-                <div
-                  className={styles.photo}
-                  style={{
-                    backgroundImage: `url('${image}')`,
-                  }}
-                >
-                  <Button variant='outlineYellow' className={styles.expand}>
-                    <FontAwesomeIcon icon={faExpandAlt}></FontAwesomeIcon>
+          <Row>
+            <Col sm={12} md={6} className={styles.photoWrapper}>
+              <Row>
+                <Col sm={12}>
+                  <img
+                    className={styles.mainPhoto}
+                    src={`${image}`}
+                    alt={category}
+                  ></img>
+                </Col>
+              </Row>
+              <Row className={styles.miniSliderWrapper}>
+                <Col sm={12} className={styles.miniSlider}>
+                  <Button variant='outlineYellow' className={styles.button}>
+                    <FontAwesomeIcon icon={faChevronLeft}>Favorite</FontAwesomeIcon>
                   </Button>
-                </div>
-              </div>
-              <div className={'row ' + styles.mini}>
-                <Button variant='outlineYellow' className={styles.left}>
-                  <FontAwesomeIcon icon={faChevronLeft}>Favorite</FontAwesomeIcon>
-                </Button>
-                <Button variant='outlineYellow' className={styles.right}>
-                  <FontAwesomeIcon icon={faChevronRight}>Favorite</FontAwesomeIcon>
-                </Button>
-                <div className='col-2'>
-                  <div
-                    className={styles.photo}
-                    style={{
-                      backgroundImage: `url('${image}')`,
-                    }}
-                  ></div>
-                </div>
-                <div className='col-2'>
-                  <div
-                    className={styles.photo}
-                    style={{
-                      backgroundImage: `url('${image}')`,
-                    }}
-                  ></div>
-                </div>
-                <div className='col-2'>
-                  <div
-                    className={styles.photo}
-                    style={{
-                      backgroundImage: `url('${image}')`,
-                    }}
-                  ></div>
-                </div>
-                <div className='col-2'>
-                  <div
-                    className={styles.photo}
-                    style={{
-                      backgroundImage: `url('${image}')`,
-                    }}
-                  ></div>
-                </div>
-              </div>
-            </div>
-            <div className='col-7'>
-              <div className={styles.section}>
-                <div className='row'>
-                  <div className='col'>
+                  <div>
+                    <img className={styles.photo} src={`${image}`} alt={category}></img>
+                  </div>
+                  <div>
+                    <img className={styles.photo} src={`${image}`} alt={category}></img>
+                  </div>
+                  <div>
+                    <img className={styles.photo} src={`${image}`} alt={category}></img>
+                  </div>
+                  <Button variant='outlineYellow' className={styles.button}>
+                    <FontAwesomeIcon icon={faChevronRight}>Favorite</FontAwesomeIcon>
+                  </Button>
+                </Col>
+              </Row>
+            </Col>
+            <Col sm={12} md={6}>
+              <div className={styles.productDetailsSection}>
+                <Row className={styles.headerRow}>
+                  <Col>
                     <h5>{name}</h5>
                     <p>From {manufacturer}</p>
-                  </div>
-                  <div className='col-auto'>
+                  </Col>
+                  <Col>
                     <Button variant='outlineYellow'>
                       <FontAwesomeIcon icon={faChevronLeft}>Favorite</FontAwesomeIcon>
                     </Button>
                     <Button variant='outlineYellow'>
                       <FontAwesomeIcon icon={faChevronRight}>Favorite</FontAwesomeIcon>
                     </Button>
-                  </div>
-                </div>
-                <div className='row'>
-                  <div className='col'>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
                     <div className={styles.review}>
                       <Stars rate={stars} handleStar={() => {}} />
                       <p>(0 reviews)</p>
-                      <p>Add your review</p>
+                      <Link to={`/product/${id}/review`}>
+                        <Button variant='outline'>Add your review</Button>
+                      </Link>
                     </div>
-                  </div>
-                </div>
+                  </Col>
+                </Row>
               </div>
-              <div className={styles.section}>
+              <div className={styles.productDetailsSection}>
                 <div className='row justify-content-start'>
-                  <div className={'col-2 ' + styles.olderPrice}>{olderPrice}</div>
+                  {olderPrice ? (
+                    <div className={'col-2 ' + styles.olderPrice}>{olderPrice}</div>
+                  ) : (
+                    ''
+                  )}
                   <div className={'col-2 ' + styles.price}>{price}</div>
                 </div>
               </div>
-              <div className={styles.section}>
+              <div className={styles.productDetailsSection}>
                 <div className='row'>
                   <div className='col'>
                     <div className={styles.buttons}>
@@ -182,7 +161,7 @@ const ProductPage = ({
                   </div>
                 </div>
               </div>
-              <div className={styles.section}>
+              <div className={styles.productDetailsSection}>
                 <div className='row'>
                   <div className='col'>
                     <p>
@@ -193,7 +172,7 @@ const ProductPage = ({
                   </div>
                 </div>
               </div>
-              <div className={styles.section}>
+              <div className={styles.productDetailsSection}>
                 <div className='row'>
                   <div className='col-2'>
                     <p>
@@ -215,7 +194,7 @@ const ProductPage = ({
                   </div>
                 </div>
               </div>
-              <div className={styles.section}>
+              <div className={styles.productDetailsSection}>
                 <div className='row'>
                   <div className='col'>
                     <div className={styles.social}>
@@ -254,10 +233,10 @@ const ProductPage = ({
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </div>
-      </div>
+      </Grid>
       <ProductMore />
     </div>
   );
@@ -273,6 +252,7 @@ ProductPage.propTypes = {
   quantity: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
   manufacturer: PropTypes.string.isRequired,
+  id: PropTypes.string,
 };
 
 export default ProductPage;

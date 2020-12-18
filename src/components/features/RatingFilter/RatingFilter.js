@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './RatingFilters.module.scss';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 

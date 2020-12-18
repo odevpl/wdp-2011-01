@@ -37,6 +37,7 @@ $main-transition: all 0.3s linear;
 $transition: 0.3s linear;
 %hover-effect {
   transition: $main-transition;
+  cursor: pointer;
 }
 
 /* SHADOWS */
