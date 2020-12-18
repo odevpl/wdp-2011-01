@@ -22,6 +22,7 @@ const Sale = ({ saleContent, saleFeedback }) => {
       }, 2500);
     }
     return () => clearTimeout(time);
+
   });
 
   const closeSale = () => {
@@ -46,7 +47,6 @@ const Sale = ({ saleContent, saleFeedback }) => {
       setFeedback(true);
     }
   };
-
   useEffect(() => {
     let interval = null;
     if (feedback) {
