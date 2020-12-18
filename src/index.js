@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import UserProvider from '../src/data/userData';
+import AlertProvider from './data/alertData';
 
 ReactDOM.render(
-  <UserProvider>
-    <App />
-  </UserProvider>,
+  <AlertProvider>
+    <UserProvider>
+      <App />
+    </UserProvider>
+  </AlertProvider>,
   document.getElementById('root')
 );
 
