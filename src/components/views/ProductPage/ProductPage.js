@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductPage.module.scss';
 import Button from '../../common/Button/Button';
@@ -39,8 +39,31 @@ const ProductPage = ({
 }) => {
   var availability = 'Unavailable';
   if (quantity > 0) {
-    availability = 'In Stock';
+    availability = `In Stock(${quantity})`;
   }
+
+  const [count, setCount] = useState(quantity);
+
+  const handleIncrease = quantity => {
+    if (quantity >= 0 && quantity < 10) {
+      setCount(quantity + 1);
+    }
+  };
+
+  const handleDecrease = quantity => {
+    if (quantity > 0) {
+      setCount(quantity - 1);
+    }
+  };
+
+  const handleChange = value => {
+    console.log(value);
+    if (quantity > 0) {
+      setCount(value);
+    } else if (quantity === 0) {
+      setCount(value);
+    }
+  };
 
   return (
     <div className={styles.root}>
@@ -53,7 +76,7 @@ const ProductPage = ({
           </Col>
         </Row>
         <div className={styles.productBox}>
-          <Row>
+          <Row className={styles.mainRow}>
             <Col sm={12} md={6} className={styles.photoWrapper}>
               <Row>
                 <Col sm={12}>
@@ -113,18 +136,44 @@ const ProductPage = ({
                 </Row>
               </div>
               <div className={styles.productDetailsSection}>
-                <div className='row justify-content-start'>
+                <Row>
                   {olderPrice ? (
-                    <div className={'col-2 ' + styles.olderPrice}>{olderPrice}</div>
+                    <div className={styles.olderPrice}>{olderPrice}</div>
                   ) : (
                     ''
                   )}
-                  <div className={'col-2 ' + styles.price}>{price}</div>
-                </div>
+                  <div className={styles.quantity}>
+                    <p>Quantity</p>
+                    <input
+                      onChange={e => handleChange(parseInt(e.target.value))}
+                      className={styles.inputSmall}
+                      type='number'
+                      defaultValue={count}
+                      value={count}
+                    ></input>
+                    <Button
+                      variant='outlineYellow'
+                      onClick={() => handleDecrease(count)}
+                    >
+                      <FontAwesomeIcon icon={faMinus}></FontAwesomeIcon>
+                    </Button>
+                    <Button
+                      variant='outlineYellow'
+                      onClick={() => handleIncrease(count)}
+                    >
+                      <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+                    </Button>
+                  </div>
+                  <div className={styles.priceWrapper}>
+                    <div className={styles.price}>
+                      <span>{count >= 0 ? count * price : setCount('')}</span>
+                    </div>
+                  </div>
+                </Row>
               </div>
               <div className={styles.productDetailsSection}>
-                <div className='row'>
-                  <div className='col'>
+                <Row>
+                  <div>
                     <div className={styles.buttons}>
                       <Button variant='outlineYellow'>
                         <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD
@@ -141,97 +190,82 @@ const ProductPage = ({
                       </Button>
                     </div>
                   </div>
-                </div>
-                <div className='row'>
-                  <div className='col-12'>
-                    <div className={styles.quantity}>
-                      <p>Quantity</p>
-                      <input
-                        className={styles.inputSmall}
-                        type='number'
-                        defaultValue='2'
-                      ></input>
-                      <Button variant='outlineYellow'>
-                        <FontAwesomeIcon icon={faMinus}></FontAwesomeIcon>
-                      </Button>
-                      <Button variant='outlineYellow'>
-                        <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
+                </Row>
               </div>
               <div className={styles.productDetailsSection}>
-                <div className='row'>
-                  <div className='col'>
-                    <p>
-                      <span>Quick Overview</span>
-                      <br />
-                      {overview}
-                    </p>
-                  </div>
-                </div>
+                <Row>
+                  <p>
+                    <span>Quick Overview</span>
+                    <br />
+                    {overview}
+                  </p>
+                </Row>
               </div>
               <div className={styles.productDetailsSection}>
-                <div className='row'>
-                  <div className='col-2'>
-                    <p>
-                      <span>Availability:</span>
-                    </p>
-                  </div>
-                  <div className='col-2'>
-                    <p> {availability} </p>
-                  </div>
-                </div>
-                <div className='row'>
-                  <div className='col-2'>
-                    <p>
-                      <span>Category:</span>
-                    </p>
-                  </div>
-                  <div className='col-2'>
-                    <p> {category} </p>
-                  </div>
-                </div>
+                <Row>
+                  <p>
+                    <span>
+                      Availability:{' '}
+                      <span className={styles.availability}>{availability}</span>{' '}
+                    </span>
+                  </p>
+                </Row>
+                <Row>
+                  <p>
+                    <span>
+                      Category: {category.charAt(0).toUpperCase() + category.slice(1)}{' '}
+                    </span>
+                  </p>
+                </Row>
               </div>
               <div className={styles.productDetailsSection}>
-                <div className='row'>
-                  <div className='col'>
+                <Row>
+                  <div>
                     <div className={styles.social}>
-                      <Button variant='outlineFacebook'>
-                        <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>Share
-                      </Button>
-                      <Button variant='outlineGoogle'>
-                        <FontAwesomeIcon
-                          icon={faGooglePlusG}
-                          className={styles.googleplus}
-                        ></FontAwesomeIcon>{' '}
-                        Google+
-                      </Button>
-                      <Button variant='outlineTwitter'>
-                        <FontAwesomeIcon
-                          icon={faTwitter}
-                          className={styles.twitter}
-                        ></FontAwesomeIcon>{' '}
-                        Tweet
-                      </Button>
-                      <Button variant='outlinePinterest'>
-                        <FontAwesomeIcon
-                          icon={faPinterestP}
-                          className={styles.pinterest}
-                        ></FontAwesomeIcon>{' '}
-                        Pinterest
-                      </Button>
-                      <Button variant='outlineLinkedIn'>
-                        <FontAwesomeIcon
-                          icon={faLinkedinIn}
-                          className={styles.linkedin}
-                        ></FontAwesomeIcon>{' '}
-                        LinkedIn
-                      </Button>
+                      <Link>
+                        <Button variant='outlineFacebook'>
+                          <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>Share
+                        </Button>
+                      </Link>
+                      <Link>
+                        <Button variant='outlineGoogle'>
+                          <FontAwesomeIcon
+                            icon={faGooglePlusG}
+                            className={styles.googleplus}
+                          ></FontAwesomeIcon>{' '}
+                          Google+
+                        </Button>
+                      </Link>
+                      <Link>
+                        <Button variant='outlineTwitter'>
+                          <FontAwesomeIcon
+                            icon={faTwitter}
+                            className={styles.twitter}
+                          ></FontAwesomeIcon>{' '}
+                          Tweet
+                        </Button>
+                      </Link>
+                      <Link>
+                        <Button variant='outlinePinterest'>
+                          <FontAwesomeIcon
+                            icon={faPinterestP}
+                            className={styles.pinterest}
+                          ></FontAwesomeIcon>{' '}
+                          Pinterest
+                        </Button>
+                      </Link>
+                      <Link>
+                        <Button variant='outlineLinkedIn'>
+                          <FontAwesomeIcon
+                            icon={faLinkedinIn}
+                            className={styles.linkedin}
+                          ></FontAwesomeIcon>{' '}
+                          LinkedIn
+                        </Button>
+                      </Link>
                     </div>
                   </div>
-                </div>
+                </Row>
               </div>
             </Col>
           </Row>
