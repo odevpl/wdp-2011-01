@@ -39,7 +39,8 @@ const ProductList = ({ products, getProductByPrice }) => {
         return (
           product.stars >= ratingValues &&
           companyValues.includes(product.manufacturer) &&
-          product.price >= priceValuesFrom && product.price <= priceValuesTo
+          product.price >= priceValuesFrom &&
+          product.price <= priceValuesTo
         );
       });
       setCategoryProducts(filteredProduct);

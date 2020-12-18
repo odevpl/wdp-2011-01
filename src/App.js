@@ -10,9 +10,11 @@ import ProductList from './components/views/ProductList/ProductListContainer';
 import ProductPage from './components/views/ProductPage/ProductPageContainer';
 import Login from './components/views/Login/Login';
 import Register from './components/views/Register/Register';
+import Alert from './components/features/Alert/Alert';
 
 const App = () => (
   <Provider store={store}>
+    <Alert />
     <BrowserRouter>
       <MainLayout>
         <Switch>
