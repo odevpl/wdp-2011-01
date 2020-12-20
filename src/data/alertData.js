@@ -38,6 +38,15 @@ const AlertProvider = ({ children }) => {
     });
   };
 
+  const premiumAlert = (title, text) => {
+    setAlert({
+      isVisible: true,
+      title: title,
+      text: text,
+      type: 'premium',
+    });
+  };
+
   const closeAlert = () => {
     setAlert({
       isVisible: false,
@@ -49,7 +58,7 @@ const AlertProvider = ({ children }) => {
   return (
     <div>
       <AlertContext.Provider
-        value={{ alert, successAlert, warningAlert, dangerAlert, closeAlert }}
+        value={{ alert, successAlert, warningAlert, dangerAlert, closeAlert, premiumAlert }}
       >
         {children}
       </AlertContext.Provider>

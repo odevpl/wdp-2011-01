@@ -7,12 +7,21 @@ import {
   faMobileAlt,
   faShoppingBasket,
   faUser,
-  faLock,
+  faSignOutAlt,
+  faUserCog,
+  faStar,
 } from '@fortawesome/free-solid-svg-icons';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {UserContext} from '../../../data/userData';
 
 const CompanyClaim = () => {
+  const user = React.useContext(UserContext);
   const width = window.innerWidth;
+
+  const handleLogout = () => {
+    localStorage.setItem('isLogged', 'false');
+  };
+
   return (
     <div className={styles.root}>
       <div className={`row align-items-center ${styles.compRow}`}>
@@ -24,22 +33,20 @@ const CompanyClaim = () => {
             </Switch>
           </Router>
         </div>
+        <div className={styles.logo}>
+          <a href='/'>
+            {width > 445 ? (
+              <img src='/images/logo.png' alt='Bazar' />
+            ) : (
+              <img src='/images/logo2.png' alt='Bazar' />
+            )}
+          </a>
+        </div>
+        <div className={styles.empty}> </div>
         <div className={`col text-right ${styles.iconWrapper}`}>
           <div className={styles.icons}>
             <div>
               <ul className={styles.list}>
-                <li>
-                  <a href='/login'>
-                    <FontAwesomeIcon className={styles.icon} icon={faUser} />
-                    <span className={styles.topMenuText}>Login</span>
-                  </a>
-                </li>
-                <li>
-                  <a href='/register'>
-                    <FontAwesomeIcon className={styles.icon} icon={faLock} />
-                    <span className={styles.topMenuText}>Register</span>
-                  </a>
-                </li>
                 <li>
                   <a href='/'>
                     <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} />{' '}
@@ -52,18 +59,36 @@ const CompanyClaim = () => {
                     <span className={styles.topMenuText}>Cart</span>
                   </a>
                 </li>
+                {!user.isLogged &&
+                <li>
+                  <a href='/login'>
+                    <FontAwesomeIcon className={styles.icon} icon={faUser} />
+                    <span className={styles.topMenuText}>Login</span>
+                  </a>
+                </li>
+                }
+                {user.isLogged &&
+                <>
+                <li>
+                  <a href='' onClick={handleLogout}>
+                    <FontAwesomeIcon className={styles.icon} icon={faSignOutAlt} />
+                    <span className={styles.topMenuText}>Logout</span>
+                  </a>
+                </li>
+                <li>
+                  <a href='/userpage'>
+                    <FontAwesomeIcon className={styles.iconUserConf} icon={faUserCog} />
+                    <span className={styles.topMenuText}>{user.userData}</span>
+                    {user.isPremium &&
+                    <FontAwesomeIcon className={styles.iconUserStar} icon={faStar} />
+                    }
+                  </a>
+                </li>
+                </>
+                }
               </ul>
             </div>
           </div>
-        </div>
-        <div className={`col logo-left ${styles.logo}`}>
-          <a href='/'>
-            {width > 445 ? (
-              <img src='/images/logo.png' alt='Bazar' />
-            ) : (
-              <img src='/images/logo2.png' alt='Bazar' />
-            )}
-          </a>
         </div>
       </div>
     </div>

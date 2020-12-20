@@ -7,15 +7,17 @@
   z-index: 999;
   .content {
     width: 30rem;
-    height: 10rem;
-    background: $color-success;
+    height: auto;
     opacity: 0.95;
+    background: $milk;
     @include center();
     h3 {
       margin: 1rem 0 0 1rem;
+      text-align: center;
     }
-    p {
-      margin: 1.5rem 0 0 1rem;
+    div {
+      margin: 1.5rem 1rem;
+      font-size: 1.3rem;
     }
     .close {
       position: absolute;
@@ -32,15 +34,16 @@
     }
   }
   .success {
-    background: $color-success;
-    border-left: 15px solid green;
+    border-left: 20px solid $color-success;
   }
   .warning {
-    background: $color-warning;
-    border-left: 15px solid $primary;
+    border-left: 20px solid $color-warning;
   }
   .danger {
-    background: $color-danger;
-    border-left: 15px solid red;
+    border-left: 20px solid $color-danger;
+  }
+  .premium {
+    border-left: 20px solid $primary;
+    width: 40rem;
   }
 }
