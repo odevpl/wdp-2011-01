@@ -1,106 +1,143 @@
-import React, { useState, useRef } from 'react';
+import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
-import CheckButton from 'react-validation/build/button';
-import AuthService from '../../../services/auth.service';
 import styles from './Login.module.scss';
 import PropTypes from 'prop-types';
-const required = value => {
-  if (!value) {
-    return <div>This field is required!</div>;
-  }
-};
+import {UserContext} from '../../../data/userData';
+import {AlertContext} from '../../../data/alertData';
 
-const Login = props => {
-  const form = useRef();
-  const checkBtn = useRef();
+const Login = () => {
+  const user = React.useContext(UserContext);
+  const alert = React.useContext(AlertContext);
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
+  const [loginView, setLoginView] = useState(true);
 
-  const onChangeUsername = e => {
-    const username = e.target.value;
-    setUsername(username);
+  const history = useHistory();
+
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
   };
 
-  const onChangePassword = e => {
-    const password = e.target.value;
-    setPassword(password);
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLoginView = () => {
+    setLoginView(!loginView);
+  };
+
+  const validate = () => {
+    if(username === '') {
+      alert.warningAlert('Warning!', `Username field can not be empty`);
+    } else if(password === '') {
+      alert.warningAlert('Warning!', `Password field can not be empty`);
+    } else if(username !== user.userData) {
+      alert.dangerAlert('oopss...', `Username ${username} does not exist`);
+    } else if(password !== user.passwordData) {
+      alert.dangerAlert('oopss...', 'Incorrect password');
+    }
   };
 
   const handleLogin = e => {
     e.preventDefault();
-
-    setMessage('');
-    setLoading(true);
-
-    form.current.validateAll();
-
-    if (checkBtn.current.context._errors.length === 0) {
-      AuthService.login(username, password).then(
-        () => {
-          props.history.push('/profile');
-          window.location.reload();
-        },
-        error => {
-          const resMessage =
-            (error.response && error.response.data && error.response.data.message) ||
-            error.message ||
-            error.toString();
-
-          setLoading(false);
-          setMessage(resMessage);
-        }
-      );
-    } else {
-      setLoading(false);
+    validate();
+    if(username === user.userData && password === user.passwordData) {
+      localStorage.setItem('isLogged', 'true');
+      alert.successAlert('You are logged in', `Welcome ${username}`);
+      setTimeout(()=> {
+        history.push('/');
+        alert.closeAlert();
+        window.location.reload();
+      },3000);
     }
+  };
+
+  const handleRegister = e => {
+    e.preventDefault();
+    validate();
+    localStorage.setItem('Username',username);
+    localStorage.setItem('Password',password);
+    localStorage.setItem('isPremium', 'false');
+    alert.successAlert('Account created', `You can log in now`);
+    setTimeout(()=> {
+      alert.closeAlert();
+      window.location.reload();
+    },3000);
   };
 
   return (
     <div className={styles.root}>
-      <div>
-        <img src='//ssl.gstatic.com/accounts/ui/avatar_2x.png' alt='profile-img' />
-
-        <Form onSubmit={handleLogin} ref={form}>
+      <div className={styles.container}>
+        {loginView &&
+        <h1>Login</h1>
+        }
+        {!loginView &&
+        <h1>Register</h1>
+        }
+        <img src={process.env.PUBLIC_URL + '/images/user.png'} alt='login-img' />
+        <Form >
           <div>
-            <label htmlFor='username'>Username</label>
             <Input
               type='text'
               name='username'
               value={username}
-              onChange={onChangeUsername}
-              validations={[required]}
+              onChange={handleUsername}
+              placeholder='Username'
             />
           </div>
-
           <div>
-            <label htmlFor='password'>Password</label>
             <Input
               type='password'
               name='password'
               value={password}
-              onChange={onChangePassword}
-              validations={[required]}
+              onChange={handlePassword}
+              placeholder='Password'
             />
           </div>
-
+          {!loginView &&
           <div>
-            <button disabled={loading}>
-              {loading && <span></span>}
+            <button onClick={handleRegister}>
+              <span>Register</span>
+            </button>
+          </div>
+          }
+          {loginView &&
+          <div>
+            <button onClick={handleLogin}>
               <span>Login</span>
             </button>
           </div>
-
-          {message && (
-            <div>
-              <div>{message}</div>
-            </div>
-          )}
-          <CheckButton style={{ display: 'none' }} ref={checkBtn} />
+          }
         </Form>
+        {loginView &&
+        <div className={styles.descrip}>
+          <p>
+            Do not have an account?
+            <button
+              className={styles.register}
+              onClick={handleLoginView}
+            >
+              Register now!
+            </button>
+          </p>
+        </div>
+        }
+        {!loginView &&
+        <div className={styles.descrip}>
+          <p>
+            Do already have an account?
+            <button
+              className={styles.register}
+              onClick={handleLoginView}
+            >
+              Login now!
+            </button>
+          </p>
+        </div>
+        }
       </div>
     </div>
   );

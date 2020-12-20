@@ -12,10 +12,6 @@ const Alert = () => {
   };
 
   useEffect(()=> {
-    setTimeout(()=> {
-      close();
-    },5000);
-
     const handleClickOutside = (e) => {
       if (alertCont.current && !alertCont.current.contains(e.target)) {
         close();
@@ -35,23 +31,30 @@ const Alert = () => {
   },[close]);
 
   return (
+    <>
+    {alertData.alert.isVisible &&
     <section className={styles.container}>
-      {alertData.alert.isVisible &&
       <div
         ref={alertCont}
-        className={`${styles.content} ${alertData.alert.type === 'success' ? styles.success :
-          alertData.alert.type === 'warning' ? styles.warning : styles.danger}`}
+        className={`${styles.content} ${alertData.alert.type === 'success' ? styles.success
+          :
+          alertData.alert.type === 'warning' ? styles.warning
+            :
+            alertData.alert.type === 'danger' ? styles.danger
+              : styles.premium
+        }`}
       >
         <h3>{alertData.alert.title}</h3>
-        <p>{alertData.alert.text}</p>
+        <div>{alertData.alert.text}</div>
         <div className={styles.close}>
           <button onClick={close}>
             <FaRegWindowClose className={styles.icon} />
           </button>
         </div>
       </div>
-      }
     </section>
+    }
+    </>
   );
 };
 

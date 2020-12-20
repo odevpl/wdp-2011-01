@@ -1,36 +1,18 @@
-import { checkPropTypes } from 'prop-types';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 export const UserContext = React.createContext();
 
-const getUserFromLocalStorage = () => {
-  console.log('aa');
-};
-
 const UserProvider = ({ children }) => {
-  const [user, setUser] = useState('');
-  const [password, setPassword] = useState('');
-  let [data, setData] = useState('');
-
-  const userLogin = (user, password) => {
-    data = {
-      name: setUser(user),
-      password: setPassword(password),
-    };
-
-    console.log(data);
-    return setData(data);
-  };
-
-  const userLogout = () => {
-    setUser('');
-  };
+  const [userData, setUserData] = useState(localStorage.getItem('Username'));
+  const [passwordData, setPasswordData] = useState(localStorage.getItem('Password'));
+  const [isLogged, setIsLogged] = useState(JSON.parse(localStorage.getItem('isLogged')));
+  const [isPremium, setIsPremium] = useState(JSON.parse(localStorage.getItem('isPremium')));
 
   return (
     <div>
       <UserContext.Provider
-        value={{ user, password, setPassword, userLogin, userLogout }}
+        value={{ userData, passwordData, setPasswordData, setIsLogged, isLogged, isPremium }}
       >
         {children}
       </UserContext.Provider>
