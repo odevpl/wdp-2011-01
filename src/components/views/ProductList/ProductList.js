@@ -35,7 +35,6 @@ const ProductList = ({ products, getProductByPrice }) => {
 
   useEffect(() => {
     if (initialLoad.current) {
-      console.log(companyValues);
       const filteredProduct = categoryProducts.filter(product => {
         return (
           product.stars >= ratingValues &&
@@ -52,9 +51,9 @@ const ProductList = ({ products, getProductByPrice }) => {
     priceValuesFrom,
     priceValuesTo,
     initializer,
-    companyValues,
     categoryProducts,
     ratingValues,
+    companyValues,
   ]);
 
   return (
