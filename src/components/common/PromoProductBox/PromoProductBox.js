@@ -81,7 +81,7 @@ PromoProductBox.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.number,
-  olderPrice: PropTypes.string,
+  olderPrice: PropTypes.number,
   image: PropTypes.string,
   imageAlt: PropTypes.string,
   handleStar: PropTypes.func,

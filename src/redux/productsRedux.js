@@ -1,6 +1,5 @@
 /* selectors */
 export const getAll = ({ products }) => products;
-export const getCount = ({ products }) => products.length;
 
 export const getProductById = ({ products }, productId) => {
   const filtered = products.filter(product => product.id === productId);
@@ -25,7 +24,7 @@ export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
 
 export const getCompared = ({ products }) =>
-  products.filter(product => product.compare === true);
+  products.filter(product => product.compare === false);
 
 /* action name */
 const createActionName = name => `products/${name}`;
@@ -95,23 +94,11 @@ export default function reducer(statePart = [], action = {}) {
       return newStatePart;
     }
     case COMPARE_HANDLER: {
-      let compareCounter = 0;
-      for (let product of statePart) {
-        if (product.compare) {
-          compareCounter++;
-        }
-      }
-      const newStatePart = statePart.map(product => {
-        if (product.id === action.payload) {
-          if (product.compare) {
-            product.compare = false;
-          } else if (compareCounter < 4) {
-            product.compare = true;
-          }
-        }
-        return product;
+      const newStatePart = statePart.filter(product => product.id === action.payload);
+      newStatePart.map(product => {
+        product.compare = true;
       });
-      return newStatePart;
+      return statePart;
     }
     case REMOVE_HANDLER: {
       const newStatePart = statePart.map(product => {

@@ -47,7 +47,14 @@ const ProductList = ({ products, getProductByPrice }) => {
     } else {
       initialLoad.current = true;
     }
-  }, [priceValuesFrom, priceValuesTo, initializer, categoryProducts, ratingValues, companyValues]);
+  }, [
+    priceValuesFrom,
+    priceValuesTo,
+    initializer,
+    categoryProducts,
+    ratingValues,
+    companyValues,
+  ]);
 
   return (
     <div className={styles.root}>
