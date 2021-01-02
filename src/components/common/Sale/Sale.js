@@ -13,16 +13,17 @@ const Sale = ({ saleContent, saleFeedback }) => {
   const close = useRef(null);
   const history = useHistory();
 
-  // history.listen(() => {
-  //   let time;
-  //   const rand = Math.floor(Math.random() * 3) + 1;
-  //   if (rand === 1) {
-  //     time = setTimeout(() => {
-  //       setSale(true);
-  //     }, 2500);
-  //   }
-  //   return () => clearTimeout(time);
-  // });
+  history.listen(() => {
+    let time;
+    const rand = Math.floor(Math.random() * 3) + 1;
+    if (rand === 1) {
+      time = setTimeout(() => {
+        setSale(true);
+      }, 2500);
+    }
+    return () => clearTimeout(time);
+
+  });
 
   const closeSale = () => {
     setSale(false);
@@ -46,7 +47,6 @@ const Sale = ({ saleContent, saleFeedback }) => {
       setFeedback(true);
     }
   };
-
   useEffect(() => {
     let interval = null;
     if (feedback) {

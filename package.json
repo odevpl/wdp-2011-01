@@ -53,9 +53,11 @@
     "@material-ui/core": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "@szhsin/react-menu": "^0.11.2",
+    "axios": "^0.21.0",
     "bootstrap": "^4.3.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "material-ui": "^0.20.2",
     "node-sass": "^4.13.0",
     "npm-run-all": "^4.1.5",
     "prop-types": "^15.7.2",
@@ -72,8 +74,10 @@
     "react-scripts": "3.1.2",
     "react-spring": "^8.0.27",
     "react-test-renderer": "^16.9.0",
+    "react-validation": "^3.0.7",
     "redux": "^4.0.4",
-    "use-autocomplete": "^1.1.1"
+    "use-autocomplete": "^1.1.1",
+    "validator": "^13.5.2"
   },
   "devDependencies": {
     "husky": "^3.1.0",
