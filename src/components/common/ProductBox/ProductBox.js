@@ -37,7 +37,7 @@ const ProductBox = ({
 
   return (
     <div className={styles.root}>
-      <Link to={`/product/${id}`}>
+      <Link to={{ pathname: `/product/${id}`, state: { id } }}>
         <div className={styles.photo}>
           <img src={`../${image}`} alt='' />
           {promo && <div className={styles.sale}>{promo}</div>}

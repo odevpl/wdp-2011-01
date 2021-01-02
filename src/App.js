@@ -8,6 +8,7 @@ import MainLayout from './components/layout/MainLayout/MainLayout';
 import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductListContainer';
 import ProductPage from './components/views/ProductPage/ProductPageContainer';
+import ProductMore from './components/common/ProductMore/ProductMoreContainer';
 import Login from './components/views/Login/Login';
 import Register from './components/views/Register/Register';
 import Alert from './components/features/Alert/Alert';
@@ -23,6 +24,7 @@ const App = () => (
           <Route exact path={'/register'} component={Register} />
           <Route exact path={'/shop/:categoryId'} component={ProductList} />
           <Route exact path={'/product/:productId'} component={ProductPage} />
+          <Route exact path={'/product/:id/review'} component={ProductMore} />
         </Switch>
       </MainLayout>
     </BrowserRouter>
