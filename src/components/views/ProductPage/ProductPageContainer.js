@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ProductPage from './ProductPage';
-import { getProductById } from '../../../redux/productsRedux';
+import { getProductById, getAll } from '../../../redux/productsRedux';
 
 const imageName = image => {
   if (image.startsWith('http')) {
@@ -16,6 +16,7 @@ const mapStateToProps = (state, props) => {
   return {
     ...product,
     image: imageName(product.image),
+    products: getAll(state),
   };
 };
 

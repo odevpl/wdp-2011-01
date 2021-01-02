@@ -717,7 +717,7 @@ const initialState = {
       id: 'bart-electronic-mouse-11',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 11`,
       category: 'mouse',
-      image: 'images/Mouse/mouse11.jpg',
+      image: 'images/Mouse/mouse12.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
       stars: Math.floor(Math.random() * 5) + 1,
