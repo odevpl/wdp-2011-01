@@ -15,6 +15,7 @@ export const handleCompareValue = payload => ({ payload, type: COMPARE_VALUE });
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case COMPARE_VALUE: {
+      console.log(statePart);
       statePart.value = true;
       return statePart;
     }

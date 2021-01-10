@@ -35,6 +35,7 @@ const ProductBox = ({
     e.preventDefault();
     handleCompare(id);
     handleCompareValue();
+    console.log('wow');
   };
 
   return (
