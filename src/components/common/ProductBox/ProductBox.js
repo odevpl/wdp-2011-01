@@ -56,7 +56,7 @@ const ProductBox = ({
         </div>
       </Link>
       <div className={styles.content}>
-        <Link to={`/product/${id}`}>
+        <Link to={{ pathname: `/product/${id}`, state: { id } }}>
           <h5>{name}</h5>
         </Link>
         <p className={styles.manufacturer}>by {manufacturer}</p>

@@ -10,7 +10,6 @@ import ProductList from './components/views/ProductList/ProductListContainer';
 import ProductPage from './components/views/ProductPage/ProductPageContainer';
 import ProductMore from './components/common/ProductMore/ProductMoreContainer';
 import Login from './components/views/Login/Login';
-import Register from './components/views/Register/Register';
 import Alert from './components/features/Alert/Alert';
 
 const App = () => (
@@ -21,7 +20,6 @@ const App = () => (
         <Switch>
           <Route exact path={'/'} component={Homepage} />
           <Route exact path={'/login'} component={Login} />
-          <Route exact path={'/register'} component={Register} />
           <Route exact path={'/shop/:categoryId'} component={ProductList} />
           <Route exact path={'/product/:productId'} component={ProductPage} />
           <Route exact path={'/product/:id/review'} component={ProductMore} />

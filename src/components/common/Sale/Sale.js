@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Sale.module.scss';
 import { FaRegWindowClose } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
+import { UserContext } from '../../../data/userData';
 
 const Sale = ({ saleContent, saleFeedback }) => {
   const [sale, setSale] = useState(false);
@@ -12,17 +13,19 @@ const Sale = ({ saleContent, saleFeedback }) => {
   const ref = useRef(null);
   const close = useRef(null);
   const history = useHistory();
+  const userData = React.useContext(UserContext);
 
   history.listen(() => {
-    let time;
-    const rand = Math.floor(Math.random() * 3) + 1;
-    if (rand === 1) {
-      time = setTimeout(() => {
-        setSale(true);
-      }, 2500);
+    if (!userData.isPremium) {
+      let time;
+      const rand = Math.floor(Math.random() * 3) + 1;
+      if (rand === 1) {
+        time = setTimeout(() => {
+          setSale(true);
+        }, 2500);
+      }
+      return () => clearTimeout(time);
     }
-    return () => clearTimeout(time);
-
   });
 
   const closeSale = () => {

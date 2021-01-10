@@ -11,7 +11,7 @@ const CompanyFilter = ({
   setInitializer,
   initializer,
 }) => {
-  const [filteredCompany, setFilteredCompany] = useState([]);
+  const [filteredCompany] = useState([]);
 
   const noDuplicateCompanies = {};
   for (let i = 0; i < companies.length; i++) {

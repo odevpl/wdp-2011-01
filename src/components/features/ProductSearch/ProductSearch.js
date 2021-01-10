@@ -61,12 +61,8 @@ const ProductSearch = ({ products }) => {
         if (productCounter === searchProduct.length) {
           setProductCounter(0);
         }
-        // console.log(e.target);
-        // console.log(document.activeElement);
-        // console.log(searchList.current);
         if (e.target === searchList.current) {
           e.target.focus();
-          console.log('wow');
         }
         break;
     }
@@ -131,7 +127,10 @@ const ProductSearch = ({ products }) => {
                     >
                       <Link
                         className={styles.link}
-                        to={__dirname + `product/${option.id}`}
+                        to={{
+                          pathname: `/product/${option.id}`,
+                          state: { id: option.id },
+                        }}
                       >
                         {option.name}
                       </Link>
