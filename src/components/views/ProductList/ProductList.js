@@ -26,7 +26,9 @@ const ProductList = ({ products, getProductByPrice }) => {
 
   history.listen(() => {
     setCategory(window.location.pathname.split('/')[2]);
-    setCategoryProducts(products.filter(item => item.category === category));
+    setCategoryProducts(
+      products.filter(item => item.category === window.location.pathname.split('/')[2])
+    );
   });
 
   if (companyValues.length === 0) {
@@ -47,7 +49,8 @@ const ProductList = ({ products, getProductByPrice }) => {
     } else {
       initialLoad.current = true;
     }
-  }, [priceValuesFrom, priceValuesTo, initializer, categoryProducts, ratingValues, companyValues]);
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [priceValuesFrom, priceValuesTo, initializer]);
 
   return (
     <div className={styles.root}>

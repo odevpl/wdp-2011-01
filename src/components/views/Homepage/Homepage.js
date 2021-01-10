@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import {useHistory} from 'react-router-dom';
-import {UserContext} from '../../../data/userData';
-import {AlertContext} from '../../../data/alertData';
+import React, { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { UserContext } from '../../../data/userData';
+import { AlertContext } from '../../../data/alertData';
 import styles from './Homepage.module.scss';
 
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
@@ -13,21 +13,18 @@ const Homepage = () => {
   const user = React.useContext(UserContext);
   const alert = React.useContext(AlertContext);
   const history = useHistory();
-  const [confirmPremium, setConfirmPremium] = useState(false);
 
   const handleYes = () => {
     localStorage.setItem('isPremium', 'true');
-    setConfirmPremium(false);
-    return (
-      setTimeout(()=> {
-        alert.premiumAlert(`Congratulation ${user.userData}!`,
-          <div className={styles.confirmPremium}>
-            <h5>You are a Premium User now!</h5>
-            <h5>Enjoy your new functionalities!</h5>
-          </div>
-        );
-      },500)
-    );
+    return setTimeout(() => {
+      alert.premiumAlert(
+        `Congratulation ${user.userData}!`,
+        <div className={styles.confirmPremium}>
+          <h5>You are a Premium User now!</h5>
+          <h5>Enjoy your new functionalities!</h5>
+        </div>
+      );
+    }, 500);
   };
 
   const handleNo = () => {
@@ -36,27 +33,31 @@ const Homepage = () => {
 
   const handleConfirm = () => {
     alert.closeAlert();
-    setConfirmPremium(true);
-    return (
-      setTimeout(()=> {
-        alert.premiumAlert('Confirmation',
-          <div className={styles.confirmPremium}>
-            <h5>Are you sure you want to become a premium user and start 2$/month subscription?</h5>
-            <div>
-              <button onClick={handleYes}>Yes</button>
-              <button onClick={handleNo}>No</button>
-            </div>
+    return setTimeout(() => {
+      alert.premiumAlert(
+        'Confirmation',
+        <div className={styles.confirmPremium}>
+          <h5>
+            Are you sure you want to become a premium user and start 2$/month
+            subscription?
+          </h5>
+          <div>
+            <button onClick={handleYes}>Yes</button>
+            <button onClick={handleNo}>No</button>
           </div>
-        );
-      },500)
-    );
+        </div>
+      );
+    }, 500);
   };
 
-  useEffect(()=> {
-    if(history.location.pathname === '/' && user.isLogged && !user.isPremium){
-      alert.premiumAlert(`Welcome ${user.userData}`,
+  useEffect(() => {
+    if (history.location.pathname === '/' && user.isLogged && !user.isPremium) {
+      alert.premiumAlert(
+        `Welcome ${user.userData}`,
         <div className={styles.premium}>
-          <h5>Become a <span>premium user</span> and get access to special content today:</h5>
+          <h5>
+            Become a <span>premium user</span> and get access to special content today:
+          </h5>
           <ul>
             <li>No more adverts on website!</li>
             <li>Special feature to compare products</li>
@@ -70,7 +71,8 @@ const Homepage = () => {
         </div>
       );
     }
-  },[alert, alert.isLogged, handleConfirm, history.location.pathname, user.isLogged, user.isPremium, user.userData]);
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user.isLogged]);
 
   return (
     <div className={styles.root}>

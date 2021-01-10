@@ -234,7 +234,6 @@ const ProductPage = ({ overview, quantity, category, products }) => {
                           onChange={e => handleChange(parseInt(e.target.value))}
                           className={styles.inputSmall}
                           type='number'
-                          defaultValue={count}
                           value={count}
                         ></input>
                         <Button
@@ -317,6 +316,7 @@ const ProductPage = ({ overview, quantity, category, products }) => {
                       <div>
                         <div className={styles.social}>
                           <Link
+                            to='/'
                             onClick={e => {
                               e.preventDefault();
                               window.open('https://www.facebook.com/');
@@ -328,6 +328,7 @@ const ProductPage = ({ overview, quantity, category, products }) => {
                             </Button>
                           </Link>
                           <Link
+                            to='/'
                             onClick={e => {
                               e.preventDefault();
                               window.open('https://www.gmail.com/');
@@ -342,6 +343,7 @@ const ProductPage = ({ overview, quantity, category, products }) => {
                             </Button>
                           </Link>
                           <Link
+                            to='/'
                             onClick={e => {
                               e.preventDefault();
                               window.open('https://www.twitter.com/');
@@ -356,6 +358,7 @@ const ProductPage = ({ overview, quantity, category, products }) => {
                             </Button>
                           </Link>
                           <Link
+                            to='/'
                             onClick={e => {
                               e.preventDefault();
                               window.open('https://www.pinterest.com/');
@@ -370,6 +373,7 @@ const ProductPage = ({ overview, quantity, category, products }) => {
                             </Button>
                           </Link>
                           <Link
+                            to='/'
                             onClick={e => {
                               e.preventDefault();
                               window.open('https://www.linkedin.com/');
@@ -404,7 +408,7 @@ ProductPage.propTypes = {
   name: PropTypes.string.isRequired,
   stars: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
-  olderPrice: PropTypes.string,
+  olderPrice: PropTypes.number,
   overview: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
