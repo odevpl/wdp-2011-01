@@ -1,0 +1,48 @@
+@import "../../../styles/settings";
+
+.root {
+  @include center();
+  width: 53rem;
+  height: auto;
+  background: $milk;
+  border: 3px solid $primary;
+  z-index: 9999;
+  h1 {
+    text-align: center;
+    margin: 3rem 0;
+  }
+  .products {
+    @include flex(center,center);
+    .product {
+      @include flex(center, center);
+      flex-wrap: wrap;
+      border-right: 3px solid $primary;
+      margin: 0 2rem;
+      width: 100%;
+      padding: 0 1rem;
+      h4 {
+        margin: 2rem 0;
+      }
+      img {
+        width: 18rem;
+        height: 15rem;
+      }
+      span {
+        font-weight: bolder;
+      }
+      .icon {
+        font-size: 6rem;
+        color: $primary;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .addButton {
+        border: none;
+        background: transparent;
+      }
+    }
+    .productTwo {
+      border: none;
+    }
+  }
+}

@@ -16,6 +16,8 @@ const Homepage = () => {
 
   const handleYes = () => {
     localStorage.setItem('isPremium', 'true');
+    setConfirmPremium(false);
+
     return setTimeout(() => {
       alert.premiumAlert(
         `Congratulation ${user.userData}!`,
@@ -33,6 +35,8 @@ const Homepage = () => {
 
   const handleConfirm = () => {
     alert.closeAlert();
+    setConfirmPremium(true);
+
     return setTimeout(() => {
       alert.premiumAlert(
         'Confirmation',

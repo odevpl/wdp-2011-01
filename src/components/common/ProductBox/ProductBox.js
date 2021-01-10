@@ -24,6 +24,7 @@ const ProductBox = ({
   handleCompare,
   compare,
   manufacturer,
+  handleCompareValue,
 }) => {
   const favouriteHandler = e => {
     e.preventDefault();
@@ -33,6 +34,8 @@ const ProductBox = ({
   const compareHandler = e => {
     e.preventDefault();
     handleCompare(id);
+    handleCompareValue();
+    console.log('wow');
   };
 
   return (
@@ -88,9 +91,6 @@ const ProductBox = ({
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
-
-        <div className={styles.outline}> </div>
-        <div className={styles.outline}> </div>
         <div className={styles.price}>
           <Button noHover className={styles.button} variant='small'>
             <h5>$ {price}</h5>
@@ -122,6 +122,7 @@ ProductBox.propTypes = {
   compare: PropTypes.bool,
   arrow: PropTypes.bool,
   manufacturer: PropTypes.string,
+  handleCompareValue: PropTypes.func,
 };
 
 export default ProductBox;

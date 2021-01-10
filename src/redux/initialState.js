@@ -4,6 +4,33 @@ import * as FaIcons from 'react-icons/fa';
 const manufacturer = ['Samsung', 'Apple', 'Xiaomi', 'Motorola', 'Huawei'];
 const names = ['Super', 'Ultra', 'Extra', 'Turbo', 'Mega', 'WoW', 'Yeey'];
 
+const ram = ['2GB', '4GB', '8GB', '16GB'];
+const processor = [
+  'AMD Ryzen 9 5950X',
+  'AMD Ryzen Threadripper 1950X',
+  'Intel Core i7-10700K',
+  'Intel Core i9-9900K',
+  'Intel Core i5-2200K',
+];
+const graphic = [
+  'Gigabyte Radeon RX 5500',
+  'ASUS TUF GeForce GTX 1650',
+  'Gigabyte GeForce RTX 2060',
+  'MSI GeForce RTX 2080',
+];
+
+const mouseType = ['For players', 'For homework', 'Universal'];
+const connection = ['With wires', 'Bluetooth'];
+const resolution = ['10000dpi', '5000dpi', '8000dpi', '6000dpi'];
+
+const typeOfSwitches = [
+  'Membran - Mech-Dome',
+  'Mechanic-membran - Razer Mecha-Membrane',
+  'Mechanic',
+];
+
+const design = ['OLED', 'LTPO', 'Retina'];
+
 const initialState = {
   categories: [
     {
@@ -183,6 +210,9 @@ const initialState = {
       id: `bart-electronic-laptop-1`,
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 1`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop1.jpg',
       imageAlt: 'laptop',
       price: Math.floor(Math.random() * 300) + 20,
@@ -196,11 +226,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-2',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 2`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop2.jpg',
       imageAlt: 'laptop',
       price: Math.floor(Math.random() * 300) + 20,
@@ -216,11 +250,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-3',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 3`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop3.jpg',
       imageAlt: 'laptop',
       price: Math.floor(Math.random() * 300) + 20,
@@ -233,12 +271,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      compare: false,
       heart: true,
     },
     {
       id: 'bart-electronic-laptop-4',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 4`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop4.jpg',
       imageAlt: 'laptop',
       price: Math.floor(Math.random() * 300) + 20,
@@ -250,12 +292,16 @@ const initialState = {
       arrow: true,
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      quantity: 0,
+      quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-5',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 5`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop5.jpg',
       imageAlt: 'laptop',
       price: Math.floor(Math.random() * 300) + 20,
@@ -267,12 +313,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
+      compare: false,
       heart: true,
     },
     {
       id: 'bart-electronic-laptop-6',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 6`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop6.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -284,11 +334,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-7',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 7`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop7.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -300,11 +354,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-8',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 8`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop8.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -317,11 +375,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-9',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 9`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop9.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -331,11 +393,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-10',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 10`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop10.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -345,11 +411,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-11',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 11`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop11.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -360,11 +430,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-12',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 12`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop12.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -374,11 +448,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-13',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 13`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop13.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -389,11 +467,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-14',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 14`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop14.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -403,11 +485,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-15',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 15`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop15.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -418,11 +504,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-16',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 16`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop16.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -432,11 +522,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-17',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 17`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop17.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -446,11 +540,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-18',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 18`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop18.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -460,11 +558,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-19',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 19`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop19.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -474,11 +576,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-20',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 20`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop20.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -489,11 +595,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-21',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 21`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop21.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -503,11 +613,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-22',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 22`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop22.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -517,11 +631,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-23',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 23`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop23.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -531,11 +649,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-laptop-24',
       name: `${names[Math.floor(Math.random() * names.length)]} Laptop 24`,
       category: 'laptop',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Laptop/laptop24.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -546,12 +668,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     /**************** MOUSE ****************/
     {
       id: 'bart-electronic-mouse-1',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 1`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse1.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -564,11 +690,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-2',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 2`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse2.jpg',
       imageAlt: 'chair',
       price: Math.floor(Math.random() * 300) + 20,
@@ -584,11 +714,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-3',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 3`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse3.jpg',
       imageAlt: 'bed',
       price: Math.floor(Math.random() * 300) + 20,
@@ -601,12 +735,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      compare: false,
       heart: true,
     },
     {
       id: 'bart-electronic-mouse-4',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 4`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse4.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -618,11 +756,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-5',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 5`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse5.jpg',
       imageAlt: 'sofa',
       price: Math.floor(Math.random() * 300) + 20,
@@ -634,12 +776,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
+      compare: false,
       heart: true,
     },
     {
       id: 'bart-electronic-mouse-6',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 6`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse6.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -651,11 +797,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-7',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 7`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse7.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -667,11 +817,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-8',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 8`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse8.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -684,11 +838,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-9',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 9`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse9.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -698,11 +856,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-10',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 10`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse10.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -712,11 +874,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-11',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 11`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse12.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -727,11 +893,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-12',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 12`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse12.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -741,11 +911,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-13',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 13`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse13.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -756,11 +930,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-14',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 14`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse14.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -770,11 +948,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-15',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 15`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse15.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -785,11 +967,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-16',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 16`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse16.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -799,11 +985,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-17',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 17`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse17.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -813,11 +1003,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-18',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 18`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse18.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -827,11 +1021,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-19',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 19`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse19.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -841,11 +1039,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-20',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 20`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse20.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -856,11 +1058,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-21',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 21`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse21.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -870,11 +1076,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-22',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 22`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse22.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -884,11 +1094,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-23',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 23`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse23.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -898,11 +1112,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-mouse-24',
       name: `${names[Math.floor(Math.random() * names.length)]} Mouse 24`,
       category: 'mouse',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      resolution: resolution[Math.floor(Math.random() * resolution.length)],
       image: 'images/Mouse/mouse24.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -913,12 +1131,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     /**************** KEYBOARD ****************/
     {
       id: 'bart-electronic-keyboard-1',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 1`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard1.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -931,11 +1153,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-2',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 2`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard2.jpg',
       imageAlt: 'chair',
       price: Math.floor(Math.random() * 300) + 20,
@@ -951,11 +1177,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-3',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 3`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard3.jpg',
       imageAlt: 'bed',
       price: Math.floor(Math.random() * 300) + 20,
@@ -968,12 +1198,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      compare: false,
       heart: true,
     },
     {
       id: 'bart-electronic-keyboard-4',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 4`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard4.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -985,11 +1219,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-5',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 5`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard5.jpg',
       imageAlt: 'sofa',
       price: Math.floor(Math.random() * 300) + 20,
@@ -1001,12 +1239,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
+      compare: false,
       heart: true,
     },
     {
       id: 'bart-electronic-keyboard-6',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 6`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard6.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1018,11 +1260,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-7',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 7`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard7.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1034,11 +1280,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-8',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 8`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard8.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1051,11 +1301,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-9',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 9`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard9.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1065,11 +1319,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-10',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 10`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard10.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1079,11 +1337,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-11',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 11`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard11.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1094,11 +1356,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-12',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 12`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard12.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1108,11 +1374,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-13',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 13`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard13.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1123,11 +1393,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-14',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 14`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard14.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1137,11 +1411,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-15',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 15`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard15.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1152,11 +1430,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-16',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 16`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard16.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1166,11 +1448,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-17',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 17`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard17.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1180,11 +1466,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-18',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 18`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard18.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1194,11 +1484,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-19',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 19`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard19.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1208,11 +1502,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-20',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 20`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard20.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1223,11 +1521,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-21',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 21`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard21.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1237,11 +1539,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-22',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 22`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard22.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1251,11 +1557,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-23',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 23`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard23.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1265,11 +1575,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-keyboard-24',
       name: `${names[Math.floor(Math.random() * names.length)]} Keyboard 24`,
       category: 'keyboard',
+      mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
+      connection: connection[Math.floor(Math.random() * connection.length)],
+      typeOfSwitches: typeOfSwitches[Math.floor(Math.random() * typeOfSwitches.length)],
       image: 'images/Keyboard/keyboard24.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1280,12 +1594,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     /**************** SMARTPHONE ****************/
     {
       id: 'bart-electronic-smartphone-1',
       name: `${names[Math.floor(Math.random() * names.length)]} Smartphone 1`,
       category: 'smartphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      graphic: graphic[Math.floor(Math.random() * graphic.length)],
       image: 'images/Smartphone/smartphone1.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1298,6 +1616,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-2',
@@ -1316,6 +1635,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-3',
@@ -1333,6 +1653,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      compare: false,
       heart: true,
     },
     {
@@ -1350,6 +1671,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-5',
@@ -1366,6 +1688,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
+      compare: false,
       heart: true,
     },
     {
@@ -1383,6 +1706,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-7',
@@ -1399,6 +1723,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-8',
@@ -1416,6 +1741,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-9',
@@ -1430,6 +1756,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-10',
@@ -1444,6 +1771,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-11',
@@ -1459,6 +1787,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-12',
@@ -1473,6 +1802,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-13',
@@ -1488,6 +1818,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-14',
@@ -1502,6 +1833,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-15',
@@ -1517,6 +1849,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-16',
@@ -1531,6 +1864,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-17',
@@ -1545,6 +1879,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-18',
@@ -1559,6 +1894,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-19',
@@ -1573,6 +1909,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-20',
@@ -1588,6 +1925,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-21',
@@ -1602,6 +1940,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-22',
@@ -1616,6 +1955,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-23',
@@ -1630,6 +1970,7 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-smartphone-24',
@@ -1645,12 +1986,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     /**************** HEADPHONE ****************/
     {
       id: 'bart-electronic-headphone-1',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 1`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone1.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1663,11 +2008,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-2',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 2`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone2.jpg',
       imageAlt: 'chair',
       price: Math.floor(Math.random() * 300) + 20,
@@ -1681,11 +2030,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-3',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 3`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone3.jpg',
       imageAlt: 'bed',
       price: Math.floor(Math.random() * 300) + 20,
@@ -1698,12 +2051,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
+      compare: false,
       heart: true,
     },
     {
       id: 'bart-electronic-headphone-4',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 4`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone4.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1715,11 +2072,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-5',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 5`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone5.jpg',
       imageAlt: 'sofa',
       price: Math.floor(Math.random() * 300) + 20,
@@ -1731,12 +2092,16 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
+      compare: false,
       heart: true,
     },
     {
       id: 'bart-electronic-headphone-6',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 6`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone6.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1748,11 +2113,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-7',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 7`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone7.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1764,11 +2133,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-8',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 8`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone8.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1781,11 +2154,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-9',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 9`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone9.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1795,11 +2172,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-10',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 10`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone10.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1809,11 +2190,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-11',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 11`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone11.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1824,11 +2209,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-12',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 12`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone12.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1838,11 +2227,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-13',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 13`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone13.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1853,11 +2246,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-14',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 14`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone14.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1867,11 +2264,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-15',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 15`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone15.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1882,11 +2283,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-16',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 16`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone16.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1896,11 +2301,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-17',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 17`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone17.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1910,11 +2319,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-18',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 18`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone18.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1924,11 +2337,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-19',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 19`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone19.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1938,11 +2355,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-20',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 20`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone20.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -1953,11 +2374,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-21',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 21`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone21.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1967,11 +2392,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-22',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 22`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone22.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1981,11 +2410,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-23',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 23`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone23.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       stars: Math.floor(Math.random() * 5) + 1,
@@ -1995,11 +2428,15 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
     {
       id: 'bart-electronic-headphone-24',
       name: `${names[Math.floor(Math.random() * names.length)]} Headphones 24`,
       category: 'headphone',
+      ram: ram[Math.floor(Math.random() * ram.length)],
+      processor: processor[Math.floor(Math.random() * processor.length)],
+      design: design[Math.floor(Math.random() * design.length)],
       image: 'images/Headphones/headphone24.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
@@ -2010,8 +2447,12 @@ const initialState = {
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
+      compare: false,
     },
   ],
+  compare: {
+    value: false,
+  },
   promoProducts: {
     name: 'newest',
     spanName: 'technology',

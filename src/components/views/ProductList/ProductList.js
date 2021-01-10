@@ -52,6 +52,7 @@ const ProductList = ({ products, getProductByPrice }) => {
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [priceValuesFrom, priceValuesTo, initializer]);
 
+
   return (
     <div className={styles.root}>
       <Grid>

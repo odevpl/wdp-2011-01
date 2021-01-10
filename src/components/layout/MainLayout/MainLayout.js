@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import StickyBar from '../StickyBar/StickyBarContainer';
 import Sale from '../../common/Sale/SaleContainer';
+import Compare from '../../features/Compare/CompareContainer';
 
 const MainLayout = ({ children }) => {
   return (
     <div>
       <Header />
       {children}
-      <StickyBar />
       <Footer />
       <Sale />
+      <Compare />
     </div>
   );
 };
