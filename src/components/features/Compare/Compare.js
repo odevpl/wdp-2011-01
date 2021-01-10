@@ -43,6 +43,7 @@ const Compare = ({ compareProducts }) => {
       const filteredComparedProductCategory = filteredCompareProducts[0].category;
       setProductOneCategory(filteredComparedProductCategory);
     }
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [compareProducts, compareState]);
 
   return (
