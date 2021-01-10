@@ -25,6 +25,7 @@ const MenuBar = ({ children, categories }) => {
             <ul>
               <li>
                 <a
+                  href='/'
                   className={!activeBar ? styles.active : ''}
                   onClick={(e, id) => handleActiveClass(e, id)}
                 >
@@ -35,6 +36,7 @@ const MenuBar = ({ children, categories }) => {
                 return (
                   <li key={item.id}>
                     <a
+                      href='/'
                       className={activeBar === item.id ? styles.active : ''}
                       onClick={e => handleActiveClass(e, item.id)}
                     >

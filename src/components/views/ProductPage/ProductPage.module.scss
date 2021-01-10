@@ -1,30 +1,22 @@
 @import "../../../styles/settings.scss";
 
+.row {
+  margin-left: 0;
+}
+
 .root {
   padding: $base-padding 0;
-
-  background: linear-gradient(to bottom, $heavenlyGrey 50%, $white 50%);
 
   .panelBar {
     margin-bottom: 30px;
     position: relative;
-
-    .heading {
-      position: relative;
-
-      h3 {
-        color: $milk;
-        text-transform: uppercase;
-        font-size: 20px;
-        line-height: 38px;
-        margin: 0;
-        letter-spacing: $letter-spacing;
-      }
-    }
-
-    .nav {
-      color: $milk;
-      font-size: 0.75rem;
+    .categoryIdentyfier {
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 38px;
+      margin: 0;
+      letter-spacing: $letter-spacing;
+      color: $heavenlyGrey;
     }
   }
 
@@ -32,6 +24,38 @@
     background-color: $white;
     border: 1px solid $heavenlyGrey;
     padding: 25px;
+
+    .photoWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .activeImage {
+      color: $white;
+      font-size: 30px;
+      @include center()
+    }
+
+    .miniSliderWrapper{
+      margin-top: 20px;
+
+      .miniSlider {
+        display: flex;
+        height: 80px;
+        justify-content: space-between;
+
+        & > div {
+          text-align: center;
+        }
+        
+        .button {
+          margin: 5px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
 
     p {
       font-size: 0.75rem;
@@ -47,19 +71,41 @@
       font-weight: bold;
     }
 
-    .section {
+    .productDetailsSection {
       padding: 12px 0;
       border-bottom: 1px solid $heavenlyGrey;
+
+      .headerRow {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .priceWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+      }
     }
 
     .section:last-of-type {
       border-bottom: none;
     }
 
-    .photo {
-      position: absolute;
+    .mainPhoto {
       width: 100%;
-      height: 75%;
+      height: 335px;
+      background: {
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+    }
+    
+    .photo {
+      width: 80%;
+      height: 100%;
       background: {
         size: contain;
         position: center;
@@ -67,32 +113,9 @@
       }
     }
 
-    .expand {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      margin: 10px;
-    }
-
-    .left {
-      position: absolute;
-      left: 0;
-      margin: 10px;
-      z-index: 1;
-    }
-
-    .right {
-      position: absolute;
-      right: 0;
-      margin: 10px;
-      z-index: 1;
-    }
-
-    .mini {
-      position: absolute;
-      bottom: 0px;
-      width: 100%;
-      height: 75px;
+    .photoActive {
+      transition: all 0.2s;
+      border: 3px solid $primary;
     }
 
     .olderPrice {
@@ -101,22 +124,20 @@
       font-size: 22px;
       color: $milk;
       margin-bottom: 0;
+      margin-right: 10px;
     }
 
     .price {
-      text-align: center;
       font-size: 22px;
       font-weight: bold;
       color: $white;
       background-color: $black;
       margin-bottom: 0;
+      padding: 0 10px;
+
     }
 
     .buttons {
-      a {
-        margin-right: 10px;
-      }
-
       padding: 12px 0;
     }
 
@@ -152,9 +173,31 @@
 
     .social {
       a {
-        margin-right: 10px;
         text-decoration: none;
       }
+      .media {
+        width: 100px;
+        margin: 3px;
+      }
     }
+  }
+
+  //
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  }
+}
+
+@media (max-width: 410px) {
+  .olderPrice {
+    display: none;
   }
 }

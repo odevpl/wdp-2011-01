@@ -15,6 +15,7 @@ class NewFurniture extends React.Component {
 
   handlePageChange(e, newPage) {
     e.preventDefault();
+    console.log(newPage);
     this.setState({ activePage: newPage });
   }
 

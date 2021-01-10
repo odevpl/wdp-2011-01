@@ -883,7 +883,7 @@ const initialState = {
       mouseType: mouseType[Math.floor(Math.random() * mouseType.length)],
       connection: connection[Math.floor(Math.random() * connection.length)],
       resolution: resolution[Math.floor(Math.random() * resolution.length)],
-      image: 'images/Mouse/mouse11.jpg',
+      image: 'images/Mouse/mouse12.jpg',
       price: Math.floor(Math.random() * 300) + 20,
       olderPrice: Math.floor(Math.random() * 400) + 300,
       stars: Math.floor(Math.random() * 5) + 1,

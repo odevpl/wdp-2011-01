@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../../data/userData';
 import { AlertContext } from '../../../data/alertData';
@@ -13,11 +13,11 @@ const Homepage = () => {
   const user = React.useContext(UserContext);
   const alert = React.useContext(AlertContext);
   const history = useHistory();
-  const [confirmPremium, setConfirmPremium] = useState(false);
 
   const handleYes = () => {
     localStorage.setItem('isPremium', 'true');
     setConfirmPremium(false);
+
     return setTimeout(() => {
       alert.premiumAlert(
         `Congratulation ${user.userData}!`,
@@ -36,6 +36,7 @@ const Homepage = () => {
   const handleConfirm = () => {
     alert.closeAlert();
     setConfirmPremium(true);
+
     return setTimeout(() => {
       alert.premiumAlert(
         'Confirmation',
@@ -74,14 +75,8 @@ const Homepage = () => {
         </div>
       );
     }
-  }, [
-    alert,
-    handleConfirm,
-    history.location.pathname,
-    user.isLogged,
-    user.isPremium,
-    user.userData,
-  ]);
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user.isLogged]);
 
   return (
     <div className={styles.root}>
