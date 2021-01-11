@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import styles from './CompanyClaim.module.scss';
 import BurgerMenu from '../../features/BurgerMenu/BurgerMenuContainer';
@@ -12,16 +12,22 @@ import {
   faStar,
 } from '@fortawesome/free-solid-svg-icons';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import {UserContext} from '../../../data/userData';
+import { UserContext } from '../../../data/userData';
 
 const CompanyClaim = () => {
   const user = React.useContext(UserContext);
-  const width = window.innerWidth;
-
+  const [width, setWidth] = useState(window.innerWidth);
+  console.log(typeof width);
   const handleLogout = () => {
     localStorage.setItem('isLogged', 'false');
   };
 
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setWidth(window.innerWidth);
+    });
+  }, [width]);
+  //console.log('<img src={process.env.PUBLIC_URL + \'/yourPathHere.jpg\'} />');
   return (
     <div className={styles.root}>
       <div className={`row align-items-center ${styles.compRow}`}>
@@ -35,10 +41,10 @@ const CompanyClaim = () => {
         </div>
         <div className={styles.logo}>
           <a href='/'>
-            {width > 445 ? (
-              <img src='/images/logo.png' alt='Bazar' />
+            {width < 600 ? (
+              <img src={window.location.origin + '/images/logo2.png'} />
             ) : (
-              <img src='/images/logo2.png' alt='Bazar' />
+              <img src={window.location.origin + '/images/logo.png'} />
             )}
           </a>
         </div>
@@ -59,33 +65,39 @@ const CompanyClaim = () => {
                     <span className={styles.topMenuText}>Cart</span>
                   </a>
                 </li>
-                {!user.isLogged &&
-                <li>
-                  <a href='/login'>
-                    <FontAwesomeIcon className={styles.icon} icon={faUser} />
-                    <span className={styles.topMenuText}>Login</span>
-                  </a>
-                </li>
-                }
-                {user.isLogged &&
-                <>
-                <li>
-                  <a href='' onClick={handleLogout}>
-                    <FontAwesomeIcon className={styles.icon} icon={faSignOutAlt} />
-                    <span className={styles.topMenuText}>Logout</span>
-                  </a>
-                </li>
-                <li>
-                  <a href='/userpage'>
-                    <FontAwesomeIcon className={styles.iconUserConf} icon={faUserCog} />
-                    <span className={styles.topMenuText}>{user.userData}</span>
-                    {user.isPremium &&
-                    <FontAwesomeIcon className={styles.iconUserStar} icon={faStar} />
-                    }
-                  </a>
-                </li>
-                </>
-                }
+                {!user.isLogged && (
+                  <li>
+                    <a href='/login'>
+                      <FontAwesomeIcon className={styles.icon} icon={faUser} />
+                      <span className={styles.topMenuText}>Login</span>
+                    </a>
+                  </li>
+                )}
+                {user.isLogged && (
+                  <>
+                    <li>
+                      <a href='' onClick={handleLogout}>
+                        <FontAwesomeIcon className={styles.icon} icon={faSignOutAlt} />
+                        <span className={styles.topMenuText}>Logout</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href='/userpage'>
+                        <FontAwesomeIcon
+                          className={styles.iconUserConf}
+                          icon={faUserCog}
+                        />
+                        <span className={styles.topMenuText}>{user.userData}</span>
+                        {user.isPremium && (
+                          <FontAwesomeIcon
+                            className={styles.iconUserStar}
+                            icon={faStar}
+                          />
+                        )}
+                      </a>
+                    </li>
+                  </>
+                )}
               </ul>
             </div>
           </div>

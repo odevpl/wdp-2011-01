@@ -1,5 +1,13 @@
 @import "../../../styles/settings";
 
+.overley {
+  @include center();
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0, 0.4);
+  z-index: 999;
+}
 .root {
   @include center();
   width: 53rem;
@@ -10,6 +18,16 @@
   h1 {
     text-align: center;
     margin: 3rem 0;
+  }
+  .closeButton {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    .closeIcon {
+      font-size: 1.7rem;
+    }
   }
   .products {
     @include flex(center,center);
@@ -41,8 +59,36 @@
         background: transparent;
       }
     }
+    .productList {
+      height: 250px;
+      overflow: scroll;
+      overflow-x: hidden;
+      width: 100%;
+      margin: 1rem 0;
+      .productTwoList {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 5px;
+        transition: $main-transition;
+        margin: .5rem 0 .5rem .5rem;
+
+        &:hover {
+          color: $primary;
+          cursor: pointer;
+        }
+      }
+    }
+    .searchText {
+      font-size: 1.2rem;
+      font-weight: bolder;
+    }
     .productTwo {
       border: none;
+      .newProduct {
+        margin-left: 10px;
+      }
     }
   }
 }
