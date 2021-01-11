@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Sale from '../../common/Sale/SaleContainer';
 import Compare from '../../features/Compare/CompareContainer';
+import BurgerMenu from '../../features/BurgerMenu/BurgerMenuContainer';
 
 const MainLayout = ({ children }) => {
   return (
@@ -14,6 +15,7 @@ const MainLayout = ({ children }) => {
       <Footer />
       <Sale />
       <Compare />
+      <BurgerMenu />
     </div>
   );
 };

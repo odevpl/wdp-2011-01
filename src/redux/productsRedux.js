@@ -35,6 +35,7 @@ export const CHANGE_HOTDEAL = createActionName('CHANGE_HOTDEAL');
 export const SHINING_STAR = createActionName('SHINING_STAR');
 export const CHANGE_STYLE = createActionName('CHANGE_STYLE');
 export const COMPARE_HANDLER = createActionName('COMPARE_HANDLER');
+export const COMPARE_RESET = createActionName('COMPARE_RESET');
 export const REMOVE_HANDLER = createActionName('REMOVE_HANDLER');
 
 /* action creator */
@@ -44,6 +45,7 @@ export const handleCompare = payload => ({ payload, type: COMPARE_HANDLER });
 export const changeHotDeal = payload => ({ payload, type: CHANGE_HOTDEAL });
 export const handleRemove = payload => ({ payload, type: REMOVE_HANDLER });
 export const handleFavourite = payload => ({ payload, type: FAVOURITE_HANDLER });
+export const compareReset = payload => ({ payload, type: COMPARE_RESET });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
@@ -97,6 +99,13 @@ export default function reducer(statePart = [], action = {}) {
       const newStatePart = statePart.filter(product => product.id === action.payload);
       newStatePart.map(product => {
         product.compare = true;
+      });
+      return statePart;
+    }
+    case COMPARE_RESET: {
+      const newStatePart = statePart.filter(product => product.compare === true);
+      newStatePart.map(product => {
+        product.compare = false;
       });
       return statePart;
     }

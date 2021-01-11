@@ -24,7 +24,7 @@ class NewFurniture extends React.Component {
     this.setState({ fadeTrue: false });
     setTimeout(() => {
       this.handleFadeIn(newCategory);
-    }, 2000);
+    }, 1000);
   }
 
   handleFadeIn(newCategory) {
@@ -78,7 +78,7 @@ class NewFurniture extends React.Component {
               <div className={styles.panelBar}>
                 <div className='row no-gutters align-items-end'>
                   <div className={'col-auto ' + styles.heading}>
-                    <h3>New furniture</h3>
+                    <h3>Electronics</h3>
                   </div>
                   <div className={'col ' + styles.menu}>
                     <ul>
