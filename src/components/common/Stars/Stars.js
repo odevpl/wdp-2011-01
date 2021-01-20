@@ -22,8 +22,6 @@ const Stars = ({ rate, id, handleStar, handleStyle, starChange }) => {
                 <input type='radio' name='rating' value={ratingValue} />
                 <FontAwesomeIcon
                   onClick={() => handleStar({ id, ratingValue })}
-                  onMouseEnter={() => handleStar({ id, ratingValue })}
-                  onMouseLeave={() => handleStar({ id, ratingValue })}
                   className={styles.star}
                   icon={faStar}
                 >
@@ -35,8 +33,6 @@ const Stars = ({ rate, id, handleStar, handleStyle, starChange }) => {
                 <input type='radio' name='rating' value={ratingValue} />
                 <FontAwesomeIcon
                   onClick={() => handleStar({ id, ratingValue })}
-                  onMouseEnter={() => handleStar({ id, ratingValue })}
-                  onMouseLeave={() => handleStar({ id, ratingValue })}
                   className={styles.star}
                   icon={farStar}
                 >

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './CompanyClaim.module.scss';
 import BurgerMenu from '../../features/BurgerMenu/BurgerMenuContainer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,21 +13,32 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { UserContext } from '../../../data/userData';
+import { Link } from 'react-router-dom';
 
-const CompanyClaim = () => {
+const CompanyClaim = ({ products }) => {
   const user = React.useContext(UserContext);
   const [width, setWidth] = useState(window.innerWidth);
-  console.log(typeof width);
+  const [counter, setCounter] = useState(0);
+
   const handleLogout = () => {
     localStorage.setItem('isLogged', 'false');
   };
 
   useEffect(() => {
+    cartCounter();
     window.addEventListener('resize', () => {
       setWidth(window.innerWidth);
     });
-  }, [width]);
-  //console.log('<img src={process.env.PUBLIC_URL + \'/yourPathHere.jpg\'} />');
+  }, [width, products, cartCounter]);
+
+  const cartCounter = () => {
+    const sum = products
+      .filter(product => product.cartCounter > 0)
+      .map(product => product.cartCounter)
+      .reduce((a, b) => a + b, 0);
+    setCounter(sum);
+  };
+
   return (
     <div className={styles.root}>
       <div className={`row align-items-center ${styles.compRow}`}>
@@ -54,35 +65,38 @@ const CompanyClaim = () => {
             <div>
               <ul className={styles.list}>
                 <li>
-                  <a href='/'>
+                  <Link href='/'>
                     <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} />{' '}
                     <span className={styles.topMenuText}>Contact</span>
-                  </a>
+                  </Link>
                 </li>
-                <li>
-                  <a href='/'>
+                <li className={styles.cart}>
+                  <Link to='/cart'>
+                    <span className={styles.counter}>
+                      {counter === 0 ? '' : counter}
+                    </span>
                     <FontAwesomeIcon className={styles.icon} icon={faShoppingBasket} />{' '}
                     <span className={styles.topMenuText}>Cart</span>
-                  </a>
+                  </Link>
                 </li>
                 {!user.isLogged && (
                   <li>
-                    <a href='/login'>
+                    <Link to='/login'>
                       <FontAwesomeIcon className={styles.icon} icon={faUser} />
                       <span className={styles.topMenuText}>Login</span>
-                    </a>
+                    </Link>
                   </li>
                 )}
                 {user.isLogged && (
                   <>
                     <li>
-                      <a href='' onClick={handleLogout}>
+                      <Link href='' onClick={handleLogout}>
                         <FontAwesomeIcon className={styles.icon} icon={faSignOutAlt} />
                         <span className={styles.topMenuText}>Logout</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href='/userpage'>
+                      <Link href='/userpage'>
                         <FontAwesomeIcon
                           className={styles.iconUserConf}
                           icon={faUserCog}
@@ -94,7 +108,7 @@ const CompanyClaim = () => {
                             icon={faStar}
                           />
                         )}
-                      </a>
+                      </Link>
                     </li>
                   </>
                 )}
@@ -107,6 +121,8 @@ const CompanyClaim = () => {
   );
 };
 
-// CompanyClaim.propTypes = {};
+CompanyClaim.propTypes = {
+  products: PropTypes.array,
+};
 
 export default CompanyClaim;

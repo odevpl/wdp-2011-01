@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import Stars from '../Stars/StarsContainer';
+import { handleAddToCart } from '../../../redux/productsRedux';
 
 const ProductBox = ({
   image,
@@ -16,7 +16,7 @@ const ProductBox = ({
   heart,
   stars,
   olderPrice,
-  handleFavourite,
+  handleAddToCart,
   id,
   handleStar,
   handleStyle,
@@ -26,16 +26,14 @@ const ProductBox = ({
   manufacturer,
   handleCompareValue,
 }) => {
-  const favouriteHandler = e => {
-    e.preventDefault();
-    handleFavourite(id);
+  const addToCart = () => {
+    handleAddToCart(id);
   };
 
   const compareHandler = e => {
     e.preventDefault();
     handleCompare(id);
     handleCompareValue();
-    console.log('wow');
   };
 
   return (
@@ -74,12 +72,8 @@ const ProductBox = ({
       <div className={styles.line}> </div>
       <div className={styles.actions}>
         <div className={styles.outline}>
-          <Button
-            className={heart ? styles.heart : ''}
-            variant='outline'
-            onClick={favouriteHandler}
-          >
-            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+          <Button className={styles.basket} variant='outline' onClick={addToCart}>
+            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon>
           </Button>
         </div>
         <div className={styles.outline}>
@@ -123,6 +117,7 @@ ProductBox.propTypes = {
   arrow: PropTypes.bool,
   manufacturer: PropTypes.string,
   handleCompareValue: PropTypes.func,
+  handleAddToCart: PropTypes.func,
 };
 
 export default ProductBox;
