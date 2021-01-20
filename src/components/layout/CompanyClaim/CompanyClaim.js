@@ -29,7 +29,8 @@ const CompanyClaim = ({ products }) => {
     window.addEventListener('resize', () => {
       setWidth(window.innerWidth);
     });
-  }, [width, products, cartCounter]);
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [width, products]);
 
   const cartCounter = () => {
     const sum = products
