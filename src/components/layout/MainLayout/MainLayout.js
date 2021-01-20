@@ -15,7 +15,6 @@ const MainLayout = ({ children }) => {
       <Footer />
       <Sale />
       <Compare />
-      <BurgerMenu />
     </div>
   );
 };

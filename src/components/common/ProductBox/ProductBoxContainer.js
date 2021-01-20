@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import ProductBox from './ProductBox';
 import {
-  handleFavourite,
+  handleAddToCart,
   handleStar,
   handleStyle,
   handleCompare,
@@ -9,7 +9,7 @@ import {
 import { handleCompareValue } from '../../../redux/compareRedux';
 
 const mapDispatchToProps = dispatch => ({
-  handleFavourite: value => dispatch(handleFavourite(value)),
+  handleAddToCart: value => dispatch(handleAddToCart(value)),
   handleStar: value => dispatch(handleStar(value)),
   handleStyle: value => dispatch(handleStyle(value)),
   handleCompare: value => dispatch(handleCompare(value)),

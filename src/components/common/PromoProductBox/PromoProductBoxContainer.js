@@ -3,7 +3,6 @@ import PromoProductBox from './PromoProductBox';
 import {
   getNew,
   getHotDeal,
-  handleFavourite,
   handleStar,
   handleStyle,
   handleCompare,
@@ -17,7 +16,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  handleFavourite: value => dispatch(handleFavourite(value)),
   handleStar: value => dispatch(handleStar(value)),
   handleStyle: value => dispatch(handleStyle(value)),
   handleCompare: value => dispatch(handleCompare(value)),

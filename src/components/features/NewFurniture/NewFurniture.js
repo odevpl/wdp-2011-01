@@ -2,7 +2,6 @@ import React from 'react';
 import Swipe from 'react-easy-swipe';
 import PropTypes from 'prop-types';
 import Brands from '../../layout/Brands/Brands';
-
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
@@ -11,7 +10,39 @@ class NewFurniture extends React.Component {
     activePage: 0,
     activeCategory: 'laptop',
     fadeTrue: true,
+    mobile: false,
+    tablet: false,
+    desktop: false,
+    hugeScreen: false,
+    width: window.innerWidth,
   };
+
+  componentDidMount() {
+    this.updateSize();
+    window.addEventListener('resize', this.updateSize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateSize);
+  }
+
+  updateSize = () => {
+    this.setState({ width: window.innerWidth });
+    this.handleSizeScreen();
+  };
+
+  handleSizeScreen() {
+    const windowScreenWidth = this.state.width;
+    if (windowScreenWidth > 360 && windowScreenWidth < 768) {
+      this.setState({ mobile: true, tablet: false, desktop: false, hugeScreen: false });
+    } else if (windowScreenWidth >= 768 && windowScreenWidth < 1024) {
+      this.setState({ mobile: false, tablet: true, desktop: false, hugeScreen: false });
+    } else if (windowScreenWidth >= 1024 && windowScreenWidth < 1400) {
+      this.setState({ mobile: false, tablet: false, desktop: true, hugeScreen: false });
+    } else if (windowScreenWidth >= 1400) {
+      this.setState({ mobile: false, tablet: false, desktop: false, hugeScreen: true });
+    }
+  }
 
   handlePageChange(e, newPage) {
     e.preventDefault();
@@ -46,7 +77,14 @@ class NewFurniture extends React.Component {
 
   render() {
     const { categories, products, brands } = this.props;
-    const { activeCategory, activePage, fadeTrue } = this.state;
+    const {
+      activeCategory,
+      activePage,
+      fadeTrue,
+      tablet,
+      desktop,
+      mobile,
+    } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
@@ -110,7 +148,15 @@ class NewFurniture extends React.Component {
                   .map(item => (
                     <div
                       key={item.id}
-                      className={`col-3 ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}
+                      className={`${
+                        mobile
+                          ? 'col-12'
+                          : tablet
+                          ? 'col-6'
+                          : desktop
+                          ? 'col-4'
+                          : 'col-3'
+                      } ${fadeTrue ? styles.fadeIn : styles.fadeOut}`}
                     >
                       <ProductBox {...item} />
                     </div>

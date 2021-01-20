@@ -3,7 +3,7 @@ import React from 'react';
 
 import styles from './Header.module.scss';
 
-import CompanyClaim from '../CompanyClaim/CompanyClaim';
+import CompanyClaim from '../CompanyClaim/CompanyClaimContainer';
 import MenuBar from '../MenuBar/MenuBarContainer';
 
 const Header = props => (

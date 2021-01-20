@@ -25,6 +25,12 @@
 }
 @media (min-width: 360px) and (max-width: 768px) {
   .filters {
+    display: block;
+    @include flex(center, center)
+  }
+}
+@media (min-width: 769px) {
+  .filters {
     display: none;
   }
 }

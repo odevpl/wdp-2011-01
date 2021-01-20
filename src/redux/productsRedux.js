@@ -30,13 +30,16 @@ export const getCompared = ({ products }) =>
 const createActionName = name => `products/${name}`;
 
 /* action type */
-export const FAVOURITE_HANDLER = createActionName('FAVOURITE_HANDLER');
+export const ADD_TO_CART_HANDLER = createActionName('ADD_TO_CART_HANDLER');
 export const CHANGE_HOTDEAL = createActionName('CHANGE_HOTDEAL');
 export const SHINING_STAR = createActionName('SHINING_STAR');
 export const CHANGE_STYLE = createActionName('CHANGE_STYLE');
 export const COMPARE_HANDLER = createActionName('COMPARE_HANDLER');
 export const COMPARE_RESET = createActionName('COMPARE_RESET');
 export const REMOVE_HANDLER = createActionName('REMOVE_HANDLER');
+export const HANDLE_CART_COUNTER = createActionName('HANDLE_CART_COUNTER');
+export const RESET_COUNTER = createActionName('RESET_COUNTER');
+export const RESET_ALL_COUNTERS = createActionName('RESET_ALL_COUNTERS');
 
 /* action creator */
 export const handleStar = payload => ({ payload, type: SHINING_STAR });
@@ -44,8 +47,15 @@ export const handleStyle = payload => ({ payload, type: CHANGE_STYLE });
 export const handleCompare = payload => ({ payload, type: COMPARE_HANDLER });
 export const changeHotDeal = payload => ({ payload, type: CHANGE_HOTDEAL });
 export const handleRemove = payload => ({ payload, type: REMOVE_HANDLER });
-export const handleFavourite = payload => ({ payload, type: FAVOURITE_HANDLER });
+export const handleAddToCart = payload => ({ payload, type: ADD_TO_CART_HANDLER });
 export const compareReset = payload => ({ payload, type: COMPARE_RESET });
+export const handleCartCounterChange = (value, id) => ({
+  value,
+  id,
+  type: HANDLE_CART_COUNTER,
+});
+export const resetCounter = payload => ({ payload, type: RESET_COUNTER });
+export const resetAllCounters = payload => ({ payload, type: RESET_ALL_COUNTERS });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
@@ -54,6 +64,39 @@ export default function reducer(statePart = [], action = {}) {
       const newStatePart = statePart.map(product => {
         if (product.id === action.payload.id) {
           product.starChange = true;
+          return product;
+        } else {
+          return product;
+        }
+      });
+      return newStatePart;
+    }
+    case HANDLE_CART_COUNTER: {
+      const newStatePart = statePart.map(product => {
+        if (product.id === action.id) {
+          product.cartCounter = action.value;
+          return product;
+        } else {
+          return product;
+        }
+      });
+      return newStatePart;
+    }
+    case RESET_ALL_COUNTERS: {
+      const newStatePart = statePart.map(product => {
+        if (product.cartCounter > 0) {
+          product.cartCounter = 0;
+          return product;
+        } else {
+          return product;
+        }
+      });
+      return newStatePart;
+    }
+    case RESET_COUNTER: {
+      const newStatePart = statePart.map(product => {
+        if (product.id === action.payload) {
+          product.cartCounter = 0;
           return product;
         } else {
           return product;
@@ -72,10 +115,10 @@ export default function reducer(statePart = [], action = {}) {
       });
       return newStatePart;
     }
-    case FAVOURITE_HANDLER: {
+    case ADD_TO_CART_HANDLER: {
       const newStatePart = statePart.map(product => {
         if (product.id === action.payload) {
-          product.heart = !product.heart;
+          product.cartCounter = product.cartCounter + 1;
           return product;
         } else {
           return product;

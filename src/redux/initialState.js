@@ -218,11 +218,12 @@ const initialState = {
       newFurniture: true,
       heart: true,
       arrow: false,
-      starChange: true,
+      starChange: false,
       overview:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-2',
@@ -247,6 +248,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-3',
@@ -268,6 +270,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       compare: false,
+      cartCounter: 0,
       heart: true,
     },
     {
@@ -290,6 +293,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-5',
@@ -310,6 +314,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
       compare: false,
+      cartCounter: 0,
       heart: true,
     },
     {
@@ -331,6 +336,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-7',
@@ -351,6 +357,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-8',
@@ -372,6 +379,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-9',
@@ -390,6 +398,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-10',
@@ -408,6 +417,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-11',
@@ -427,6 +437,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-12',
@@ -445,6 +456,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-13',
@@ -464,6 +476,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-14',
@@ -482,6 +495,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-15',
@@ -501,6 +515,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-16',
@@ -519,6 +534,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-17',
@@ -537,6 +553,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-18',
@@ -555,6 +572,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-19',
@@ -573,6 +591,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-20',
@@ -592,6 +611,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-21',
@@ -610,6 +630,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-22',
@@ -628,6 +649,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-23',
@@ -646,6 +668,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-laptop-24',
@@ -665,6 +688,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     /**************** MOUSE ****************/
     {
@@ -687,6 +711,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-2',
@@ -711,6 +736,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-3',
@@ -732,6 +758,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       compare: false,
+      cartCounter: 0,
       heart: true,
     },
     {
@@ -753,6 +780,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-5',
@@ -773,6 +801,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
       compare: false,
+      cartCounter: 0,
       heart: true,
     },
     {
@@ -794,6 +823,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-7',
@@ -814,6 +844,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-8',
@@ -835,6 +866,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-9',
@@ -853,6 +885,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-10',
@@ -871,6 +904,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-11',
@@ -890,6 +924,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-12',
@@ -908,6 +943,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-13',
@@ -927,6 +963,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-14',
@@ -945,6 +982,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-15',
@@ -964,6 +1002,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-16',
@@ -982,6 +1021,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-17',
@@ -1000,6 +1040,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-18',
@@ -1018,6 +1059,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-19',
@@ -1036,6 +1078,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-20',
@@ -1055,6 +1098,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-21',
@@ -1073,6 +1117,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-22',
@@ -1091,6 +1136,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-23',
@@ -1109,6 +1155,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-mouse-24',
@@ -1128,6 +1175,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     /**************** KEYBOARD ****************/
     {
@@ -1150,6 +1198,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-2',
@@ -1174,6 +1223,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-3',
@@ -1195,6 +1245,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       compare: false,
+      cartCounter: 0,
       heart: true,
     },
     {
@@ -1216,6 +1267,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-5',
@@ -1236,6 +1288,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
       compare: false,
+      cartCounter: 0,
       heart: true,
     },
     {
@@ -1257,6 +1310,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-7',
@@ -1277,6 +1331,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-8',
@@ -1298,6 +1353,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-9',
@@ -1316,6 +1372,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-10',
@@ -1334,6 +1391,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-11',
@@ -1353,6 +1411,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-12',
@@ -1371,6 +1430,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-13',
@@ -1390,6 +1450,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-14',
@@ -1408,6 +1469,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-15',
@@ -1427,6 +1489,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-16',
@@ -1445,6 +1508,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-17',
@@ -1463,6 +1527,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-18',
@@ -1481,6 +1546,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-19',
@@ -1499,6 +1565,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-20',
@@ -1518,6 +1585,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-21',
@@ -1536,6 +1604,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-22',
@@ -1554,6 +1623,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-23',
@@ -1572,6 +1642,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-keyboard-24',
@@ -1591,6 +1662,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     /**************** SMARTPHONE ****************/
     {
@@ -1613,6 +1685,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-2',
@@ -1635,6 +1708,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-3',
@@ -1656,6 +1730,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       compare: false,
+      cartCounter: 0,
       heart: true,
     },
     {
@@ -1677,6 +1752,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-5',
@@ -1697,6 +1773,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
       compare: false,
+      cartCounter: 0,
       heart: true,
     },
     {
@@ -1718,6 +1795,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-7',
@@ -1738,6 +1816,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-8',
@@ -1759,6 +1838,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-9',
@@ -1777,6 +1857,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-10',
@@ -1795,6 +1876,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-11',
@@ -1814,6 +1896,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-12',
@@ -1832,6 +1915,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-13',
@@ -1851,6 +1935,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-14',
@@ -1869,6 +1954,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-15',
@@ -1888,6 +1974,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-16',
@@ -1906,6 +1993,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-17',
@@ -1924,6 +2012,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-18',
@@ -1942,6 +2031,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-19',
@@ -1960,6 +2050,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-20',
@@ -1979,6 +2070,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-21',
@@ -1997,6 +2089,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-22',
@@ -2015,6 +2108,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-23',
@@ -2033,6 +2127,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-smartphone-24',
@@ -2052,6 +2147,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     /**************** HEADPHONE ****************/
     {
@@ -2074,6 +2170,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-2',
@@ -2096,6 +2193,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-3',
@@ -2117,6 +2215,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 2,
       compare: false,
+      cartCounter: 0,
       heart: true,
     },
     {
@@ -2138,6 +2237,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-5',
@@ -2158,6 +2258,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 0,
       compare: false,
+      cartCounter: 0,
       heart: true,
     },
     {
@@ -2179,6 +2280,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-7',
@@ -2199,6 +2301,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-8',
@@ -2220,6 +2323,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-9',
@@ -2238,6 +2342,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-10',
@@ -2256,6 +2361,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-11',
@@ -2275,6 +2381,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-12',
@@ -2293,6 +2400,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-13',
@@ -2312,6 +2420,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-14',
@@ -2330,6 +2439,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-15',
@@ -2349,6 +2459,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-16',
@@ -2367,6 +2478,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-17',
@@ -2385,6 +2497,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-18',
@@ -2403,6 +2516,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-19',
@@ -2421,6 +2535,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-20',
@@ -2440,6 +2555,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-21',
@@ -2458,6 +2574,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-22',
@@ -2476,6 +2593,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-23',
@@ -2494,6 +2612,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
     {
       id: 'bart-electronic-headphone-24',
@@ -2513,6 +2632,7 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       quantity: 1,
       compare: false,
+      cartCounter: 0,
     },
   ],
   compare: {
@@ -2543,6 +2663,7 @@ const initialState = {
   },
   cart: {
     products: [],
+    counter: 0,
   },
   feedback: [
     {

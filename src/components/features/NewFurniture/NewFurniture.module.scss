@@ -2,6 +2,11 @@
 
 .root {
 
+  .productItem {
+    min-width: 215px;
+    position: relative;
+  }
+
   .panelBar {
     margin-bottom: 30px;
     position: relative;
