@@ -3,7 +3,7 @@ import * as FaIcons from 'react-icons/fa';
 
 const manufacturer = ['Samsung', 'Apple', 'Xiaomi', 'Motorola', 'Huawei'];
 const names = ['Super', 'Ultra', 'Extra', 'Turbo', 'Mega', 'WoW', 'Yeey'];
-
+const hompageURL = 'https://bartoszhor.github.io';
 const ram = ['2GB', '4GB', '8GB', '16GB'];
 const processor = [
   'AMD Ryzen 9 5950X',

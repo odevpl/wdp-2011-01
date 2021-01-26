@@ -40,7 +40,14 @@ const ProductBox = ({
     <div className={styles.root}>
       <Link to={{ pathname: `/product/${id}`, state: { id } }}>
         <div className={styles.photo}>
-          <img src={`../${image}`} alt='' />
+          <img
+            src={
+              process.env.NODE_ENV === 'production'
+                ? `https://bartoszhor.github.io/${image}`
+                : `../${image}`
+            }
+            alt=''
+          />
           {promo && <div className={styles.sale}>{promo}</div>}
           <div className={styles.buttons}>
             <div to='/' className={styles.quickView}>

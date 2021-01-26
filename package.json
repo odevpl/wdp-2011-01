@@ -2,7 +2,7 @@
   "name": "pizzeria-portal",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bartoszhor.github.io/Bart-Electronic-E-Commerce/",
+  "homepage": "https://bartoszhor.github.io/",
   "scripts": {
     "start": "run-p start:* ",
     "start:react": "react-scripts start",
@@ -48,6 +48,7 @@
     ]
   },
   "dependencies": {
+    "@babel/helper-compilation-targets": "^7.12.5",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
