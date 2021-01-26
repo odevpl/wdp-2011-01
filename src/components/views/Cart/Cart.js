@@ -16,6 +16,7 @@ const Cart = ({
   useEffect(() => {
     const filteredCartProducts = allProducts.filter(product => product.cartCounter > 0);
     setCartProducts(filteredCartProducts);
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allProducts]);
 
   const buildOptions = () => {
